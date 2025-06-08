@@ -1,14 +1,19 @@
 "use client";
 
+import Image from "next/image";
+import React from "react";
+
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/placeholder.svg?height=1080&width=1920"
           alt="Winchair Beauty Spa Interior"
-          className="w-full h-full object-cover opacity-20"
+          fill
+          className="object-cover opacity-20"
+          priority
         />
         <div className="absolute inset-0 bg-black/80"></div>
       </div>
