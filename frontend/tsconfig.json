@@ -13,15 +13,22 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",                           // ✅ Bắt buộc nếu dùng "paths"
+    "paths": {
+      "@/*": ["src/*"]                        // ✅ Cho phép import từ "@/..." thay vì "../../"
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src"                                     // ✅ Đảm bảo TypeScript kiểm tra trong thư mục src
+  ],
   "exclude": ["node_modules"]
 }
