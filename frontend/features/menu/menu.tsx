@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
 // Define types for menu items
@@ -115,28 +115,88 @@ const Menu = () => {
   return (
     <nav className="bg-gray-800 text-white" aria-label="Main navigation">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <span className="text-2xl font-bold">Winchair Beauty Spa</span>
-            </div>
+        {/* Desktop Layout: Logo trái, Menu phải */}
+        <div className="hidden lg:flex items-center justify-between h-16">
+          {/* Logo bên trái */}
+          <div className="flex-shrink-0">
+            <span className="text-2xl font-bold">Winchair Beauty Spa</span>
           </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+
+          {/* Menu bên phải */}
+          <div className="flex items-center space-x-4">
+            {menuItems.map((item, index) => (
+              <div key={index} className="relative group">
+                <a
+                  href={item.link || "#"}
+                  className="flex justify-between items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 whitespace-nowrap"
+                  title={item.name}
+                >
+                  <span>{item.name}</span>
+                  {item.subItems && (
+                    <FaChevronDown className="h-4 w-4 text-amber-200 ml-2" />
+                  )}
+                </a>
+                {item.subItems && (
+                  <div className="absolute hidden group-hover:block bg-gray-700 min-w-[200px] rounded-md shadow-lg z-10 top-full left-0 transform translate-y-[-10px] group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                    {item.subItems.map((subItem, subIndex) => (
+                      <div key={subIndex} className="relative group/sub">
+                        <a
+                          href={subItem.link || "#"}
+                          className="flex justify-between items-center w-full px-4 py-2 text-sm hover:bg-gray-600"
+                          title={subItem.name}
+                        >
+                          <span>{subItem.name}</span>
+                          {subItem.subItems && (
+                            <FaChevronDown className="h-4 w-4 text-amber-200 ml-1 group-hover/sub:-rotate-90 transition-transform" />
+                          )}
+                        </a>
+                        {subItem.subItems && (
+                          <div className="absolute hidden group-hover/sub:block bg-gray-700 min-w-[200px] rounded-md shadow-lg left-full top-0 transform translate-x-[-100%] group-hover/sub:translate-x-0 transition-transform duration-300 ease-in-out">
+                            {subItem.subItems.map((subSubItem, subSubIndex) => (
+                              <a
+                                key={subSubIndex}
+                                href={subSubItem.link || "#"}
+                                className="flex justify-between items-center w-full px-4 py-2 text-sm hover:bg-gray-600"
+                                title={subSubItem.name}
+                              >
+                                <span>{subSubItem.name}</span>
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Tablet Layout: Logo trên căn giữa, Menu dưới căn giữa */}
+        <div className="hidden md:block lg:hidden">
+          {/* Logo trên căn giữa */}
+          <div className="flex justify-center py-4">
+            <span className="text-2xl font-bold">Winchair Beauty Spa</span>
+          </div>
+
+          {/* Menu dưới căn giữa */}
+          <div className="flex justify-center pb-4">
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
               {menuItems.map((item, index) => (
                 <div key={index} className="relative group">
                   <a
                     href={item.link || "#"}
-                    className="flex justify-between items-center w-full px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
+                    className="flex justify-between items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 whitespace-nowrap"
                     title={item.name}
                   >
                     <span>{item.name}</span>
                     {item.subItems && (
-                      <FaChevronDown className="h-4 w-4 text-amber-200 ml-4" />
+                      <FaChevronDown className="h-4 w-4 text-amber-200 ml-2" />
                     )}
                   </a>
                   {item.subItems && (
-                    <div className="absolute hidden group-hover:block bg-gray-700 min-w-[200px] rounded-md shadow-lg z-10">
+                    <div className="absolute hidden group-hover:block bg-gray-700 min-w-[200px] rounded-md shadow-lg z-10 top-full left-0 transform translate-y-[-10px] group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
                       {item.subItems.map((subItem, subIndex) => (
                         <div key={subIndex} className="relative group/sub">
                           <a
@@ -150,7 +210,7 @@ const Menu = () => {
                             )}
                           </a>
                           {subItem.subItems && (
-                            <div className="absolute hidden group-hover/sub:block bg-gray-700 min-w-[200px] rounded-md shadow-lg left-full top-0">
+                            <div className="absolute hidden group-hover/sub:block bg-gray-700 min-w-[200px] rounded-md shadow-lg left-full top-0 transform translate-x-[-100%] group-hover/sub:translate-x-0 transition-transform duration-300 ease-in-out">
                               {subItem.subItems.map(
                                 (subSubItem, subSubIndex) => (
                                   <a
@@ -173,48 +233,55 @@ const Menu = () => {
               ))}
             </div>
           </div>
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-amber-400"
-              aria-label={isOpen ? "Close main menu" : "Open main menu"}
-              aria-expanded={isOpen}
-            >
-              {isOpen ? (
-                <svg
-                  className="h-7 w-7"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="h-7 w-7"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={3}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </button>
+        </div>
+
+        {/* Mobile Layout: Logo và hamburger button */}
+        <div className="md:hidden flex items-center justify-between h-16">
+          <div className="flex-shrink-0">
+            <span className="text-xl font-bold">Winchair Beauty Spa</span>
           </div>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-amber-400"
+            aria-label={isOpen ? "Close main menu" : "Open main menu"}
+            aria-expanded={isOpen}
+          >
+            {isOpen ? (
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </button>
         </div>
       </div>
+
+      {/* Mobile menu slide-out */}
       <div
         ref={menuRef}
         className={`md:hidden fixed inset-y-0 left-0 w-3/4 max-w-xs bg-gray-900 transition-transform duration-300 ease-in-out ${
@@ -302,6 +369,14 @@ const Menu = () => {
           ))}
         </nav>
       </div>
+
+      {/* Overlay for mobile menu */}
+      {isOpen && (
+        <div
+          className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-10"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
     </nav>
   );
 };

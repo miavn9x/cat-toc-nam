@@ -6,7 +6,12 @@ module.exports = {
     "./shared/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        playfair: ['"Playfair Display"', "serif"],
+        inter: ["Inter", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
