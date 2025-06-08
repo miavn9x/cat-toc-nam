@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export", // ✅ Đây là cách mới để xuất static site
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true, // ✅ Bỏ qua lỗi lint khi build
   },
-  output: "export", // ✅ Bắt buộc để next export hoạt động
 };
 
 export default nextConfig;
