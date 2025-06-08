@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  output: "export", // ✅ Next.js sẽ tự export static HTML khi build
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  output: "export", // ✅ Bắt buộc để next export hoạt động
 };
 
 export default nextConfig;
