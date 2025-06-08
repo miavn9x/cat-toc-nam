@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 const About = () => {
   return (
     <section className="py-20 lg:py-32 bg-white">
