@@ -1,34 +1,41 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "baseUrl": ".",                           // ✅ Bắt buộc nếu dùng "paths"
+    "target": "es2020",                       // Changed from ES2017 to es2020 for better modern JS feature support
+    "lib": ["dom", "dom.iterable", "esnext"], // Kept as is, good for Next.js
+    "allowJs": true,                          // Kept to allow JS files if needed
+    "skipLibCheck": true,                     // Kept to avoid checking node_modules types
+    "strict": true,                           // Kept for type safety
+    "noEmit": true,                           // Kept as Next.js handles emission
+    "esModuleInterop": true,                  // Kept for module compatibility
+    "module": "esnext",                       // Kept for modern module system
+    "moduleResolution": "bundler",            // Kept for Next.js compatibility
+    "resolveJsonModule": true,                // Kept to allow JSON imports
+    "isolatedModules": true,                  // Kept for compatibility with Next.js
+    "jsx": "preserve",                        // Kept for Next.js JSX handling
+    "incremental": true,                      // Kept for faster builds
+    "baseUrl": ".",                           // Kept to enable paths
     "paths": {
-      "@/*": ["src/*"]                        // ✅ Cho phép import từ "@/..." thay vì "../../"
+      "@/*": ["src/*"]                        // Kept for aliasing src imports
     },
     "plugins": [
       {
-        "name": "next"
+        "name": "next"                        // Kept for Next.js TypeScript plugin
       }
-    ]
+    ],
+    "forceConsistentCasingInFileNames": true, // Added to enforce consistent file casing
+    "noFallthroughCasesInSwitch": true,       // Added to prevent switch case fallthrough bugs
+    "allowSyntheticDefaultImports": true      // Added for better module import compatibility
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src"                                     // ✅ Đảm bảo TypeScript kiểm tra trong thư mục src
+    "next-env.d.ts",                          // Kept for Next.js types
+    "**/*.ts",                                // Kept to include all TS files
+    "**/*.tsx",                               // Kept to include all TSX files
+    ".next/types/**/*.ts",                    // Kept for Next.js generated types
+    "src/**/*"                                // Changed to be more specific, ensuring src is included
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",                           // Kept to exclude node_modules
+    ".next",                                  // Added to exclude Next.js build output
+    "public"                                  // Added to exclude public folder
+  ]
 }
