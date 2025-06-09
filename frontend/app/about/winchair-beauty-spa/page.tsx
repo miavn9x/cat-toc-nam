@@ -158,7 +158,7 @@ const AboutPage = () => {
 
               {/* Content */}
               <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
-                <div className="space-y-6 sm:space-y-8 text-base sm:text-xl text-gray-300 leading-relaxed">
+                <div className="space-y-6 sm:space-y-8 text-base sm:text-xl text-gray-300 leading-relaxed text-justify">
                   <p>
                     Giữa cuộc sống bận rộn ở Canada, chăm sóc bản thân không chỉ
                     là điều xa xỉ mà là một nhu cầu thiết yếu. Tại Winchair
@@ -189,12 +189,12 @@ const AboutPage = () => {
                       <h3 className="text-amber-300 font-bold text-lg sm:text-xl mb-2 sm:mb-3">
                         Cam Kết Minh Bạch
                       </h3>
-                      <p className="text-gray-300 leading-relaxed text-sm sm:text-lg text-center">
+                        <p className="text-gray-300 leading-relaxed text-sm sm:text-lg text-justify">
                         Mức giá &quot;từ&quot; có thể thay đổi tùy thuộc vào độ phức tạp,
                         độ dài tóc và lượng sản phẩm sử dụng. Tất cả giá chưa
                         bao gồm thuế. Chúng tôi luôn tư vấn chi tiết trước khi
                         thực hiện dịch vụ.
-                      </p>
+                        </p>
                     </div>
                   </div>
                 </div>

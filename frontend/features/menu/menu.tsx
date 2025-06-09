@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
 import { useState, useEffect, useRef } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 // Define types for menu items
 interface MenuItem {
@@ -16,6 +17,7 @@ const Menu = () => {
     {}
   );
   const menuRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   const toggleSubMenu = (index: number, subIndex: number | null = null) => {
     setOpenSubMenus((prev) => {
@@ -41,6 +43,25 @@ const Menu = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, [isOpen]);
+
+  // Handle navigation for mobile menu items
+  const handleMobileNavigation = (
+    item: MenuItem,
+    index: number,
+    subIndex?: number
+  ) => {
+    // If item has a link and no sub-items, navigate directly
+    if (item.link && !item.subItems) {
+      router.push(item.link);
+      setIsOpen(false);
+      return;
+    }
+
+    // If item has sub-items, toggle the submenu
+    if (item.subItems) {
+      toggleSubMenu(index, subIndex);
+    }
+  };
 
   const menuItems: MenuItem[] = [
     { name: "Trang Chủ", link: "/" },
@@ -114,54 +135,59 @@ const Menu = () => {
   ];
 
   return (
-    <nav className="bg-gray-800 text-white" aria-label="Main navigation">
+    <nav className="bg-gray-800 text-white z-50" aria-label="Main navigation">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Desktop Layout: Logo trái, Menu phải */}
         <div className="hidden lg:flex items-center justify-between h-16">
           {/* Logo bên trái */}
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold">Winchair Beauty Spa</span>
+            <Link
+              href="/"
+              className="text-2xl font-bold hover:text-amber-300 transition-colors"
+            >
+              Winchair Beauty Spa
+            </Link>
           </div>
 
           {/* Menu bên phải */}
           <div className="flex items-center space-x-4">
             {menuItems.map((item, index) => (
               <div key={index} className="relative group">
-                <a
+                <Link
                   href={item.link || "#"}
-                  className="flex justify-between items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 whitespace-nowrap"
+                  className="flex justify-between items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 whitespace-nowrap transition-colors"
                   title={item.name}
                 >
                   <span>{item.name}</span>
                   {item.subItems && (
                     <FaChevronDown className="h-4 w-4 text-amber-200 ml-2" />
                   )}
-                </a>
+                </Link>
                 {item.subItems && (
                   <div className="absolute hidden group-hover:block bg-gray-700 min-w-[200px] rounded-md shadow-lg z-10 top-full left-0 transform translate-y-[-10px] group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
                     {item.subItems.map((subItem, subIndex) => (
                       <div key={subIndex} className="relative group/sub">
-                        <a
+                        <Link
                           href={subItem.link || "#"}
-                          className="flex justify-between items-center w-full px-4 py-2 text-sm hover:bg-gray-600"
+                          className="flex justify-between items-center w-full px-4 py-2 text-sm hover:bg-gray-600 transition-colors"
                           title={subItem.name}
                         >
                           <span>{subItem.name}</span>
                           {subItem.subItems && (
                             <FaChevronDown className="h-4 w-4 text-amber-200 ml-1 group-hover/sub:-rotate-90 transition-transform" />
                           )}
-                        </a>
+                        </Link>
                         {subItem.subItems && (
                           <div className="absolute hidden group-hover/sub:block bg-gray-700 min-w-[200px] rounded-md shadow-lg left-full top-0 transform translate-x-[-100%] group-hover/sub:translate-x-0 transition-transform duration-300 ease-in-out">
                             {subItem.subItems.map((subSubItem, subSubIndex) => (
-                              <a
+                              <Link
                                 key={subSubIndex}
                                 href={subSubItem.link || "#"}
-                                className="flex justify-between items-center w-full px-4 py-2 text-sm hover:bg-gray-600"
+                                className="flex justify-between items-center w-full px-4 py-2 text-sm hover:bg-gray-600 transition-colors"
                                 title={subSubItem.name}
                               >
                                 <span>{subSubItem.name}</span>
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         )}
@@ -178,7 +204,12 @@ const Menu = () => {
         <div className="hidden md:block lg:hidden">
           {/* Logo trên căn giữa */}
           <div className="flex justify-center py-4">
-            <span className="text-2xl font-bold">Winchair Beauty Spa</span>
+            <Link
+              href="/"
+              className="text-2xl font-bold hover:text-amber-300 transition-colors"
+            >
+              Winchair Beauty Spa
+            </Link>
           </div>
 
           {/* Menu dưới căn giữa */}
@@ -186,42 +217,42 @@ const Menu = () => {
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
               {menuItems.map((item, index) => (
                 <div key={index} className="relative group">
-                  <a
+                  <Link
                     href={item.link || "#"}
-                    className="flex justify-between items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 whitespace-nowrap"
+                    className="flex justify-between items-center px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 whitespace-nowrap transition-colors"
                     title={item.name}
                   >
                     <span>{item.name}</span>
                     {item.subItems && (
                       <FaChevronDown className="h-4 w-4 text-amber-200 ml-2" />
                     )}
-                  </a>
+                  </Link>
                   {item.subItems && (
                     <div className="absolute hidden group-hover:block bg-gray-700 min-w-[200px] rounded-md shadow-lg z-10 top-full left-0 transform translate-y-[-10px] group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
                       {item.subItems.map((subItem, subIndex) => (
                         <div key={subIndex} className="relative group/sub">
-                          <a
+                          <Link
                             href={subItem.link || "#"}
-                            className="flex justify-between items-center w-full px-4 py-2 text-sm hover:bg-gray-600"
+                            className="flex justify-between items-center w-full px-4 py-2 text-sm hover:bg-gray-600 transition-colors"
                             title={subItem.name}
                           >
                             <span>{subItem.name}</span>
                             {subItem.subItems && (
                               <FaChevronDown className="h-4 w-4 text-amber-200 ml-1 group-hover/sub:-rotate-90 transition-transform" />
                             )}
-                          </a>
+                          </Link>
                           {subItem.subItems && (
                             <div className="absolute hidden group-hover/sub:block bg-gray-700 min-w-[200px] rounded-md shadow-lg left-full top-0 transform translate-x-[-100%] group-hover/sub:translate-x-0 transition-transform duration-300 ease-in-out">
                               {subItem.subItems.map(
                                 (subSubItem, subSubIndex) => (
-                                  <a
+                                  <Link
                                     key={subSubIndex}
                                     href={subSubItem.link || "#"}
-                                    className="flex justify-between items-center w-full px-4 py-2 text-sm hover:bg-gray-600"
+                                    className="flex justify-between items-center w-full px-4 py-2 text-sm hover:bg-gray-600 transition-colors"
                                     title={subSubItem.name}
                                   >
                                     <span>{subSubItem.name}</span>
-                                  </a>
+                                  </Link>
                                 )
                               )}
                             </div>
@@ -239,11 +270,16 @@ const Menu = () => {
         {/* Mobile Layout: Logo và hamburger button */}
         <div className="md:hidden flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold">Winchair Beauty Spa</span>
+            <Link
+              href="/"
+              className="text-xl font-bold hover:text-amber-300 transition-colors"
+            >
+              Winchair Beauty Spa
+            </Link>
           </div>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-amber-400"
+            className="inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-amber-400 transition-colors"
             aria-label={isOpen ? "Close main menu" : "Open main menu"}
             aria-expanded={isOpen}
           >
@@ -287,7 +323,7 @@ const Menu = () => {
         ref={menuRef}
         className={`md:hidden fixed inset-y-0 left-0 w-3/4 max-w-xs bg-gray-900 transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } z-20`}
+        } z-20 overflow-y-auto`}
         aria-hidden={!isOpen}
       >
         <nav
@@ -296,69 +332,110 @@ const Menu = () => {
         >
           {menuItems.map((item, index) => (
             <div key={index} className="space-y-1">
-              <div
-                className="flex justify-between items-center w-full px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 cursor-pointer"
-                onClick={() => toggleSubMenu(index)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    toggleSubMenu(index);
+              {/* Main menu item */}
+              {item.link && !item.subItems ? (
+                // Direct link without submenu
+                <Link
+                  href={item.link}
+                  className="flex justify-between items-center w-full px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 transition-colors"
+                  onClick={() => setIsOpen(false)}
+                  title={item.name}
+                >
+                  <span>{item.name}</span>
+                </Link>
+              ) : (
+                // Item with submenu or no link
+                <div
+                  className="flex justify-between items-center w-full px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 cursor-pointer transition-colors"
+                  onClick={() => handleMobileNavigation(item, index)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      handleMobileNavigation(item, index);
+                    }
+                  }}
+                  tabIndex={0}
+                  role="button"
+                  aria-expanded={openSubMenus[index.toString()]}
+                  aria-label={
+                    item.subItems ? `Toggle ${item.name} submenu` : item.name
                   }
-                }}
-                tabIndex={0}
-                role="button"
-                aria-expanded={openSubMenus[index.toString()]}
-                aria-label={`Toggle ${item.name} submenu`}
-              >
-                <span>{item.name}</span>
-                {item.subItems && (
-                  <FaChevronDown
-                    className={`h-4 w-4 text-amber-200 ml-1 transition-transform ${
-                      openSubMenus[index.toString()] ? "rotate-180" : ""
-                    }`}
-                  />
-                )}
-              </div>
+                >
+                  <span>{item.name}</span>
+                  {item.subItems && (
+                    <FaChevronDown
+                      className={`h-4 w-4 text-amber-200 ml-1 transition-transform ${
+                        openSubMenus[index.toString()] ? "rotate-180" : ""
+                      }`}
+                    />
+                  )}
+                </div>
+              )}
+
+              {/* Submenu items */}
               {item.subItems && openSubMenus[index.toString()] && (
                 <div className="pl-4 space-y-1">
                   {item.subItems.map((subItem, subIndex) => (
                     <div key={subIndex} className="space-y-1">
-                      <div
-                        className="flex justify-between items-center w-full px-3 py-2 rounded-md text-sm hover:bg-gray-600 cursor-pointer"
-                        onClick={() => toggleSubMenu(index, subIndex)}
-                        onKeyDown={(e) => {
-                          if (e.key === "Enter" || e.key === " ") {
-                            toggleSubMenu(index, subIndex);
+                      {subItem.link && !subItem.subItems ? (
+                        // Direct link without sub-submenu
+                        <Link
+                          href={subItem.link}
+                          className="flex justify-between items-center w-full px-3 py-2 rounded-md text-sm hover:bg-gray-600 transition-colors"
+                          onClick={() => setIsOpen(false)}
+                          title={subItem.name}
+                        >
+                          <span>{subItem.name}</span>
+                        </Link>
+                      ) : (
+                        // Item with sub-submenu or no link
+                        <div
+                          className="flex justify-between items-center w-full px-3 py-2 rounded-md text-sm hover:bg-gray-600 cursor-pointer transition-colors"
+                          onClick={() =>
+                            handleMobileNavigation(subItem, index, subIndex)
                           }
-                        }}
-                        tabIndex={0}
-                        role="button"
-                        aria-expanded={openSubMenus[`${index}-${subIndex}`]}
-                        aria-label={`Toggle ${subItem.name} submenu`}
-                      >
-                        <span>{subItem.name}</span>
-                        {subItem.subItems && (
-                          <FaChevronDown
-                            className={`h-4 w-4 text-amber-200 ml-1 transition-transform ${
-                              openSubMenus[`${index}-${subIndex}`]
-                                ? "rotate-180"
-                                : ""
-                            }`}
-                          />
-                        )}
-                      </div>
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                              e.preventDefault();
+                              handleMobileNavigation(subItem, index, subIndex);
+                            }
+                          }}
+                          tabIndex={0}
+                          role="button"
+                          aria-expanded={openSubMenus[`${index}-${subIndex}`]}
+                          aria-label={
+                            subItem.subItems
+                              ? `Toggle ${subItem.name} submenu`
+                              : subItem.name
+                          }
+                        >
+                          <span>{subItem.name}</span>
+                          {subItem.subItems && (
+                            <FaChevronDown
+                              className={`h-4 w-4 text-amber-200 ml-1 transition-transform ${
+                                openSubMenus[`${index}-${subIndex}`]
+                                  ? "rotate-180"
+                                  : ""
+                              }`}
+                            />
+                          )}
+                        </div>
+                      )}
+
+                      {/* Sub-submenu items */}
                       {subItem.subItems &&
                         openSubMenus[`${index}-${subIndex}`] && (
                           <div className="pl-4 space-y-1">
                             {subItem.subItems.map((subSubItem, subSubIndex) => (
-                              <a
+                              <Link
                                 key={subSubIndex}
                                 href={subSubItem.link || "#"}
-                                className="flex justify-between items-center w-full px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-gray-600"
+                                className="flex justify-between items-center w-full px-3 py-2 rounded-md text-sm text-gray-300 hover:bg-gray-600 hover:text-white transition-colors"
                                 onClick={() => setIsOpen(false)}
                                 title={subSubItem.name}
                               >
                                 <span>{subSubItem.name}</span>
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         )}
@@ -376,6 +453,7 @@ const Menu = () => {
         <div
           className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-10"
           onClick={() => setIsOpen(false)}
+          aria-hidden="true"
         />
       )}
     </nav>

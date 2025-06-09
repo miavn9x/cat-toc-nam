@@ -123,7 +123,7 @@ const FeaturesPage = () => {
                   </h2>
                 </div>
 
-                <p className="text-base sm:text-xl text-gray-300 leading-relaxed mb-8 sm:mb-12">
+                <p className="text-base sm:text-xl text-gray-300 leading-relaxed mb-8 sm:mb-12 text-justify">
                   Chúng tôi tin rằng vẻ đẹp không phải là đặc quyền của những
                   người giàu có. Tại Winchair Beauty Spa, chúng tôi mang đến
                   dịch vụ đẳng cấp quốc tế với mức giá mà mọi người đều có thể
@@ -141,8 +141,8 @@ const FeaturesPage = () => {
                       <h3 className="text-amber-300 font-semibold text-base sm:text-lg mb-2">
                         Lưu Ý Quan Trọng
                       </h3>
-                      <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                        Mức giá "từ" có thể thay đổi tùy thuộc vào độ phức tạp,
+                      <p className="text-gray-300 leading-relaxed text-sm sm:text-base text-justify">
+                        Mức giá &quot;từ&quot; có thể thay đổi tùy thuộc vào độ phức tạp,
                         độ dài tóc và lượng sản phẩm sử dụng. Tất cả giá chưa
                         bao gồm thuế. Chúng tôi cam kết minh bạch về giá cả.
                       </p>
@@ -164,7 +164,7 @@ const FeaturesPage = () => {
                       <h3 className="text-white font-semibold text-lg sm:text-xl mb-1 sm:mb-2">
                         Không Gian Sang Trọng
                       </h3>
-                      <p className="text-gray-300 text-xs sm:text-sm">
+                      <p className="text-gray-300 text-xs sm:text-sm text-justify">
                         Thiết kế hiện đại, trang thiết bị cao cấp
                       </p>
                     </div>
@@ -192,13 +192,13 @@ const FeaturesPage = () => {
                   Phong Cách Đỉnh Cao, Chi Tiêu Thông Minh
                 </span>
               </h2>
-              <p className="text-base sm:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed px-4">
+              <p className="text-base sm:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed px-4 text-justify">
                 Một kiểu tóc đẹp không chỉ là cắt tỉa – đó là phong cách cá nhân
                 và sự tự tin của bạn.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-6 mb-12 sm:mb-16">
               <div className="lg:col-span-2">
                 <div className="aspect-video rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
                   <img
@@ -214,7 +214,7 @@ const FeaturesPage = () => {
                   <h3 className="text-xl sm:text-2xl font-light text-white mb-4 sm:mb-6">
                     Chuyên Nghiệp & Hiện Đại
                   </h3>
-                  <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
+                  <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base text-justify">
                     Từ những kiểu cắt cổ điển đến xu hướng mới nhất, chúng tôi
                     tạo ra phong cách phù hợp với từng cá nhân và lối sống.
                   </p>
@@ -232,7 +232,7 @@ const FeaturesPage = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-6">
               {[
                 {
                   title: "Cắt Tóc Nam Cao Cấp",
@@ -318,7 +318,7 @@ const FeaturesPage = () => {
                         </div>
                       </div>
 
-                      <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
+                      <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base text-justify">
                         {service.description}
                       </p>
 
@@ -329,7 +329,7 @@ const FeaturesPage = () => {
                             className="flex items-center space-x-2 sm:space-x-3"
                           >
                             <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
-                            <span className="text-gray-400 text-xs sm:text-sm">
+                            <span className="text-gray-400 text-xs sm:text-sm text-justify">
                               {feature}
                             </span>
                           </div>
@@ -362,7 +362,7 @@ const FeaturesPage = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6">
               {[
                 {
                   title: "Cắt Tóc Nữ Cao Cấp",
@@ -639,9 +639,7 @@ const FeaturesPage = () => {
               <div className="w-16 sm:w-32 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-8 sm:mb-12"></div>
 
               <p className="text-base sm:text-xl text-gray-300 leading-relaxed mb-12 sm:mb-16 max-w-3xl mx-auto px-4">
-                Hãy để chúng tôi giúp bạn tỏa sáng với vẻ đẹp tự nhiên và phong
-                cách riêng biệt. Đặt lịch ngay hôm nay để trải nghiệm sự khác
-                biệt tại Winchair Beauty Spa.
+                Hãy để chúng tôi giúp bạn tỏa sáng với vẻ đẹp tự nhiên và phong cách riêng biệt. Đặt lịch ngay hôm nay để trải nghiệm sự khác biệt tại Winchair Beauty Spa.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
