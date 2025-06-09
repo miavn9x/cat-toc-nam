@@ -107,8 +107,14 @@ const Menu = () => {
           name: "Dịch Vụ Tóc Cho Bé",
           link: "/dich-vu-toc-cho-be",
           subItems: [
-            { name: "Cắt Tóc Bé Trai", link: "/dich-vu-toc-cho-be/cat-toc-be-trai" },
-            { name: "Cắt Tóc Bé Gái", link: "/dich-vu-toc-cho-be/cat-toc-be-gai" },
+            {
+              name: "Cắt Tóc Bé Trai",
+              link: "/dich-vu-toc-cho-be/cat-toc-be-trai",
+            },
+            {
+              name: "Cắt Tóc Bé Gái",
+              link: "/dich-vu-toc-cho-be/cat-toc-be-gai",
+            },
           ],
         },
         {
@@ -135,14 +141,7 @@ const Menu = () => {
       ],
     },
     { name: "Đặt Lịch Hẹn", link: "/booking" },
-    {
-      name: "Liên Hệ",
-      subItems: [
-        { name: "Địa Chỉ", link: "/address" },
-        { name: "Điện Thoại", link: "/phone" },
-        { name: "Giờ Mở Cửa", link: "/hours" },
-      ],
-    },
+    { name: "Liên Hệ", link: "/contact" },
   ];
 
   return (
