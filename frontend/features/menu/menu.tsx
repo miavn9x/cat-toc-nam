@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { useState, useEffect, useRef } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
@@ -46,8 +47,8 @@ const Menu = () => {
     {
       name: "Về Chúng Tôi",
       subItems: [
-        { name: "Giới Thiệu", link: "/about" },
-        { name: "Ưu Điểm Nổi Bật", link: "/features" },
+        { name: "Giới Thiệu", link: "/about/winchair-beauty-spa" },
+        { name: "Ưu Điểm Nổi Bật", link: "/about/features" },
       ],
     },
     {
