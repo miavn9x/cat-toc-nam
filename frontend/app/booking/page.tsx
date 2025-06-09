@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState, FormEvent, ChangeEvent } from "react";
-import emailjs from "@emailjs/browser"; // Requires: npm install @emailjs/browser
+
+// Định nghĩa API_URL từ biến môi trường
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.yourdomain.com";
 
 // Define service categories with an index signature
 const serviceCategories: { [key: string]: { name: string; price: string }[] } =
@@ -152,6 +154,10 @@ const BookingPage = () => {
     notes: "",
   });
 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
@@ -159,59 +165,49 @@ const BookingPage = () => {
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
-      ...(name === "category" ? { service: "", serviceOption: "" } : {}),
-      ...(name === "service" ? { serviceOption: "" } : {}),
     }));
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const templateParams = {
-      to_email: "miavn9x@gmail.com",
-      from_name: formData.name,
-      service_category: formData.category,
-      service: formData.service,
-      service_option: formData.serviceOption
-        ? `${serviceOptions[formData.service]?.label}: ${
-            formData.serviceOption
-          }`
-        : "",
-      date: formData.date,
-      time: formData.time,
-      notes: formData.notes,
-      reply_to: formData.email,
-    };
+    setLoading(true);
+    setError(null);
+    setSuccess(false);
 
     try {
-      const response = await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
-        templateParams,
-        "YOUR_USER_ID" // Replace with your EmailJS User ID
-      );
-      console.log("EmailJS response:", response);
-      alert(
-        `Thank you, ${formData.name}! Your booking request has been sent to miavn9x@gmail.com. We will contact you to confirm soon.`
-      );
-    } catch (error: any) {
-      console.error("EmailJS error details:", error);
-      const errorMessage = error.text || "An unexpected error occurred";
-      alert(
-        `Failed to send the booking request. Error: ${errorMessage}. Please try again later or contact us directly at miavn9x@gmail.com.`
-      );
-    }
+      const response = await fetch(`${API_URL}/mailer/send-booking`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setFormData({
-      category: "",
-      service: "",
-      serviceOption: "",
-      name: "",
-      email: "",
-      phone: "",
-      date: "",
-      time: "",
-      notes: "",
-    });
+      if (response.ok) {
+        setSuccess(true);
+        setFormData({
+          category: "",
+          service: "",
+          serviceOption: "",
+          name: "",
+          email: "",
+          phone: "",
+          date: "",
+          time: "",
+          notes: "",
+        });
+        setTimeout(() => setSuccess(false), 3000);
+      } else {
+        const resData = await response.json();
+        setError(resData.message || "Failed to send booking.");
+        setTimeout(() => setError(null), 3000);
+      }
+    } catch {
+      setError("Error sending booking. Please try again later.");
+      setTimeout(() => setError(null), 3000);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -385,7 +381,7 @@ const BookingPage = () => {
                 value={formData.date}
                 onChange={handleChange}
                 className="w-full p-2 sm:p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900 text-sm sm:text-base"
-                min={new Date().toISOString().split("T")[0]} // June 09, 2025
+                min={new Date().toISOString().split("T")[0]}
                 required
               />
             </div>
@@ -431,16 +427,22 @@ const BookingPage = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-gray-900 text-white py-2 sm:py-3 rounded-md hover:bg-gray-800 transition duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed text-sm sm:text-base"
-              disabled={
-                !formData.category ||
-                !formData.service ||
-                !formData.serviceOption ||
-                !formData.notes
-              }
+              className="w-full bg-gray-900 text-white p-2 rounded-md hover:bg-gray-800 transition duration-300"
+              disabled={loading}
             >
-              Book Appointment
+              {loading ? "Booking..." : "Book Appointment"}
             </button>
+
+            {error && (
+              <p className="text-red-600 mt-2 font-semibold text-center">
+                {error}
+              </p>
+            )}
+            {success && (
+              <p className="text-green-600 mt-2 font-semibold text-center">
+                Your booking request has been sent successfully!
+              </p>
+            )}
           </form>
         </div>
       </div>

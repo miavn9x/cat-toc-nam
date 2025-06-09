@@ -80,40 +80,71 @@ const Menu = () => {
     },
     {
       name: "Dịch Vụ & Giá",
+      link: "/service-and-price",
       subItems: [
         {
           name: "Dịch Vụ Tóc Nam",
-          link: "/dich-vu-toc-nam",
+          link: "/service-and-price/dich-vu-toc-nam",
           subItems: [
-            { name: "Cắt Tóc Nam", link: "/dich-vu-toc-nam/cat-toc-nam" },
-            { name: "Cắt Fade", link: "/dich-vu-toc-nam/cat-fade" },
-            { name: "Cạo Râu Nóng", link: "/dich-vu-toc-nam/cao-rau-nong" },
-            { name: "Tỉa Râu", link: "/dich-vu-toc-nam/tia-rau" },
+            {
+              name: "Cắt Tóc Nam",
+              link: "/service-and-price/dich-vu-toc-nam/cat-toc-nam",
+            },
+            {
+              name: "Cắt Fade",
+              link: "/service-and-price/dich-vu-toc-nam/cat-fade",
+            },
+            {
+              name: "Cạo Râu Nóng",
+              link: "/service-and-price/dich-vu-toc-nam/cao-rau-nong",
+            },
+            {
+              name: "Tỉa Râu",
+              link: "/service-and-price/dich-vu-toc-nam/tia-rau",
+            },
           ],
         },
         {
           name: "Dịch Vụ Tóc Nữ",
-          link: "/dich-vu-toc-nu",
+          link: "/service-and-price/dich-vu-toc-nu",
           subItems: [
-            { name: "Cắt Tóc Nữ", link: "/dich-vu-toc-nu/cat-toc-nu" },
-            { name: "Nhuộm Tóc", link: "/dich-vu-toc-nu/nhuom-toc" },
-            { name: "Highlight", link: "/dich-vu-toc-nu/highlight" },
-            { name: "Uốn Tóc", link: "/dich-vu-toc-nu/uen-toc" },
-            { name: "Duỗi Tóc", link: "/dich-vu-toc-nu/duoi-toc" },
-            { name: "Búi Tóc", link: "/dich-vu-toc-nu/bui-toc" },
+            {
+              name: "Cắt Tóc Nữ",
+              link: "/service-and-price/dich-vu-toc-nu/cat-toc-nu",
+            },
+            {
+              name: "Nhuộm Tóc",
+              link: "/service-and-price/dich-vu-toc-nu/nhuom-toc",
+            },
+            {
+              name: "Highlight",
+              link: "/service-and-price/dich-vu-toc-nu/highlight",
+            },
+            {
+              name: "Uốn Tóc",
+              link: "/service-and-price/dich-vu-toc-nu/uen-toc",
+            },
+            {
+              name: "Duỗi Tóc",
+              link: "/service-and-price/dich-vu-toc-nu/duoi-toc",
+            },
+            {
+              name: "Búi Tóc",
+              link: "/service-and-price/dich-vu-toc-nu/bui-toc",
+            },
           ],
         },
         {
           name: "Dịch Vụ Tóc Cho Bé",
-          link: "/dich-vu-toc-cho-be",
+          link: "/service-and-price/dich-vu-toc-cho-be",
           subItems: [
             {
               name: "Cắt Tóc Bé Trai",
-              link: "/dich-vu-toc-cho-be/cat-toc-be-trai",
+              link: "/service-and-price/dich-vu-toc-cho-be/cat-toc-be-trai",
             },
             {
               name: "Cắt Tóc Bé Gái",
-              link: "/dich-vu-toc-cho-be/cat-toc-be-gai",
+              link: "/service-and-price/dich-vu-toc-cho-be/cat-toc-be-gai",
             },
           ],
         },

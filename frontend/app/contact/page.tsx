@@ -2,12 +2,19 @@
 
 import React, { useState, FormEvent, ChangeEvent } from "react";
 
+// Định nghĩa API_URL từ biến môi trường
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.yourdomain.com";
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -19,11 +26,34 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission logic here
-    alert("Thank you for your message! We will get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    setLoading(true);
+    setError(null);
+    setSuccess(false);
+
+    try {
+      const response = await fetch(`${API_URL}/mailer/send-contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSuccess(true);
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setSuccess(false), 3000);
+      } else {
+        const resData = await response.json();
+        setError(resData.message || "Failed to send message.");
+      }
+    } catch {
+      setError("Error sending message. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -93,6 +123,7 @@ const ContactPage = () => {
                   className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900"
                   placeholder="Your Name"
                   required
+                  disabled={loading}
                 />
               </div>
               <div>
@@ -111,6 +142,7 @@ const ContactPage = () => {
                   className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900"
                   placeholder="Your Email"
                   required
+                  disabled={loading}
                 />
               </div>
               <div>
@@ -129,14 +161,26 @@ const ContactPage = () => {
                   rows={5}
                   placeholder="Your Message"
                   required
+                  disabled={loading}
                 />
               </div>
               <button
                 type="submit"
                 className="w-full bg-gray-900 text-white p-2 rounded-md hover:bg-gray-800 transition duration-300"
+                disabled={loading}
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
+              {error && (
+                <p className="text-red-600 mt-2 font-semibold text-center">
+                  {error}
+                </p>
+              )}
+              {success && (
+                <p className="text-green-600 mt-2 font-semibold text-center">
+                  Your message has been sent successfully!
+                </p>
+              )}
             </form>
           </div>
         </div>

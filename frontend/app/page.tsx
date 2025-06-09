@@ -1,14 +1,14 @@
-import About from "./components/about";
-import BeautyServices from "./components/beauty-services";
-import CallToAction from "./components/call-to-action";
-import Gallery from "./components/gallery";
-import HairCareServices from "./components/hair-care-services";
-import Hero from "./components/hero";
-import KidsServices from "./components/kids-services";
-import MenServices from "./components/men-services";
-import ServicesOverview from "./components/services-overview";
-import WhyChooseUs from "./components/why-choose-us";
-import WomenServices from "./components/women-services";
+import About from "../features/components/about";
+import BeautyServices from "../features/components/beauty-services";
+import CallToAction from "../features/components/call-to-action";
+import Gallery from "../features/components/gallery";
+import HairCareServices from "../features/components/hair-care-services";
+import Hero from "../features/components/hero";
+import KidsServices from "../features/components/kids-services";
+import MenServices from "../features/components/men-services";
+import ServicesOverview from "../features/components/services-overview";
+import WhyChooseUs from "../features/components/why-choose-us";
+import WomenServices from "../features/components/women-services";
 
 export default function Home() {
   return (

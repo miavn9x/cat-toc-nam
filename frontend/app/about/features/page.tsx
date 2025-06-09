@@ -55,7 +55,7 @@ const FeaturesPage = () => {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56 sm:w-80 h-56 sm:h-80 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-full blur-3xl"></div>
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="mb-6 sm:mb-8">
               <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 sm:mb-8">
                 <span className="text-amber-300 font-medium text-xs sm:text-sm tracking-wider uppercase">
@@ -108,7 +108,7 @@ const FeaturesPage = () => {
         {/* Value Proposition - Responsive */}
         <section className="py-16 sm:py-32 bg-gradient-to-b from-black to-slate-900 relative">
           <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1200&width=1920')] bg-cover bg-center opacity-5"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-20 items-center">
               <div className="order-2 lg:order-1">
                 <div className="mb-6 sm:mb-8">
@@ -181,7 +181,7 @@ const FeaturesPage = () => {
 
         {/* Men's Services - Responsive */}
         <section className="py-16 sm:py-32 bg-gradient-to-br from-slate-900 to-gray-900 relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-20">
               <span className="text-blue-400 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6 block">
                 Dành Cho Quý Ông
@@ -345,7 +345,7 @@ const FeaturesPage = () => {
 
         {/* Women's Services - Responsive */}
         <section className="py-16 sm:py-32 bg-gradient-to-br from-gray-900 to-rose-900/20 relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-20">
               <span className="text-rose-400 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6 block">
                 Dành Cho Quý Bà
@@ -450,7 +450,7 @@ const FeaturesPage = () => {
 
         {/* Kids & Additional Services - Responsive */}
         <section className="py-16 sm:py-32 bg-gradient-to-br from-slate-900 to-purple-900/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-20">
               {/* Kids Services */}
               <div>

@@ -1,0 +1,1258 @@
+{
+  "categories": {
+    "men-hair": {
+      "id": "dich-vu-toc-nam",
+      "title": "Dịch Vụ Tóc Nam",
+      "subtitle": "Hair Services for Men",
+      "description": "Các quý ông, một kiểu tóc đẹp không chỉ là cắt tỉa – đó là phong cách cá nhân. Tại Winchair Beauty Spa, bạn đang đầu tư vào chất lượng và phong cách bền vững thật sự đáng giá.",
+      "tagline": "Phong Cách Đỉnh Cao, Chi Tiêu Thông Minh",
+      "color": "blue",
+      "services": {
+        "cat-toc-nam": {
+          "id": "cat-toc-nam",
+          "title": "Cắt Tóc Nam",
+          "subtitle": "Men's Haircut",
+          "price": "Từ $35 + tax",
+          "description": "Kiểu tóc được thiết kế riêng, hoàn hảo với phong cách và cuộc sống của bạn.",
+          "longDescription": "Kiểu tóc được thiết kế riêng, hoàn hảo với phong cách và cuộc sống của bạn. Bao gồm gội đầu thư giãn và tạo kiểu chuyên nghiệp. Đây không chỉ là một lần cắt tóc; đó là nền tảng cho một vẻ ngoài luôn gọn gàng, sắc sảo lâu hơn, nghĩa là bạn ít phải ghé tiệm hơn và tiết kiệm tiền để làm những việc khác.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": ["Tư vấn phong cách cá nhân", "Gội đầu thư giãn", "Tạo kiểu chuyên nghiệp", "Bảo hành kiểu tóc"],
+          "benefits": [
+            "Vẻ ngoài luôn gọn gàng, sắc sảo lâu hơn",
+            "Ít phải ghé tiệm hơn",
+            "Tiết kiệm tiền",
+            "Tự tin với vẻ ngoài chuyên nghiệp"
+          ],
+          "styles": {
+            "classic-business": {
+              "id": "classic-business",
+              "name": "Classic Business",
+              "description": "Kiểu tóc lịch lãm, phù hợp cho môi trường công sở và các sự kiện trang trọng.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Vuông", "Chữ nhật"],
+              "popular": true
+            },
+            "modern-quiff": {
+              "id": "modern-quiff",
+              "name": "Modern Quiff",
+              "description": "Phong cách hiện đại với phần trên được tạo độ phồng, thể hiện cá tính mạnh mẽ.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Tròn", "Chữ nhật"],
+              "popular": true
+            },
+            "textured-crop": {
+              "id": "textured-crop",
+              "name": "Textured Crop",
+              "description": "Kiểu tóc ngắn với kết cấu tự nhiên, dễ tạo kiểu và phù hợp với mọi hoạt động.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Tròn", "Vuông", "Oval"],
+              "popular": false
+            },
+            "side-part-classic": {
+              "id": "side-part-classic",
+              "name": "Side Part Classic",
+              "description": "Kiểu tóc chia ngôi bên cổ điển, thanh lịch và phù hợp với mọi lứa tuổi.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Chữ nhật", "Vuông"],
+              "popular": true
+            },
+            "pompadour-modern": {
+              "id": "pompadour-modern",
+              "name": "Modern Pompadour",
+              "description": "Phiên bản hiện đại của kiểu pompadour cổ điển, tạo điểm nhấn ấn tượng.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Khó",
+              "maintenance": "Cao",
+              "faceShape": ["Oval", "Chữ nhật"],
+              "popular": false
+            },
+            "buzz-cut-styled": {
+              "id": "buzz-cut-styled",
+              "name": "Styled Buzz Cut",
+              "description": "Kiểu tóc buzz cut được tạo kiểu tinh tế, mạnh mẽ và dễ bảo dưỡng.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Vuông", "Oval", "Tròn"],
+              "popular": false
+            },
+            "messy-fringe": {
+              "id": "messy-fringe",
+              "name": "Messy Fringe",
+              "description": "Kiểu tóc với phần mái tự nhiên, phù hợp với phong cách trẻ trung, năng động.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Chữ nhật", "Tròn"],
+              "popular": true
+            },
+            "slicked-back": {
+              "id": "slicked-back",
+              "name": "Slicked Back",
+              "description": "Kiểu tóc chải ngược sang trọng, thể hiện phong cách lịch lãm và quyền lực.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Vuông", "Chữ nhật"],
+              "popular": false
+            }
+          }
+        },
+        "cat-fade": {
+          "id": "cat-fade",
+          "title": "Cắt Fade",
+          "subtitle": "Men's Skin Fade",
+          "price": "Từ $40 + tax",
+          "description": "Kiểu fade siêu gọn gàng, hiện đại với độ chính xác cao.",
+          "longDescription": "Bạn muốn có kiểu fade siêu gọn gàng, hiện đại? Các chuyên gia của chúng tôi sẽ thực hiện hoàn hảo từng lần. Hãy mong đợi một kiểu fade cực kỳ sạch sẽ, chính xác, giữ form lâu bền, giúp bạn tận dụng tối đa kiểu tóc của mình và giảm chi phí cho việc chỉnh sửa thường xuyên.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": ["Fade chính xác", "Kỹ thuật hiện đại", "Giữ form lâu bền", "Tư vấn bảo dưỡng"],
+          "benefits": ["Vẻ ngoài hiện đại", "Dễ bảo dưỡng", "Phù hợp mọi hoạt động", "Tạo điểm nhấn cá tính"],
+          "styles": {
+            "high-fade": {
+              "id": "high-fade",
+              "name": "High Fade",
+              "description": "Fade cao tạo sự tương phản mạnh mẽ, phù hợp với phong cách hiện đại và năng động.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Vuông", "Tròn"],
+              "popular": true
+            },
+            "mid-fade": {
+              "id": "mid-fade",
+              "name": "Mid Fade",
+              "description": "Fade trung bình cân bằng, phù hợp với đa số khuôn mặt và phong cách.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Chữ nhật", "Vuông"],
+              "popular": true
+            },
+            "low-fade": {
+              "id": "low-fade",
+              "name": "Low Fade",
+              "description": "Fade thấp tinh tế, tạo sự chuyển tiếp mềm mại và tự nhiên.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Tròn", "Chữ nhật"],
+              "popular": true
+            },
+            "skin-fade": {
+              "id": "skin-fade",
+              "name": "Skin Fade",
+              "description": "Fade xuống da tạo hiệu ứng mạnh mẽ và sắc nét nhất.",
+              "images": ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
+              "difficulty": "Khó",
+              "maintenance": "Cao",
+              "faceShape": ["Vuông", "Oval"],
+              "popular": false
+            },
+            "temple-fade": {
+              "id": "temple-fade",
+              "name": "Temple Fade",
+              "description": "Fade chỉ ở vùng thái dương, giữ lại độ dài ở các vùng khác.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Chữ nhật", "Tròn"],
+              "popular": false
+            },
+            "burst-fade": {
+              "id": "burst-fade",
+              "name": "Burst Fade",
+              "description": "Fade theo hình cung quanh tai, tạo hiệu ứng độc đáo và cá tính.",
+              "images": ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
+              "difficulty": "Khó",
+              "maintenance": "Cao",
+              "faceShape": ["Oval", "Vuông"],
+              "popular": false
+            }
+          }
+        },
+        "cao-rau-nong": {
+          "id": "cao-rau-nong",
+          "title": "Cạo Râu Nóng",
+          "subtitle": "Hot Towel Shave",
+          "price": "Từ $55 + tax",
+          "description": "Trải nghiệm cạo râu truyền thống với khăn nóng thư giãn.",
+          "longDescription": "Tự thưởng cho mình trải nghiệm cạo râu truyền thống đỉnh cao. Dịch vụ cạo râu khăn nóng truyền thống của chúng tôi mang lại cảm giác cạo sát, thoải mái và làm trẻ hóa làn da. Không chỉ là cạo râu; đó là một trị liệu mặt nhỏ thư giãn giúp thúc đẩy sức khỏe da, mang lại lợi ích nhân đôi chỉ với một mức giá.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": ["Khăn nóng thư giãn", "Cạo râu truyền thống", "Chăm sóc da mặt", "Massage thư giãn"],
+          "benefits": ["Cạo sát thoải mái", "Trẻ hóa làn da", "Thư giãn tối đa", "Tăng cường sức khỏe da"],
+          "styles": {
+            "classic-hot-towel": {
+              "id": "classic-hot-towel",
+              "name": "Classic Hot Towel Shave",
+              "description": "Cạo râu truyền thống với khăn nóng, mang lại cảm giác thư giãn tối đa và làn da mịn màng.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Vuông", "Chữ nhật", "Tròn"],
+              "popular": true
+            },
+            "premium-beard-shave": {
+              "id": "premium-beard-shave",
+              "name": "Premium Beard Shave",
+              "description": "Dịch vụ cạo râu cao cấp với sản phẩm chăm sóc da mặt đặc biệt và massage thư giãn.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Vuông", "Chữ nhật"],
+              "popular": true
+            },
+            "mustache-trim-shave": {
+              "id": "mustache-trim-shave",
+              "name": "Mustache Trim & Shave",
+              "description": "Tỉa và cạo ria mép chính xác, tạo đường nét sắc sảo và phong cách lịch lãm.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Chữ nhật", "Vuông"],
+              "popular": false
+            },
+            "full-face-shave": {
+              "id": "full-face-shave",
+              "name": "Full Face Shave",
+              "description": "Cạo toàn bộ khuôn mặt với kỹ thuật chuyên nghiệp, mang lại làn da mịn màng hoàn hảo.",
+              "images": ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Tròn", "Chữ nhật", "Vuông"],
+              "popular": true
+            },
+            "precision-shave": {
+              "id": "precision-shave",
+              "name": "Precision Shave",
+              "description": "Cạo râu chính xác với dao cạo thẳng truyền thống, dành cho những ai yêu thích sự hoàn hảo.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Khó",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Vuông"],
+              "popular": false
+            }
+          }
+        },
+        "tia-rau": {
+          "id": "tia-rau",
+          "title": "Tỉa Râu",
+          "subtitle": "Beard Trim",
+          "price": "Từ $16 + tax",
+          "description": "Tỉa và tạo dáng râu chuyên nghiệp, giữ bộ râu luôn hoàn hảo.",
+          "longDescription": "Giữ bộ râu của bạn luôn trong tình trạng tốt nhất với dịch vụ tỉa và tạo dáng chuyên nghiệp. Một bộ râu được tạo hình chuyên nghiệp không chỉ đẹp hơn mà còn mọc đều hơn, giúp bạn dễ dàng tự chăm sóc tại nhà và tiết kiệm thời gian.",
+          "images": ["/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
+          "features": ["Tạo dáng chuyên nghiệp", "Tư vấn phong cách", "Sản phẩm cao cấp", "Hướng dẫn chăm sóc"],
+          "benefits": ["Râu đẹp hơn", "Mọc đều hơn", "Dễ chăm sóc tại nhà", "Tiết kiệm thời gian"],
+          "styles": {
+            "full-beard-trim": {
+              "id": "full-beard-trim",
+              "name": "Full Beard Trim",
+              "description": "Tỉa toàn bộ bộ râu, tạo hình dáng cân đối và phù hợp với khuôn mặt của bạn.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Vuông", "Chữ nhật"],
+              "popular": true
+            },
+            "goatee-style": {
+              "id": "goatee-style",
+              "name": "Goatee Style",
+              "description": "Tạo kiểu râu dê hiện đại, phù hợp với phong cách trẻ trung và cá tính mạnh mẽ.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Tròn", "Oval", "Vuông"],
+              "popular": true
+            },
+            "mustache-trim": {
+              "id": "mustache-trim",
+              "name": "Mustache Trim",
+              "description": "Tỉa ria mép chuyên nghiệp, tạo đường nét sắc sảo và phong cách lịch lãm.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Chữ nhật", "Vuông"],
+              "popular": false
+            },
+            "beard-shaping": {
+              "id": "beard-shaping",
+              "name": "Beard Shaping",
+              "description": "Tạo hình râu theo phong cách cá nhân, làm nổi bật đường nét khuôn mặt.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Khó",
+              "maintenance": "Cao",
+              "faceShape": ["Oval", "Vuông", "Chữ nhật"],
+              "popular": true
+            },
+            "designer-beard": {
+              "id": "designer-beard",
+              "name": "Designer Beard",
+              "description": "Râu thiết kế cao cấp với các đường nét phức tạp, thể hiện phong cách độc đáo.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Khó",
+              "maintenance": "Cao",
+              "faceShape": ["Oval", "Vuông"],
+              "popular": false
+            },
+            "corporate-beard": {
+              "id": "corporate-beard",
+              "name": "Corporate Beard",
+              "description": "Râu phong cách công sở, gọn gàng và chuyên nghiệp, phù hợp với môi trường làm việc.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Chữ nhật", "Vuông"],
+              "popular": true
+            },
+            "vintage-beard": {
+              "id": "vintage-beard",
+              "name": "Vintage Beard",
+              "description": "Râu phong cách cổ điển, mang đậm chất nam tính và sự lịch lãm của quý ông.",
+              "images": ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Vuông", "Chữ nhật"],
+              "popular": false
+            }
+          }
+        }
+      }
+    },
+    "women-hair": {
+      "id": "dich-vu-toc-nu",
+      "title": "Dịch Vụ Tóc Nữ",
+      "subtitle": "Hair Services for Women",
+      "description": "Các quý cô, tại Winchair Beauty Spa, chúng tôi luôn nỗ lực biến mái tóc của bạn thành một tài sản đẹp, bền vững.",
+      "tagline": "Đẹp Tự Nhiên, Giá Trị Vượt Trội!",
+      "color": "pink",
+      "services": {
+        "cat-toc-nu": {
+          "id": "cat-toc-nu",
+          "title": "Cắt Tóc Nữ",
+          "subtitle": "Women's Haircut",
+          "price": "Từ $55 + tax",
+          "description": "Không chỉ là cắt tóc, đây là trải nghiệm tạo kiểu bespoke làm nổi bật vẻ đẹp tự nhiên và phù hợp với lối sống của bạn.",
+          "longDescription": "Không chỉ là một lần cắt tóc, đây là trải nghiệm tạo kiểu riêng biệt nhằm tôn vinh vẻ đẹp tự nhiên và phù hợp với lối sống của bạn. Bao gồm gội đầu sang trọng và tạo kiểu chuyên nghiệp. Các chuyên gia của chúng tôi tư vấn kỹ lưỡng để đảm bảo kiểu tóc của bạn hoàn hảo, nghĩa là bạn ít khi gặp 'ngày tóc xấu' và có được sự tự tin vô giá.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": [
+            "Tư vấn phong cách cá nhân",
+            "Gội đầu sang trọng",
+            "Tạo kiểu chuyên nghiệp",
+            "Chăm sóc tóc toàn diện"
+          ],
+          "benefits": [
+            "Nổi bật vẻ đẹp tự nhiên",
+            "Phù hợp lối sống",
+            "Tóc khỏe đẹp lâu dài",
+            "Tự tin mọi lúc"
+          ],
+          "styles": {
+            "layered-cut": {
+              "id": "layered-cut",
+              "name": "Layered Cut",
+              "description": "Kiểu tóc tầng nhẹ nhàng, tạo độ bồng bềnh và phù hợp với nhiều phong cách.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Tròn", "Chữ nhật"],
+              "popular": true
+            },
+            "bob-cut": {
+              "id": "bob-cut",
+              "name": "Bob Cut",
+              "description": "Kiểu tóc bob cổ điển, thanh lịch, dễ tạo kiểu và phù hợp với mọi lứa tuổi.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Vuông", "Chữ nhật"],
+              "popular": true
+            },
+            "pixie-cut": {
+              "id": "pixie-cut",
+              "name": "Pixie Cut",
+              "description": "Kiểu tóc ngắn năng động, cá tính, phù hợp với những ai yêu thích sự mạnh mẽ.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Tròn"],
+              "popular": false
+            }
+          }
+        },
+        "nhuom-toc": {
+          "id": "nhuom-toc",
+          "title": "Nhuộm Tóc",
+          "subtitle": "Colour",
+          "price": "Từ $65 + tax",
+          "description": "Bạn đã sẵn sàng cho một màu tóc mới rực rỡ hoặc làm tươi mới màu hiện có?",
+          "longDescription": "Bạn đã sẵn sàng cho một màu tóc mới rực rỡ hoặc làm tươi mới màu hiện có? Các stylist của chúng tôi sẽ giúp bạn chọn tông màu hoàn hảo. Nhuộm chuyên nghiệp của chúng tôi sử dụng sản phẩm chất lượng cao bảo vệ sức khỏe tóc, đảm bảo màu bền lâu và độ bóng rực rỡ giúp ngăn ngừa hư tổn tốn kém về sau.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": [
+            "Tư vấn tông màu",
+            "Sản phẩm chất lượng cao",
+            "Bảo vệ sức khỏe tóc",
+            "Màu bền lâu"
+          ],
+          "benefits": [
+            "Màu tóc rực rỡ",
+            "Tóc khỏe mạnh",
+            "Ngăn ngừa hư tổn",
+            "Độ bóng tự nhiên"
+          ],
+          "styles": {
+            "full-colour": {
+              "id": "full-colour",
+              "name": "Full Colour",
+              "description": "Nhuộm toàn bộ tóc với tông màu đồng đều, tạo vẻ ngoài mới mẻ và rực rỡ.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Tròn", "Vuông", "Chữ nhật"],
+              "popular": true
+            },
+            "root-touch-up": {
+              "id": "root-touch-up",
+              "name": "Root Touch-Up",
+              "description": "Làm mới màu tóc tại phần chân tóc, giữ màu đồng đều và tự nhiên.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Tròn", "Vuông", "Chữ nhật"],
+              "popular": true
+            },
+            "ombre": {
+              "id": "ombre",
+              "name": "Ombre",
+              "description": "Kiểu nhuộm chuyển màu từ đậm sang nhạt, tạo hiệu ứng hiện đại và tự nhiên.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Khó",
+              "maintenance": "Cao",
+              "faceShape": ["Oval", "Chữ nhật"],
+              "popular": false
+            }
+          }
+        },
+        "highlight": {
+          "id": "highlight",
+          "title": "Highlight",
+          "subtitle": "Highlight",
+          "price": "Từ $180 + tax",
+          "description": "Thêm chiều sâu và sự lấp lánh cho mái tóc bằng những sợi highlight tuyệt đẹp.",
+          "longDescription": "Thêm chiều sâu và sự lấp lánh cho mái tóc bằng những sợi highlight tuyệt đẹp, tùy chỉnh để tạo hiệu ứng tự nhiên như nắng hoặc một tuyên bố cá tính. Kỹ thuật chuyên nghiệp của chúng tôi đảm bảo sự pha trộn liền mạch và tóc mọc tự nhiên, mang lại vẻ đẹp bền lâu và ít cần phải chỉnh sửa thường xuyên.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": [
+            "Tùy chỉnh highlight",
+            "Kỹ thuật pha trộn liền mạch",
+            "Sản phẩm chất lượng cao",
+            "Hiệu ứng tự nhiên"
+          ],
+          "benefits": [
+            "Tóc lấp lánh, có chiều sâu",
+            "Vẻ đẹp bền lâu",
+            "Ít cần chỉnh sửa",
+            "Tôn lên cá tính"
+          ],
+          "styles": {
+            "natural-highlights": {
+              "id": "natural-highlights",
+              "name": "Natural Highlights",
+              "description": "Highlight nhẹ nhàng, tạo hiệu ứng tóc sáng tự nhiên như ánh nắng.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Tròn", "Chữ nhật"],
+              "popular": true
+            },
+            "bold-highlights": {
+              "id": "bold-highlights",
+              "name": "Bold Highlights",
+              "description": "Highlight đậm, tạo tuyên bố cá tính mạnh mẽ và nổi bật.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Khó",
+              "maintenance": "Cao",
+              "faceShape": ["Oval", "Vuông"],
+              "popular": false
+            }
+          }
+        },
+        "uon-toc": {
+          "id": "uon-toc",
+          "title": "Uốn Tóc",
+          "subtitle": "Perm",
+          "price": "Từ $85 + tax",
+          "description": "Thêm độ bồng bềnh, phồng và những lọn sóng hoặc xoăn đẹp mắt cho mái tóc.",
+          "longDescription": "Bạn muốn thêm độ bồng bềnh, phồng và những lọn sóng hoặc xoăn đẹp mắt cho mái tóc? Dịch vụ uốn chuyên nghiệp của chúng tôi sẽ thực hiện điều đó. Chúng tôi tạo ra kết cấu tóc hoàn hảo, mang lại kết quả nhất quán, đẹp mắt trong nhiều tháng, mang đến giá trị tuyệt vời cho khoản đầu tư của bạn.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": [
+            "Tạo lọn xoăn hoàn hảo",
+            "Kết quả bền lâu",
+            "Sản phẩm bảo vệ tóc",
+            "Tùy chỉnh theo yêu cầu"
+          ],
+          "benefits": [
+            "Tóc bồng bềnh, phồng",
+            "Kiểu tóc đẹp nhiều tháng",
+            "Dễ tạo kiểu",
+            "Tăng giá trị đầu tư"
+          ],
+          "styles": {
+            "beach-waves": {
+              "id": "beach-waves",
+              "name": "Beach Waves",
+              "description": "Lọn sóng nhẹ nhàng, tự nhiên, mang phong cách bãi biển thoải mái.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Tròn", "Chữ nhật"],
+              "popular": true
+            },
+            "tight-curls": {
+              "id": "tight-curls",
+              "name": "Tight Curls",
+              "description": "Lọn xoăn chặt, tạo vẻ ngoài năng động và cá tính mạnh mẽ.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Khó",
+              "maintenance": "Cao",
+              "faceShape": ["Oval", "Vuông"],
+              "popular": false
+            }
+          }
+        },
+        "duoi-toc": {
+          "id": "duoi-toc",
+          "title": "Duỗi Tóc",
+          "subtitle": "Relaxer",
+          "price": "Từ $160 + tax",
+          "description": "Mơ ước có mái tóc suôn mượt, óng ả và dễ quản lý?",
+          "longDescription": "Mơ ước có mái tóc suôn mượt, óng ả và dễ quản lý? Các liệu trình duỗi tóc chuyên nghiệp của chúng tôi giúp giảm xoăn cứng và tăng độ bóng. Được thực hiện cẩn thận để giảm thiểu hư tổn và tối đa độ mượt mà, giúp việc tạo kiểu hàng ngày của bạn nhanh hơn và dễ dàng hơn rất nhiều – một cách tiết kiệm thời gian đáng kể!",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": [
+            "Giảm xoăn cứng",
+            "Tăng độ bóng",
+            "Bảo vệ tóc",
+            "Tạo kiểu dễ dàng"
+          ],
+          "benefits": [
+            "Tóc suôn mượt, óng ả",
+            "Dễ quản lý",
+            "Tiết kiệm thời gian tạo kiểu",
+            "Giảm hư tổn"
+          ],
+          "styles": {
+            "classic-straight": {
+              "id": "classic-straight",
+              "name": "Classic Straight",
+              "description": "Tóc duỗi thẳng mượt mà, mang lại vẻ ngoài thanh lịch và chuyên nghiệp.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Chữ nhật", "Vuông"],
+              "popular": true
+            },
+            "sleek-smooth": {
+              "id": "sleek-smooth",
+              "name": "Sleek Smooth",
+              "description": "Tóc duỗi mượt tối đa, tạo hiệu ứng bóng gương hoàn hảo.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Khó",
+              "maintenance": "Cao",
+              "faceShape": ["Oval", "Tròn"],
+              "popular": false
+            }
+          }
+        },
+        "bui-toc": {
+          "id": "bui-toc",
+          "title": "Búi Tóc",
+          "subtitle": "Updo",
+          "price": "$120 + tax",
+          "description": "Hoàn hảo cho các dịp đặc biệt, kiểu búi tóc được tạo kiểu tinh xảo.",
+          "longDescription": "Hoàn hảo cho các dịp đặc biệt, kiểu búi tóc của chúng tôi được tạo kiểu tinh xảo để mang lại vẻ ngoài thanh lịch và đáng nhớ. Với kiểu búi tóc chuyên nghiệp, bạn được đảm bảo sự hoàn hảo và giữ nếp suốt cả ngày/đêm, giúp bạn tận hưởng khoảnh khắc mà không phải lo lắng về tóc.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": [
+            "Tạo kiểu tinh xảo",
+            "Giữ nếp lâu dài",
+            "Tùy chỉnh theo sự kiện",
+            "Sản phẩm giữ nếp cao cấp"
+          ],
+          "benefits": [
+            "Vẻ ngoài thanh lịch",
+            "Giữ nếp cả ngày",
+            "Không lo lắng về tóc",
+            "Hoàn hảo cho dịp đặc biệt"
+          ],
+          "styles": {
+            "classic-updo": {
+              "id": "classic-updo",
+              "name": "Classic Updo",
+              "description": "Kiểu búi cổ điển, thanh lịch, phù hợp cho tiệc cưới hoặc sự kiện trang trọng.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Chữ nhật", "Vuông"],
+              "popular": true
+            },
+            "messy-bun": {
+              "id": "messy-bun",
+              "name": "Messy Bun",
+              "description": "Kiểu búi lỏng tự nhiên, mang phong cách thoải mái nhưng vẫn cuốn hút.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Tròn"],
+              "popular": true
+            }
+          }
+        }
+      }
+    },
+    "kids-hair": {
+      "id": "dich-vu-toc-tre-em",
+      "title": "Dịch Vụ Tóc Trẻ Em",
+      "subtitle": "Hair Services for Kids",
+      "description": "Tại Winchair Beauty Spa, chúng tôi mang đến một môi trường vui vẻ và thoải mái cho những khách hàng nhỏ tuổi nhất.",
+      "tagline": "Tóc Xinh, Ba Mẹ Hài Lòng!",
+      "color": "purple",
+      "services": {
+        "cat-toc-be-trai": {
+          "id": "cat-toc-be-trai",
+          "title": "Cắt Tóc Bé Trai",
+          "subtitle": "Kid's Haircut",
+          "price": "Từ $25",
+          "description": "Trải nghiệm cắt tóc thân thiện, không rắc rối cho các bé, đảm bảo các em rời đi với kiểu tóc phong cách và thoải mái.",
+          "longDescription": "Trải nghiệm cắt tóc thân thiện, không rắc rối cho các bé, đảm bảo các bé sẽ rời đi với một kiểu tóc sành điệu và thoải mái. Các stylist kiên nhẫn của chúng tôi đảm bảo một trải nghiệm tích cực, giúp những lần cắt tóc sau này không căng thẳng cho cả bé và ba mẹ.",
+          "images": ["/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
+          "features": ["Môi trường thân thiện", "Stylist chuyên trẻ em", "Không gây đau", "Kiểu tóc phù hợp tuổi"],
+          "benefits": ["Trẻ em thoải mái", "Cha mẹ yên tâm", "Kiểu tóc đẹp", "Trải nghiệm vui vẻ"],
+          "styles": {
+            "classic-kid-cut": {
+              "id": "classic-kid-cut",
+              "name": "Classic Kid Cut",
+              "description": "Kiểu tóc gọn gàng, phù hợp với lứa tuổi và dễ bảo dưỡng.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Tròn", "Vuông"],
+              "popular": true
+            },
+            "spiky-cut": {
+              "id": "spiky-cut",
+              "name": "Spiky Cut",
+              "description": "Kiểu tóc năng động với phần trên dựng đứng, phù hợp cho bé trai cá tính.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Tròn"],
+              "popular": false
+            }
+          }
+        },
+        "cat-toc-be-gai": {
+          "id": "cat-toc-be-gai",
+          "title": "Cắt Tóc Bé Gái",
+          "subtitle": "Girl's Haircut",
+          "price": "Từ $35",
+          "description": "Kiểu tóc thời trang và phù hợp lứa tuổi cho các bé gái, được tạo kiểu theo sở thích và loại tóc của bé.",
+          "longDescription": "Kiểu tóc thời trang và phù hợp lứa tuổi cho các bé gái, được tạo kiểu theo sở thích và loại tóc của bé. Chúng tôi đảm bảo kiểu tóc không chỉ dễ thương mà còn dễ dàng cho ba mẹ quản lý, mang đến giải pháp làm đẹp thiết thực cho các gia đình Canada bận rộn.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": [
+            "Tùy chỉnh theo sở thích",
+            "Phù hợp lứa tuổi",
+            "Dễ quản lý",
+            "Môi trường thân thiện"
+          ],
+          "benefits": [
+            "Kiểu tóc dễ thương",
+            "Dễ quản lý cho ba mẹ",
+            "Trải nghiệm vui vẻ",
+            "Tự tin cho bé"
+          ],
+          "styles": {
+            "bob-kid-cut": {
+              "id": "bob-kid-cut",
+              "name": "Bob Kid Cut",
+              "description": "Kiểu tóc bob ngắn dễ thương, dễ chăm sóc và phù hợp với bé gái.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Tròn"],
+              "popular": true
+            },
+            "layered-kid-cut": {
+              "id": "layered-kid-cut",
+              "name": "Layered Kid Cut",
+              "description": "Kiểu tóc tầng nhẹ, tạo độ bồng bềnh và dễ tạo kiểu cho bé gái.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Chữ nhật"],
+              "popular": false
+            }
+          }
+        }
+      }
+    },
+    "hair-treatments": {
+      "id": "dieu-tri-va-tao-kieu-toc",
+      "title": "Điều Trị & Tạo Kiểu Tóc",
+      "subtitle": "Hair Treatments & Styling",
+      "description": "Đầu tư vào sức khỏe và sức sống của mái tóc bạn với các liệu trình chuyên biệt tại Winchair Beauty Spa.",
+      "tagline": "Tóc Khỏe Đẹp, Vẻ Đẹp Rạng Ngời Tự Nhiên!",
+      "color": "amber",
+      "services": {
+        "goi-dau": {
+          "id": "goi-dau",
+          "title": "Gội Đầu",
+          "subtitle": "Wash",
+          "price": "Từ $20 + tax",
+          "description": "Gội đầu sảng khoái sau đó sấy khô chuyên nghiệp bằng máy sấy khí, giúp tóc bạn sạch sẽ và nhẹ nhàng.",
+          "longDescription": "Gội đầu sảng khoái sau đó sấy khô chuyên nghiệp bằng máy sấy khí, giúp tóc bạn sạch sẽ và nhẹ nhàng. Đôi khi, tất cả những gì bạn cần là một lần gội đầu chuyên nghiệp để làm mới diện mạo tức thì và tiết kiệm thời gian trong một ngày bận rộn.",
+          "images": ["/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
+          "features": ["Gội đầu sảng khoái", "Sấy khô chuyên nghiệp", "Sản phẩm cao cấp", "Massage da đầu"],
+          "benefits": ["Tóc sạch sẽ", "Cảm giác nhẹ nhàng", "Thư giãn", "Da đầu khỏe mạnh"],
+          "styles": {}
+        },
+        "goi-tao-kieu": {
+          "id": "goi-tao-kieu",
+          "title": "Gội & Tạo Kiểu",
+          "subtitle": "Wash & Style",
+          "price": "Giá được tư vấn khi đặt lịch",
+          "description": "Tận hưởng việc gội đầu sang trọng sau đó là tạo kiểu tóc đẹp bằng lược hoặc máy uốn/duỗi.",
+          "longDescription": "Tận hưởng việc gội đầu sang trọng sau đó là tạo kiểu tóc đẹp bằng lược hoặc máy uốn/duỗi, hoàn hảo cho một vẻ ngoài hoàn thiện. Hãy để các chuyên gia của chúng tôi tạo cho bạn vẻ 'vừa bước ra từ salon' một cách dễ dàng, tiết kiệm công sức và thời gian tự tạo kiểu tại nhà.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": [
+            "Gội đầu sang trọng",
+            "Tạo kiểu bằng lược/máy",
+            "Sản phẩm cao cấp",
+            "Tư vấn tạo kiểu"
+          ],
+          "benefits": [
+            "Vẻ ngoài hoàn thiện",
+            "Tiết kiệm thời gian",
+            "Tóc đẹp như salon",
+            "Thư giãn tối đa"
+          ],
+          "styles": {
+            "sleek-blowout": {
+              "id": "sleek-blowout",
+              "name": "Sleek Blowout",
+              "description": "Tóc sấy mượt mà, óng ả, tạo vẻ ngoài thanh lịch và chuyên nghiệp.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Chữ nhật", "Vuông"],
+              "popular": true
+            },
+            "voluminous-curls": {
+              "id": "voluminous-curls",
+              "name": "Voluminous Curls",
+              "description": "Tóc uốn lọn lớn, bồng bềnh, mang lại vẻ ngoài quyến rũ và nổi bật.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Tròn"],
+              "popular": true
+            }
+          }
+        },
+        "lieu-trinh-duong-toc": {
+          "id": "lieu-trinh-duong-toc",
+          "title": "Liệu Trình Dưỡng Tóc",
+          "subtitle": "Nourishing Shampoo Therapy",
+          "price": "$90 + tax",
+          "description": "Nuôi dưỡng sâu và phục hồi sức sống cho mái tóc bạn với liệu trình gội đầu dưỡng chuyên biệt.",
+          "longDescription": "Nuôi dưỡng sâu và phục hồi sức sống cho mái tóc bạn với liệu trình gội đầu dưỡng chuyên biệt của chúng tôi, phục hồi sức khỏe và độ bóng. Liệu trình chuyên sâu này sửa chữa hư tổn, tăng thêm độ bóng đáng kinh ngạc và cải thiện khả năng quản lý tóc, cuối cùng kéo dài sức khỏe tóc và giảm nhu cầu ủ tóc sâu thường xuyên tại nhà.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": [
+            "Nuôi dưỡng sâu",
+            "Phục hồi hư tổn",
+            "Tăng độ bóng",
+            "Sản phẩm chuyên biệt"
+          ],
+          "benefits": [
+            "Tóc khỏe mạnh",
+            "Độ bóng rực rỡ",
+            "Dễ quản lý",
+            "Giảm nhu cầu chăm sóc tại nhà"
+          ],
+          "styles": {}
+        },
+        "massage-da-dau": {
+          "id": "massage-da-dau",
+          "title": "Massage Da Đầu",
+          "subtitle": "Scalp Massage",
+          "price": "$85 + tax",
+          "description": "Đắm mình trong liệu trình massage da đầu thư giãn sâu và trị liệu.",
+          "longDescription": "Đắm mình trong liệu trình massage da đầu thư giãn sâu và trị liệu. Đây không chỉ là sự nuông chiều bản thân; nó còn tích cực thúc đẩy lưu thông máu đến da đầu, khuyến khích tóc mọc khỏe mạnh hơn, và mang lại giảm căng thẳng tuyệt vời. Đây là một khoản đầu tư vào cả sức sống của tóc và sức khỏe tổng thể của bạn.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": [
+            "Massage thư giãn",
+            "Thúc đẩy lưu thông máu",
+            "Sản phẩm dưỡng da đầu",
+            "Giảm căng thẳng"
+          ],
+          "benefits": [
+            "Tóc mọc khỏe mạnh",
+            "Thư giãn sâu",
+            "Cải thiện sức khỏe da đầu",
+            "Tăng cường sức khỏe tổng thể"
+          ],
+          "styles": {}
+        }
+      }
+    },
+    "esthetic-services": {
+      "id": "dich-vu-tham-my",
+      "title": "Dịch Vụ Thẩm Mỹ",
+      "subtitle": "Esthetic Services",
+      "description": "Các dịch vụ làm đẹp tại Winchair Beauty Spa được thiết kế để nâng cao vẻ rạng rỡ tự nhiên và thúc đẩy sức khỏe tổng thể, tất cả đều mang lại giá trị đặc biệt.",
+      "tagline": "Rạng Rỡ, Thư Giãn & Kết Quả Thực Tế!",
+      "color": "emerald",
+      "services": {
+        "cham-soc-da-mat": {
+          "id": "cham-soc-da-mat",
+          "title": "Chăm Sóc Da Mặt",
+          "subtitle": "Facial (1 Hour)",
+          "price": "Từ $90 + tax",
+          "description": "Trẻ hóa làn da của bạn với các liệu trình chăm sóc da mặt tùy chỉnh của chúng tôi.",
+          "longDescription": "Trẻ hóa làn da của bạn với các liệu trình chăm sóc da mặt tùy chỉnh của chúng tôi – được thiết kế để làm sạch, nuôi dưỡng và phục hồi làn da. Chuyên gia của chúng tôi phân tích da để đảm bảo bạn nhận được liệu trình chính xác cho loại da của mình, dẫn đến kết quả rõ rệt, lâu dài giúp cải thiện sức khỏe da về lâu dài và giúp bạn tránh lãng phí tiền vào việc thử nghiệm các sản phẩm không phù hợp.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": ["Liệu pháp tùy chỉnh", "Làm sạch sâu", "Nuôi dưỡng da", "Phục hồi làn da"],
+          "benefits": ["Da trẻ hóa", "Làn da sáng mịn", "Cải thiện kết cấu da", "Thư giãn tối đa"],
+          "styles": {
+            "hydrating-facial": {
+              "id": "hydrating-facial",
+              "name": "Hydrating Facial",
+              "description": "Chăm sóc da mặt cấp ẩm sâu, lý tưởng cho da khô hoặc mất nước.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Dễ",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Tròn", "Vuông", "Chữ nhật"],
+              "popular": true
+            },
+            "anti-aging-facial": {
+              "id": "anti-aging-facial",
+              "name": "Anti-Aging Facial",
+              "description": "Liệu pháp chăm sóc da mặt chống lão hóa, giảm nếp nhăn và tăng độ săn chắc.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Chữ nhật", "Vuông"],
+              "popular": true
+            }
+          }
+        },
+        "tay-long": {
+          "id": "tay-long",
+          "title": "Tẩy Lông",
+          "subtitle": "Waxing",
+          "price": "Từ $16 + tax",
+          "description": "Đạt được làn da mềm mại, mịn màng với dịch vụ tẩy lông chuyên nghiệp.",
+          "longDescription": "Đạt được làn da mềm mại, mịn màng với dịch vụ tẩy lông chuyên nghiệp của chúng tôi cho nhiều vùng khác nhau. Các chuyên viên thẩm mỹ lành nghề của chúng tôi đảm bảo giảm thiểu khó chịu và kết quả bền lâu hơn so với cạo, nghĩa là ít lần tẩy lông hơn và có thêm thời gian cho bạn để tận hưởng cuộc sống.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": [
+            "Tẩy lông chuyên nghiệp",
+            "Giảm thiểu khó chịu",
+            "Sản phẩm an toàn",
+            "Kết quả lâu dài"
+          ],
+          "benefits": [
+            "Làn da mịn màng",
+            "Kết quả bền lâu",
+            "Tiết kiệm thời gian",
+            "Tự tin với làn da"
+          ],
+          "styles": {
+            "bikini-wax": {
+              "id": "bikini-wax",
+              "name": "Bikini Wax",
+              "description": "Tẩy lông vùng bikini, mang lại vẻ ngoài gọn gàng và tự tin.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": [],
+              "popular": true
+            },
+            "full-leg-wax": {
+              "id": "full-leg-wax",
+              "name": "Full Leg Wax",
+              "description": "Tẩy lông toàn bộ chân, mang lại làn da mịn màng và sạch sẽ.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": [],
+              "popular": true
+            }
+          }
+        },
+        "noi-mi": {
+          "id": "noi-mi",
+          "title": "Nối Mi",
+          "subtitle": "Eyelash Extension",
+          "price": "Từ $85 + tax",
+          "description": "Nâng cao vẻ đẹp tự nhiên của bạn với hàng mi dài hơn, dày hơn.",
+          "longDescription": "Nâng cao vẻ đẹp tự nhiên của bạn với hàng mi dài hơn, dày hơn, được nối một cách chuyên nghiệp để có vẻ ngoài tuyệt đẹp. Hãy tưởng tượng thức dậy mỗi sáng với hàng mi đẹp tự nhiên! Nối mi loại bỏ nhu cầu sử dụng mascara hàng ngày, tiết kiệm thời gian quý báu trong thói quen buổi sáng của bạn và mang lại vẻ quyến rũ không cần cố gắng.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": [
+            "Nối mi chuyên nghiệp",
+            "Hàng mi dài, dày",
+            "Sản phẩm an toàn",
+            "Tùy chỉnh theo yêu cầu"
+          ],
+          "benefits": [
+            "Vẻ ngoài quyến rũ",
+            "Tiết kiệm thời gian trang điểm",
+            "Hàng mi tự nhiên",
+            "Tự tin mỗi ngày"
+          ],
+          "styles": {
+            "classic-lash": {
+              "id": "classic-lash",
+              "name": "Classic Lash",
+              "description": "Nối mi tự nhiên, mỗi sợi mi thật gắn một sợi mi giả, tạo vẻ ngoài thanh lịch.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Tròn", "Chữ nhật"],
+              "popular": true
+            },
+            "volume-lash": {
+              "id": "volume-lash",
+              "name": "Volume Lash",
+              "description": "Nối mi tạo độ dày, mỗi sợi mi thật gắn nhiều sợi mi giả, mang lại vẻ ngoài ấn tượng.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Khó",
+              "maintenance": "Cao",
+              "faceShape": ["Oval", "Vuông"],
+              "popular": false
+            }
+          }
+        },
+        "phun-xam-tham-my": {
+          "id": "phun-xam-tham-my",
+          "title": "Phun Xăm Thẩm Mỹ Microblading",
+          "subtitle": "Microblading PMU",
+          "price": "$450 + tax (bao gồm 1 lần dặm lại)",
+          "description": "Đạt được cặp chân mày được định hình và rõ nét hoàn hảo với dịch vụ microblading bán vĩnh viễn.",
+          "longDescription": "Đạt được cặp chân mày được định hình và rõ nét hoàn hảo với dịch vụ microblading bán vĩnh viễn của chúng tôi, bao gồm một lần dặm lại miễn phí. Hãy nghĩ đến việc thức dậy với cặp chân mày hoàn hảo mỗi ngày! Dịch vụ này giúp bạn tiết kiệm vô số giờ trang điểm chân mày hàng ngày và cung cấp một giải pháp lâu dài, tự nhiên cho hàng chân mày không tì vết.",
+          "images": [
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600",
+            "/placeholder.svg?height=400&width=600"
+          ],
+          "features": [
+            "Microblading bán vĩnh viễn",
+            "Tùy chỉnh chân mày",
+            "Bao gồm 1 lần dặm lại",
+            "Kỹ thuật chuyên nghiệp"
+          ],
+          "benefits": [
+            "Chân mày hoàn hảo",
+            "Tiết kiệm thời gian trang điểm",
+            "Vẻ ngoài tự nhiên",
+            "Giải pháp lâu dài"
+          ],
+          "styles": {
+            "natural-microblading": {
+              "id": "natural-microblading",
+              "name": "Natural Microblading",
+              "description": "Chân mày tự nhiên, được định hình nhẹ nhàng, phù hợp với mọi khuôn mặt.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Trung bình",
+              "maintenance": "Thấp",
+              "faceShape": ["Oval", "Tròn", "Vuông", "Chữ nhật"],
+              "popular": true
+            },
+            "bold-microblading": {
+              "id": "bold-microblading",
+              "name": "Bold Microblading",
+              "description": "Chân mày đậm, rõ nét, tạo tuyên bố cá tính mạnh mẽ.",
+              "images": [
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400",
+                "/placeholder.svg?height=600&width=400"
+              ],
+              "difficulty": "Khó",
+              "maintenance": "Trung bình",
+              "faceShape": ["Oval", "Vuông"],
+              "popular": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

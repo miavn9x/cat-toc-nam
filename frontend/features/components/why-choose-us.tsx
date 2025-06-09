@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
 
   return (
     <section className="py-20 md:py-24 lg:py-32 bg-stone-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 md:mb-20 lg:mb-24">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-medium text-slate-800 mb-6">
             Tại Sao Chọn{" "}
