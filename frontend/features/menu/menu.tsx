@@ -57,10 +57,16 @@ const Menu = () => {
       return;
     }
 
-    // If item has sub-items, toggle the submenu
+    // If item has sub-items, toggle the submenu (no navigation)
     if (item.subItems) {
       toggleSubMenu(index, subIndex);
     }
+  };
+
+  // Handle link click for mobile menu items with both link and sub-items
+  const handleLinkClick = (link: string) => {
+    router.push(link);
+    setIsOpen(false);
   };
 
   const menuItems: MenuItem[] = [
@@ -77,33 +83,37 @@ const Menu = () => {
       subItems: [
         {
           name: "Dịch Vụ Tóc Nam",
+          link: "/dich-vu-toc-nam",
           subItems: [
-            { name: "Cắt Tóc Nam", link: "/men-haircut" },
-            { name: "Cắt Fade", link: "/fade" },
-            { name: "Cạo Râu Nóng", link: "/hot-shave" },
-            { name: "Tỉa Râu", link: "/beard-trim" },
+            { name: "Cắt Tóc Nam", link: "/dich-vu-toc-nam/cat-toc-nam" },
+            { name: "Cắt Fade", link: "/dich-vu-toc-nam/cat-fade" },
+            { name: "Cạo Râu Nóng", link: "/dich-vu-toc-nam/cao-rau-nong" },
+            { name: "Tỉa Râu", link: "/dich-vu-toc-nam/tia-rau" },
           ],
         },
         {
           name: "Dịch Vụ Tóc Nữ",
+          link: "/dich-vu-toc-nu",
           subItems: [
-            { name: "Cắt Tóc Nữ", link: "/women-haircut" },
-            { name: "Nhuộm Tóc", link: "/hair-dye" },
-            { name: "Highlight", link: "/highlight" },
-            { name: "Uốn Tóc", link: "/curl" },
-            { name: "Duỗi Tóc", link: "/straighten" },
-            { name: "Búi Tóc", link: "/updo" },
+            { name: "Cắt Tóc Nữ", link: "/dich-vu-toc-nu/cat-toc-nu" },
+            { name: "Nhuộm Tóc", link: "/dich-vu-toc-nu/nhuom-toc" },
+            { name: "Highlight", link: "/dich-vu-toc-nu/highlight" },
+            { name: "Uốn Tóc", link: "/dich-vu-toc-nu/uen-toc" },
+            { name: "Duỗi Tóc", link: "/dich-vu-toc-nu/duoi-toc" },
+            { name: "Búi Tóc", link: "/dich-vu-toc-nu/bui-toc" },
           ],
         },
         {
           name: "Dịch Vụ Tóc Cho Bé",
+          link: "/dich-vu-toc-cho-be",
           subItems: [
-            { name: "Cắt Tóc Bé Trai", link: "/boys-haircut" },
-            { name: "Cắt Tóc Bé Gái", link: "/girls-haircut" },
+            { name: "Cắt Tóc Bé Trai", link: "/dich-vu-toc-cho-be/cat-toc-be-trai" },
+            { name: "Cắt Tóc Bé Gái", link: "/dich-vu-toc-cho-be/cat-toc-be-gai" },
           ],
         },
         {
           name: "Chăm Sóc & Tạo Kiểu Tóc",
+          link: "/hair-care-styling",
           subItems: [
             { name: "Gội Đầu", link: "/shampoo" },
             { name: "Gội & Tạo Kiểu", link: "/shampoo-style" },
@@ -113,6 +123,7 @@ const Menu = () => {
         },
         {
           name: "Dịch Vụ Chăm Sóc Sắc Đẹp",
+          link: "/beauty-services",
           subItems: [
             { name: "Chăm Sóc Da Mặt", link: "/facial" },
             { name: "Tẩy Lông (Waxing)", link: "/waxing" },
@@ -344,30 +355,32 @@ const Menu = () => {
                   <span>{item.name}</span>
                 </Link>
               ) : (
-                // Item with submenu or no link
-                <div
-                  className="flex justify-between items-center w-full px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 cursor-pointer transition-colors"
-                  onClick={() => handleMobileNavigation(item, index)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      handleMobileNavigation(item, index);
-                    }
-                  }}
-                  tabIndex={0}
-                  role="button"
-                  aria-expanded={openSubMenus[index.toString()]}
-                  aria-label={
-                    item.subItems ? `Toggle ${item.name} submenu` : item.name
-                  }
-                >
-                  <span>{item.name}</span>
+                // Item with submenu
+                <div className="flex justify-between items-center w-full px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 transition-colors">
+                  {item.link ? (
+                    <Link
+                      href={item.link}
+                      className="flex-grow"
+                      onClick={() => item.link && handleLinkClick(item.link)}
+                      title={item.name}
+                    >
+                      <span>{item.name}</span>
+                    </Link>
+                  ) : (
+                    <span className="flex-grow">{item.name}</span>
+                  )}
                   {item.subItems && (
-                    <FaChevronDown
-                      className={`h-4 w-4 text-amber-200 ml-1 transition-transform ${
-                        openSubMenus[index.toString()] ? "rotate-180" : ""
-                      }`}
-                    />
+                    <button
+                      className="p-2"
+                      onClick={() => handleMobileNavigation(item, index)}
+                      aria-label={`Toggle ${item.name} submenu`}
+                    >
+                      <FaChevronDown
+                        className={`h-4 w-4 text-amber-200 transition-transform ${
+                          openSubMenus[index.toString()] ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
                   )}
                 </div>
               )}
@@ -388,36 +401,38 @@ const Menu = () => {
                           <span>{subItem.name}</span>
                         </Link>
                       ) : (
-                        // Item with sub-submenu or no link
-                        <div
-                          className="flex justify-between items-center w-full px-3 py-2 rounded-md text-sm hover:bg-gray-600 cursor-pointer transition-colors"
-                          onClick={() =>
-                            handleMobileNavigation(subItem, index, subIndex)
-                          }
-                          onKeyDown={(e) => {
-                            if (e.key === "Enter" || e.key === " ") {
-                              e.preventDefault();
-                              handleMobileNavigation(subItem, index, subIndex);
-                            }
-                          }}
-                          tabIndex={0}
-                          role="button"
-                          aria-expanded={openSubMenus[`${index}-${subIndex}`]}
-                          aria-label={
-                            subItem.subItems
-                              ? `Toggle ${subItem.name} submenu`
-                              : subItem.name
-                          }
-                        >
-                          <span>{subItem.name}</span>
+                        // Item with sub-submenu
+                        <div className="flex justify-between items-center w-full px-3 py-2 rounded-md text-sm hover:bg-gray-600 transition-colors">
+                          {subItem.link ? (
+                            <Link
+                              href={subItem.link}
+                              className="flex-grow"
+                              onClick={() =>
+                                subItem.link && handleLinkClick(subItem.link)
+                              }
+                              title={subItem.name}
+                            >
+                              <span>{subItem.name}</span>
+                            </Link>
+                          ) : (
+                            <span className="flex-grow">{subItem.name}</span>
+                          )}
                           {subItem.subItems && (
-                            <FaChevronDown
-                              className={`h-4 w-4 text-amber-200 ml-1 transition-transform ${
-                                openSubMenus[`${index}-${subIndex}`]
-                                  ? "rotate-180"
-                                  : ""
-                              }`}
-                            />
+                            <button
+                              className="p-2"
+                              onClick={() =>
+                                handleMobileNavigation(subItem, index, subIndex)
+                              }
+                              aria-label={`Toggle ${subItem.name} submenu`}
+                            >
+                              <FaChevronDown
+                                className={`h-4 w-4 text-amber-200 transition-transform ${
+                                  openSubMenus[`${index}-${subIndex}`]
+                                    ? "rotate-180"
+                                    : ""
+                                }`}
+                              />
+                            </button>
                           )}
                         </div>
                       )}
