@@ -13,20 +13,20 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
 
   app.enableCors({
-    origin: 'http://localhost:3000',
+    origin: 'http://localhost:3000', // Có thể thay bằng domain thực tế nếu deploy
     methods: 'GET,POST',
     credentials: true,
   });
 
-  const frontendBuildPath = join(__dirname, '../../frontend/build');
-  app.use(express.static(frontendBuildPath));
+  // Đường dẫn đến frontend/out sau khi export
+  const frontendBuildPath = join(__dirname, '../../frontend/out');
+  app.use(express.static(frontendBuildPath)); // Phục vụ static trước
 
-  // Dùng express app gốc để định nghĩa route fallback
   const expressApp = app.getHttpAdapter().getInstance();
   expressApp.get(/.*/, (req: Request, res: Response) => {
     res.sendFile(join(frontendBuildPath, 'index.html'));
   });
-
+  
   app.useGlobalPipes(new ValidationPipe());
 
   const port = configService.get<number>('PORT') || 4000;
