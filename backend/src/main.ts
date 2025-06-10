@@ -2,8 +2,8 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-
 import { NestExpressApplication } from '@nestjs/platform-express';
+
 import * as express from 'express';
 import { join } from 'path';
 import { Request, Response } from 'express';
@@ -13,20 +13,24 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
 
   app.enableCors({
-    origin: 'http://localhost:3000', // Có thể thay bằng domain thực tế nếu deploy
+    origin: 'http://localhost:3000',
     methods: 'GET,POST',
     credentials: true,
   });
 
-  // Đường dẫn đến frontend/out sau khi export
+  // Phục vụ static từ thư mục export của Next.js
   const frontendBuildPath = join(__dirname, '../../frontend/out');
-  app.use(express.static(frontendBuildPath)); // Phục vụ static trước
+  app.use(express.static(frontendBuildPath));
 
-  const expressApp = app.getHttpAdapter().getInstance();
-  expressApp.get(/.*/, (req: Request, res: Response) => {
-    res.sendFile(join(frontendBuildPath, 'index.html'));
+  // ✅ Fallback xử lý tất cả route khác (SPA)
+  app.use((req: Request, res: Response, next) => {
+    if (req.method === 'GET' && !req.path.startsWith('/api')) {
+      res.sendFile(join(frontendBuildPath, 'index.html'));
+    } else {
+      next();
+    }
   });
-  
+
   app.useGlobalPipes(new ValidationPipe());
 
   const port = configService.get<number>('PORT') || 4000;
