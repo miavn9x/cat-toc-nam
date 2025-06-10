@@ -21,7 +21,9 @@ async function bootstrap() {
   const frontendBuildPath = join(__dirname, '../../frontend/build');
   app.use(express.static(frontendBuildPath));
 
-  app.use('*', (req: Request, res: Response) => {
+  // Dùng express app gốc để định nghĩa route fallback
+  const expressApp = app.getHttpAdapter().getInstance();
+  expressApp.get(/.*/, (req: Request, res: Response) => {
     res.sendFile(join(frontendBuildPath, 'index.html'));
   });
 
