@@ -4,10 +4,8 @@ import React, { useState, FormEvent, ChangeEvent } from "react";
 
 // Định nghĩa API_URL từ biến môi trường
 const API_URL =
-  process.env.NEXT_PUBLIC_API_URL ||
-  (process.env.NODE_ENV === "development"
-    ? "http://localhost:4000"
-    : "https://api.yourdomain.com");
+  process.env.NEXT_PUBLIC_API_URL || "https://winchair-beauty-spa.onrender.com";
+
 
 // Define service categories with an index signature
 const serviceCategories: { [key: string]: { name: string; price: string }[] } =
