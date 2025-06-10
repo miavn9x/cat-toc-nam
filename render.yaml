@@ -5,7 +5,7 @@ services:
     buildCommand: |
       cd frontend && npm install && npm run build
       cd ../backend && npm install && npm run build
-    startCommand: node dist/main.js
+    startCommand: cd backend && npm run start:prod
     envVars:
       - key: NODE_ENV
         value: production
