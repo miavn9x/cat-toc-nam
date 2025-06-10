@@ -3,7 +3,7 @@
 import React, { useState, FormEvent, ChangeEvent } from "react";
 
 // Định nghĩa API_URL từ biến môi trường
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.yourdomain.com";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 // Define service categories with an index signature
 const serviceCategories: { [key: string]: { name: string; price: string }[] } =
@@ -145,7 +145,7 @@ const BookingPage = () => {
   const [formData, setFormData] = useState({
     category: "",
     service: "",
-    serviceOption: "",
+    serviceOption: "N/A", // Giá trị mặc định để đảm bảo không rỗng
     name: "",
     email: "",
     phone: "",
@@ -158,21 +158,73 @@ const BookingPage = () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
+ const handleChange = (
+  e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+) => {
+  const { name, value } = e.target;
+
+  // Reset service và serviceOption khi category thay đổi
+  if (name === "category") {
+    setFormData((prevState) => ({
+      ...prevState,
+      category: value,
+      service: "",
+      serviceOption: "N/A",
+    }));
+    setError(null);
+  }
+  // Reset serviceOption khi service thay đổi
+  else if (name === "service") {
+    setFormData((prevState) => ({
+      ...prevState,
+      service: value,
+      serviceOption: serviceOptions[value] ? "" : "N/A",
+    }));
+    setError(null);
+  }
+  // Validation cho phone
+  else if (name === "phone") {
+    // Cập nhật giá trị phone ngay cả khi đang nhập
+    setFormData((prevState) => ({
+      ...prevState,
+      phone: value,
+    }));
+    // Chỉ kiểm tra lỗi khi có giá trị
+    if (value) {
+      const phoneRegex = /^[0-9]{0,15}$/;
+      if (!phoneRegex.test(value)) {
+        setError("Please enter only digits (up to 15 digits).");
+      } else if (value.length < 10) {
+        setError("Phone number must be 10-15 digits.");
+      } else {
+        setError(null);
+      }
+    } else {
+      setError(null); // Xóa lỗi nếu phone rỗng
+    }
+  }
+  // Các trường khác
+  else {
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
     }));
-  };
-
+    setError(null);
+  }
+};
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
     setSuccess(false);
+
+    // Validation trước khi gửi
+    const phoneRegex = /^[0-9]{10,15}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      setError("Please enter a valid phone number (10-15 digits).");
+      setLoading(false);
+      return;
+    }
 
     try {
       const response = await fetch(`${API_URL}/mailer/send-booking`, {
@@ -188,7 +240,7 @@ const BookingPage = () => {
         setFormData({
           category: "",
           service: "",
-          serviceOption: "",
+          serviceOption: "N/A",
           name: "",
           email: "",
           phone: "",
@@ -196,15 +248,15 @@ const BookingPage = () => {
           time: "",
           notes: "",
         });
-        setTimeout(() => setSuccess(false), 3000);
+        setTimeout(() => setSuccess(false), 5000); // Tăng thời gian hiển thị
       } else {
         const resData = await response.json();
         setError(resData.message || "Failed to send booking.");
-        setTimeout(() => setError(null), 3000);
+        setTimeout(() => setError(null), 5000); // Tăng thời gian hiển thị
       }
     } catch {
       setError("Error sending booking. Please try again later.");
-      setTimeout(() => setError(null), 3000);
+      setTimeout(() => setError(null), 5000);
     } finally {
       setLoading(false);
     }
@@ -312,6 +364,9 @@ const BookingPage = () => {
                   ))}
                 </select>
               </div>
+            )}
+            {formData.service && !serviceOptions[formData.service] && (
+              <input type="hidden" name="serviceOption" value="N/A" />
             )}
             <div>
               <label

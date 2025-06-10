@@ -1,129 +1,166 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import * as nodemailer from 'nodemailer';
-import { Transporter } from 'nodemailer';
-import { ContactMailDto } from './dto/contact-mail.dto';
-import { BookingMailDto } from './dto/booking-mail.dto';
+import { CreateBookingDto } from './dto/create-booking.dto';
+import { CreateContactDto } from './dto/create-contact.dto';
 
 @Injectable()
 export class MailerService {
-  private transporter: Transporter;
+  private readonly logger = new Logger(MailerService.name);
+  private transporter: nodemailer.Transporter;
 
-  constructor() {
+  constructor(private configService: ConfigService) {
+    const emailHost = this.configService.get<string>('EMAIL_HOST');
+    const emailPort = this.configService.get<number>('EMAIL_PORT');
+    const emailUser = this.configService.get<string>('EMAIL_USER');
+    const emailPass = this.configService.get<string>('EMAIL_PASS');
+    const recipientEmail = this.configService.get<string>('RECIPIENT_EMAIL');
+
+    this.logger.log(`EMAIL_HOST: ${emailHost}`);
+    this.logger.log(`EMAIL_PORT: ${emailPort}`);
+    this.logger.log(`EMAIL_USER: ${emailUser}`);
+    this.logger.log(`RECIPIENT_EMAIL: ${recipientEmail}`);
+
+    if (
+      !emailHost ||
+      !emailPort ||
+      !emailUser ||
+      !emailPass ||
+      !recipientEmail
+    ) {
+      this.logger.error('Missing required email environment variables');
+      throw new Error('Email configuration is incomplete. Check .env file.');
+    }
+
     this.transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST!,
-      port: Number(process.env.SMTP_PORT!),
+      host: emailHost,
+      port: emailPort,
       secure: false,
       auth: {
-        user: process.env.SMTP_USER!,
-        pass: process.env.SMTP_PASS!,
+        user: emailUser,
+        pass: emailPass,
       },
-    }) as Transporter;
-  }
+    });
 
-  async sendMail(data: ContactMailDto): Promise<void> {
-    const { name, email, message } = data;
-
-    const htmlContent = `
-      <h2>New Contact Message</h2>
-      <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 600px; font-family: Arial, sans-serif;">
-        <tbody>
-          <tr style="background-color: #f9f9f9;">
-            <th align="left" style="width: 150px;">Name</th>
-            <td>${name}</td>
-          </tr>
-          <tr>
-            <th align="left" style="background-color: #f9f9f9;">Email</th>
-            <td>${email}</td>
-          </tr>
-          <tr>
-            <th align="left" style="background-color: #f9f9f9;">Message</th>
-            <td>${message.replace(/\n/g, '<br>')}</td>
-          </tr>
-        </tbody>
-      </table>
-    `;
-
-    await this.transporter.sendMail({
-      from: `"${name}" <${process.env.SMTP_USER}>`,
-      to: process.env.SMTP_USER,
-      subject: `Contact from ${name}`,
-      html: htmlContent,
-      text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`,
+    this.transporter.verify((error) => {
+      if (error) {
+        this.logger.error(
+          `SMTP connection error: ${this.extractErrorMessage(error)}`,
+        );
+      } else {
+        this.logger.log('SMTP connection successful');
+      }
     });
   }
 
-  async sendBookingMail(data: BookingMailDto): Promise<void> {
-    const {
-      name,
-      email,
-      phone,
-      category,
-      service,
-      serviceOption,
-      date,
-      time,
-      notes,
-    } = data;
+  async sendBookingEmail(booking: CreateBookingDto) {
+    const recipientEmail = this.configService.get<string>('RECIPIENT_EMAIL');
 
-    const htmlContent = `
-      <h2>New Booking Request</h2>
-      <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 600px; font-family: Arial, sans-serif;">
-        <tbody>
-          <tr style="background-color: #f9f9f9;">
-            <th align="left">Name</th>
-            <td>${name}</td>
-          </tr>
-          <tr>
-            <th align="left">Email</th>
-            <td>${email}</td>
-          </tr>
-          ${
-            phone ? `<tr><th align="left">Phone</th><td>${phone}</td></tr>` : ''
-          }
-          <tr>
-            <th align="left">Category</th>
-            <td>${category}</td>
-          </tr>
-          <tr>
-            <th align="left">Service</th>
-            <td>${service}</td>
-          </tr>
-          ${
-            serviceOption
-              ? `<tr><th align="left">Option</th><td>${serviceOption}</td></tr>`
-              : ''
-          }
-          <tr>
-            <th align="left">Date</th>
-            <td>${date}</td>
-          </tr>
-          <tr>
-            <th align="left">Time</th>
-            <td>${time}</td>
-          </tr>
-          ${
-            notes
-              ? `<tr><th align="left">Notes</th><td>${notes.replace(/\n/g, '<br>')}</td></tr>`
-              : ''
-          }
-        </tbody>
-      </table>
-    `;
+    const mailOptions = {
+      from: this.configService.get<string>('EMAIL_USER'),
+      to: recipientEmail,
+      subject: `New Booking Request from ${booking.name}`,
+      html: `
+        <div style="background-color:#f4f4f4; padding:30px; font-family:Arial, sans-serif;">
+          <table width="600" align="center" cellpadding="0" cellspacing="0" style="background-color:#fff; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); overflow:hidden;">
+            <tr>
+              <td style="background-color:#3b82f6; color:#ffffff; padding:24px; text-align:center;">
+                <h2 style="margin:0; font-size:24px;">New Booking Request</h2>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:24px; color:#333333; font-size:16px; line-height:1.6;">
+                <p><strong>Name:</strong> ${booking.name}</p>
+                <p><strong>Email:</strong> ${booking.email}</p>
+                <p><strong>Phone:</strong> ${booking.phone}</p>
+                <hr style="border:none; border-top:1px solid #e0e0e0;" />
+                <p><strong>Service Category:</strong> ${booking.category}</p>
+                <p><strong>Service:</strong> ${booking.service}</p>
+                <p><strong>Service Option:</strong> ${booking.serviceOption}</p>
+                <p><strong>Date:</strong> ${booking.date}</p>
+                <p><strong>Time:</strong> ${booking.time}</p>
+                <p><strong>Notes:</strong> ${booking.notes || 'None'}</p>
+                <div style="margin-top:20px; background:#e0f2fe; padding:15px; border-left:4px solid #3b82f6;">
+                  <p style="margin:0;"><strong>Reminder:</strong> Please confirm the appointment with the customer.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#f9fafb; color:#888888; font-size:13px; text-align:center; padding:15px;">
+                <p style="margin:0;">This email was automatically sent from your booking system.</p>
+                <p style="margin:0;">© ${new Date().getFullYear()} Winchair Beauty Spa. All rights reserved.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      `, // giữ nguyên HTML bạn đã có
+    };
 
-    await this.transporter.sendMail({
-      from: `"${name}" <${process.env.SMTP_USER}>`,
-      to: process.env.SMTP_USER,
-      subject: `Booking Request from ${name}`,
-      html: htmlContent,
-      text: `Name: ${name}
-Email: ${email}
-Phone: ${phone || 'N/A'}
-Category: ${category}
-Service: ${service}
-Option: ${serviceOption || 'N/A'}
-Date: ${date}
-Time: ${time}
-Notes: ${notes || 'N/A'}`,
-    });
+    try {
+      await this.transporter.sendMail(mailOptions);
+      this.logger.log(`Booking email sent to ${recipientEmail}`);
+      return { message: 'Booking email sent successfully' };
+    } catch (error: unknown) {
+      const msg = this.extractErrorMessage(error);
+      this.logger.error(`Error sending email: ${msg}`);
+      throw new Error(`Failed to send booking email: ${msg}`);
+    }
+  }
+
+  async sendContactEmail(contact: CreateContactDto) {
+    const recipientEmail = this.configService.get<string>('RECIPIENT_EMAIL');
+
+    const mailOptions = {
+      from: this.configService.get<string>('EMAIL_USER'),
+      to: recipientEmail,
+      subject: `New Contact Message from ${contact.name}`,
+      html: `
+        <div style="background-color:#f4f4f4; padding:30px; font-family:Arial, sans-serif;">
+          <table width="600" align="center" cellpadding="0" cellspacing="0" style="background-color:#fff; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); overflow:hidden;">
+            <tr>
+              <td style="background-color:#10b981; color:#ffffff; padding:24px; text-align:center;">
+                <h2 style="margin:0; font-size:24px;">New Contact Message</h2>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:24px; color:#333333; font-size:16px; line-height:1.6;">
+                <p><strong>Name:</strong> ${contact.name}</p>
+                <p><strong>Email:</strong> ${contact.email}</p>
+                <p><strong>Message:</strong> ${contact.message}</p>
+                <div style="margin-top:20px; background:#ecfdf5; padding:15px; border-left:4px solid #10b981;">
+                  <p style="margin:0;"><strong>Action Required:</strong> Please respond to the customer promptly.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#f9fafb; color:#888888; font-size:13px; text-align:center; padding:15px;">
+                <p style="margin:0;">This email was automatically sent from your contact system.</p>
+                <p style="margin:0;">© ${new Date().getFullYear()} Winchair Beauty Spa. All rights reserved.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      `, // giữ nguyên HTML bạn đã có
+    };
+
+    try {
+      await this.transporter.sendMail(mailOptions);
+      this.logger.log(`Contact email sent to ${recipientEmail}`);
+      return { message: 'Contact email sent successfully' };
+    } catch (error: unknown) {
+      const msg = this.extractErrorMessage(error);
+      this.logger.error(`Error sending contact email: ${msg}`);
+      throw new Error(`Failed to send contact email: ${msg}`);
+    }
+  }
+
+  private extractErrorMessage(error: unknown): string {
+    if (error instanceof Error) {
+      return error.message;
+    }
+    if (typeof error === 'object' && error !== null && 'message' in error) {
+      return String((error as { message: unknown }).message);
+    }
+    return 'Unknown error occurred';
   }
 }

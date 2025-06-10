@@ -6,62 +6,51 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 import { MailerService } from './mailer.service';
-import { ContactMailDto } from './dto/contact-mail.dto';
-import { BookingMailDto } from './dto/booking-mail.dto';
+import { CreateBookingDto } from './dto/create-booking.dto';
+import { CreateContactDto } from './dto/create-contact.dto';
 
 @Controller('mailer')
 export class MailerController {
   constructor(private readonly mailerService: MailerService) {}
 
-  @Post('send-contact')
-  async sendMail(@Body() contactMailDto: ContactMailDto) {
+  @Post('send-booking')
+  async sendBooking(@Body() createBookingDto: CreateBookingDto) {
     try {
-      await this.mailerService.sendMail(contactMailDto);
-      return {
-        statusCode: 200,
-        message: 'Email sent successfully',
-      };
+      const result =
+        await this.mailerService.sendBookingEmail(createBookingDto);
+      return result;
     } catch (error: unknown) {
-      console.error('Error sending email:', error);
-
-      let message = 'Failed to send email. Please try again later.';
-      if (error instanceof Error) {
-        message = error.message;
-      }
-
       throw new HttpException(
-        {
-          statusCode: 500,
-          message,
-        },
+        this.extractErrorMessage(error, 'Failed to send booking email'),
         HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }
   }
 
-  @Post('send-booking')
-  async sendBookingMail(@Body() bookingMailDto: BookingMailDto) {
+  @Post('send-contact')
+  async sendContact(@Body() createContactDto: CreateContactDto) {
     try {
-      await this.mailerService.sendBookingMail(bookingMailDto);
-      return {
-        statusCode: 200,
-        message: 'Booking email sent successfully',
-      };
+      const result =
+        await this.mailerService.sendContactEmail(createContactDto);
+      return result;
     } catch (error: unknown) {
-      console.error('Error sending booking email:', error);
-
-      let message = 'Failed to send booking email. Please try again later.';
-      if (error instanceof Error) {
-        message = error.message;
-      }
-
       throw new HttpException(
-        {
-          statusCode: 500,
-          message,
-        },
+        this.extractErrorMessage(error, 'Failed to send contact email'),
         HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }
+  }
+
+  /**
+   * Helper method to safely extract error messages
+   */
+  private extractErrorMessage(error: unknown, fallback: string): string {
+    if (error instanceof Error) {
+      return error.message;
+    }
+    if (typeof error === 'object' && error !== null && 'message' in error) {
+      return String((error as { message: unknown }).message);
+    }
+    return fallback;
   }
 }
