@@ -5,11 +5,7 @@ services:
     buildCommand: |
       cd frontend && npm install && npm run build
       cd ../backend && npm install && npm run build
-    startCommand: node backend/dist/main.js
+    startCommand: node backend/dist/main.js  # 🔥 ĐÚNG ĐƯỜNG DẪN
     envVars:
       - key: NODE_ENV
         value: production
-    buildFilter:
-      paths:
-        - backend/**
-        - frontend/**
