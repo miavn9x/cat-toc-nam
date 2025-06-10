@@ -1,24 +1,34 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { ConfigService } from '@nestjs/config';
 import { ValidationPipe } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
+
+import { NestExpressApplication } from '@nestjs/platform-express';
+import * as express from 'express';
+import { join } from 'path';
+import { Request, Response } from 'express';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
   const configService = app.get(ConfigService);
 
-  // Enable CORS for frontend
   app.enableCors({
-    origin: 'http://localhost:3000', // Update with your Next.js frontend URL
+    origin: 'http://localhost:3000',
     methods: 'GET,POST',
     credentials: true,
   });
 
-  // Enable validation for incoming requests
+  const frontendBuildPath = join(__dirname, '../../frontend/build');
+  app.use(express.static(frontendBuildPath));
+
+  app.use('*', (req: Request, res: Response) => {
+    res.sendFile(join(frontendBuildPath, 'index.html'));
+  });
+
   app.useGlobalPipes(new ValidationPipe());
 
   const port = configService.get<number>('PORT') || 4000;
   await app.listen(port);
-  console.log(`Application is running on: http://localhost:${port}`);
+  console.log(`✅ App running at http://localhost:${port}`);
 }
 void bootstrap();
