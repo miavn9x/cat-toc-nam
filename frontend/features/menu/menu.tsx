@@ -150,25 +150,49 @@ const Menu = () => {
         },
         {
           name: "Chăm Sóc & Tạo Kiểu Tóc",
-          link: "/hair-care-styling",
+          link: "/service-and-price/dieu-tri-va-tao-kieu-toc",
           subItems: [
-            { name: "Gội Đầu", link: "/shampoo" },
-            { name: "Gội & Tạo Kiểu", link: "/shampoo-style" },
-            { name: "Liệu Trình Dưỡng Tóc", link: "/hair-treatment" },
-            { name: "Massage Da Đầu", link: "/scalp-massage" },
+            {
+              name: "Gội Đầu",
+              link: "/service-and-price/dieu-tri-va-tao-kieu-toc",
+            },
+            {
+              name: "Gội & Tạo Kiểu",
+              link: "/service-and-price/dieu-tri-va-tao-kieu-toc/goi-tao-kieu",
+            },
+            {
+              name: "Liệu Trình Dưỡng Tóc",
+              link: "/service-and-price/dieu-tri-va-tao-kieu-toc/lieu-trinh-duong-toc",
+            },
+            {
+              name: "Massage Da Đầu",
+              link: "/service-and-price/dieu-tri-va-tao-kieu-toc/massage-da-dau",
+            },
           ],
         },
         {
           name: "Dịch Vụ Chăm Sóc Sắc Đẹp",
-          link: "/beauty-services",
+          link: "/service-and-price/dich-vu-tham-my",
           subItems: [
-            { name: "Chăm Sóc Da Mặt", link: "/facial" },
-            { name: "Tẩy Lông (Waxing)", link: "/waxing" },
-            { name: "Nối Mi", link: "/eyelash-extension" },
-            { name: "Phun Xăm Thẩm Mỹ Microblading", link: "/microblading" },
+            {
+              name: "Chăm Sóc Da Mặt",
+              link: "/service-and-price/dich-vu-tham-my/cham-soc-da-mat",
+            },
+            {
+              name: "Tẩy Lông (Waxing)",
+              link: "/service-and-price/dich-vu-tham-my/tay-long",
+            },
+            {
+              name: "Nối Mi",
+              link: "/service-and-price/dich-vu-tham-my/noi-mi",
+            },
+            {
+              name: "Phun Xăm Thẩm Mỹ Microblading",
+              link: "/service-and-price/dich-vu-tham-my/phun-xam-tham-my",
+            },
           ],
         },
-        { name: "Dịch Vụ Khác", link: "/other-services" },
+        { name: "Dịch Vụ Khác", link: "/service-and-price" },
       ],
     },
     { name: "Đặt Lịch Hẹn", link: "/booking" },

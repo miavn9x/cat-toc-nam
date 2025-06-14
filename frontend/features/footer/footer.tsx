@@ -6,51 +6,99 @@ const Footer = () => {
     {
       category: "Dịch Vụ Tóc Nam",
       items: [
-        { name: "Cắt Tóc Nam", link: "/men-haircut" },
-        { name: "Cắt Fade", link: "/fade" },
-        { name: "Cạo Râu Nóng", link: "/hot-shave" },
-        { name: "Tỉa Râu", link: "/beard-trim" },
+        {
+          name: "Cắt Tóc Nam",
+          link: "/service-and-price/dich-vu-toc-nam/cat-toc-nam",
+        },
+        {
+          name: "Cắt Fade",
+          link: "/service-and-price/dich-vu-toc-nam/cat-fade",
+        },
+        {
+          name: "Cạo Râu Nóng",
+          link: "/service-and-price/dich-vu-toc-nam/cao-rau-nong",
+        },
+        { name: "Tỉa Râu", link: "/service-and-price/dich-vu-toc-nam/tia-rau" },
       ],
     },
     {
       category: "Dịch Vụ Tóc Nữ",
       items: [
-        { name: "Cắt Tóc Nữ", link: "/women-haircut" },
-        { name: "Nhuộm Tóc", link: "/hair-dye" },
-        { name: "Highlight", link: "/highlight" },
-        { name: "Uốn Tóc", link: "/curl" },
-        { name: "Duỗi Tóc", link: "/straighten" },
-        { name: "Búi Tóc", link: "/updo" },
+        {
+          name: "Cắt Tóc Nữ",
+          link: "/service-and-price/dich-vu-toc-nu/cat-toc-nu",
+        },
+        {
+          name: "Nhuộm Tóc",
+          link: "/service-and-price/dich-vu-toc-nu/nhuom-toc",
+        },
+        {
+          name: "Highlight",
+          link: "/service-and-price/dich-vu-toc-nu/highlight",
+        },
+        { name: "Uốn Tóc", link: "/service-and-price/dich-vu-toc-nu/uon-toc" },
+        {
+          name: "Duỗi Tóc",
+          link: "/service-and-price/dich-vu-toc-nu/duoi-toc",
+        },
+        { name: "Búi Tóc", link: "/service-and-price/dich-vu-toc-nu/bui-toc" },
       ],
     },
     {
       category: "Dịch Vụ Tóc Cho Bé",
       items: [
-        { name: "Cắt Tóc Bé Trai", link: "/boys-haircut" },
-        { name: "Cắt Tóc Bé Gái", link: "/girls-haircut" },
+        {
+          name: "Cắt Tóc Bé Trai",
+          link: "/service-and-price/dich-vu-toc-cho-be/cat-toc-be-trai",
+        },
+        {
+          name: "Cắt Tóc Bé Gái",
+          link: "/service-and-price/dich-vu-toc-cho-be/cat-toc-be-gai",
+        },
       ],
     },
     {
       category: "Chăm Sóc & Tạo Kiểu Tóc",
       items: [
-        { name: "Gội Đầu", link: "/shampoo" },
-        { name: "Gội & Tạo Kiểu", link: "/shampoo-style" },
-        { name: "Liệu Trình Dưỡng Tóc", link: "/hair-treatment" },
-        { name: "Massage Da Đầu", link: "/scalp-massage" },
+        {
+          name: "Gội Đầu",
+          link: "/service-and-price/dieu-tri-va-tao-kieu-toc",
+        },
+        {
+          name: "Gội & Tạo Kiểu",
+          link: "/service-and-price/dieu-tri-va-tao-kieu-toc/goi-tao-kieu",
+        },
+        {
+          name: "Liệu Trình Dưỡng Tóc",
+          link: "/service-and-price/dieu-tri-va-tao-kieu-toc/lieu-trinh-duong-toc",
+        },
+        {
+          name: "Massage Da Đầu",
+          link: "/service-and-price/dieu-tri-va-tao-kieu-toc/massage-da-dau",
+        },
       ],
     },
     {
       category: "Chăm Sóc Sắc Đẹp",
       items: [
-        { name: "Chăm Sóc Da Mặt", link: "/facial" },
-        { name: "Tẩy Lông", link: "/waxing" },
-        { name: "Nối Mi", link: "/eyelash-extension" },
-        { name: "Phun Xăm Thẩm Mỹ Microblading", link: "/microblading" },
+        {
+          name: "Chăm Sóc Da Mặt",
+          link: "/service-and-price/dich-vu-tham-my/cham-soc-da-mat",
+        },
+        {
+          name: "Tẩy Lông",
+          link: "/service-and-price/dich-vu-tham-my/tay-long",
+        },
+        { name: "Nối Mi", link: "/service-and-price/dich-vu-tham-my/noi-mi" },
+        {
+          name: "Phun Xăm Thẩm Mỹ Microblading",
+          link: "/service-and-price/dich-vu-tham-my/phun-xam-tham-my",
+        },
       ],
     },
     {
       category: "Dịch Vụ Khác",
-      items: [{ name: "Liên hệ để biết thêm", link: "/other-services" }],
+      items: [{ name: "Liên hệ để biết thêm", link: "/service-and-price" }],
     },
   ];
 

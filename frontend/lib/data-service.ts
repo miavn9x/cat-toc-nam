@@ -7,9 +7,12 @@ export interface HairStyle {
   description: string; // Mô tả chi tiết về kiểu tóc
   images: string[]; // Danh sách URL hình ảnh minh họa
   difficulty: string; // Độ khó tạo kiểu (ví dụ: "Dễ", "Trung bình", "Khó")
-  maintenance: string; // Mức độ bảo dưỡng (ví dụ: "Thấp", "Trung bình", "Cao")
-  faceShape: string[]; // Các dạng khuôn mặt phù hợp (ví dụ: ["Oval", "Vuông"])
+  maintenance?: string; // Mức độ bảo dưỡng (ví dụ: "Thấp", "Trung bình", "Cao")
+  faceShape?: string[]; // Các dạng khuôn mặt phù hợp (ví dụ: ["Oval", "Vuông"])
   popular: boolean; // Trạng thái phổ biến của kiểu tóc
+  // Thuộc tính cho kids hair
+  ageRange?: string; // Độ tuổi phù hợp (ví dụ: "3-12 tuổi")
+  duration?: string; // Thời gian thực hiện (ví dụ: "15-20 phút")
 }
 
 // Định nghĩa interface cho Service, biểu diễn một dịch vụ (ví dụ: Cắt Tóc Nam)
