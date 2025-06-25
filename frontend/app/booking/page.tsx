@@ -6,46 +6,45 @@ import React, { useState, FormEvent, ChangeEvent } from "react";
 const API_URL =
   process.env.NEXT_PUBLIC_API_URL || "https://winchair-beauty-spa.onrender.com";
 
-
 // Define service categories with an index signature
 const serviceCategories: { [key: string]: { name: string; price: string }[] } =
   {
-    "Dịch Vụ Tóc Nam": [
-      { name: "Cắt Tóc Nam (Men’s Haircut)", price: "From $35 + tax" },
-      { name: "Cắt Fade (Men’s Skin Fade)", price: "From $40 + tax" },
-      { name: "Cạo Râu Nóng (Hot Towel Shave)", price: "From $55 + tax" },
-      { name: "Tỉa Râu (Beard Trim)", price: "From $16 + tax" },
+    "Men's Hair Services": [
+      { name: "Men's Haircut", price: "From $35 + tax" },
+      { name: "Cut Fade", price: "From $40 + tax" },
+      { name: "Hot Shave", price: "From $55 + tax" },
+      { name: "Beard Trimming", price: "From $16 + tax" },
     ],
-    "Dịch Vụ Tóc Nữ": [
-      { name: "Cắt Tóc Nữ (Women’s Haircut)", price: "From $55 + tax" },
-      { name: "Nhuộm Tóc (Colour)", price: "From $65 + tax" },
+    "Women's Hair Services": [
+      { name: "Women's Haircut", price: "From $55 + tax" },
+      { name: "Hair Coloring", price: "From $65 + tax" },
       { name: "Highlight", price: "From $180 + tax" },
-      { name: "Uốn Tóc (Perm)", price: "From $85 + tax" },
-      { name: "Duỗi Tóc (Relaxer)", price: "From $160 + tax" },
-      { name: "Búi Tóc (Updo)", price: "$120 + tax" },
+      { name: "Hair Perm", price: "From $85 + tax" },
+      { name: "Hair Straightening", price: "From $160 + tax" },
+      { name: "Updo", price: "$120 + tax" },
     ],
-    "Dịch Vụ Tóc Cho Bé": [
-      { name: "Cắt Tóc Bé Trai (Boys’ Haircut)", price: "From $25 + tax" },
-      { name: "Cắt Tóc Bé Gái (Girls’ Haircut)", price: "From $35 + tax" },
+    "Baby Hair Services": [
+      { name: "Boys Haircuts", price: "From $25 + tax" },
+      { name: "Baby Girl Haircut", price: "From $35 + tax" },
     ],
-    "Chăm Sóc & Tạo Kiểu Tóc": [
-      { name: "Gội Đầu (Wash)", price: "From $20 + tax" },
+    "Hair Care & Styling": [
+      { name: "Head washing", price: "From $20 + tax" },
       {
-        name: "Gội & Tạo Kiểu (Wash & Style)",
+        name: "Shampoo & Styling",
         price: "Price upon consultation",
       },
       {
-        name: "Liệu Trình Dưỡng Tóc (Nourishing Shampoo Therapy)",
+        name: "Hair Treatment",
         price: "$90 + tax",
       },
-      { name: "Massage Da Đầu (Scalp Massage)", price: "$85 + tax" },
+      { name: "Scalp Massage", price: "$85 + tax" },
     ],
-    "Dịch Vụ Chăm Sóc Sắc Đẹp": [
-      { name: "Chăm Sóc Da Mặt (Facial - 1 Hour)", price: "From $90 + tax" },
-      { name: "Tẩy Lông (Waxing)", price: "From $16 + tax" },
-      { name: "Nối Mi (Eyelash Extensions)", price: "From $85 + tax" },
+    "Beauty Care Services": [
+      { name: "Facial Care", price: "From $90 + tax" },
+      { name: "Waxing", price: "From $16 + tax" },
+      { name: "Eyelash Extensions", price: "From $85 + tax" },
       {
-        name: "Phun Xăm Thẩm Mỹ Microblading (Microblading PMU)",
+        name: "Microblading Cosmetic Tattooing",
         price: "$450 + tax (includes one touch-up)",
       },
     ],
@@ -54,27 +53,27 @@ const serviceCategories: { [key: string]: { name: string; price: string }[] } =
 // Define additional options for each service
 const serviceOptions: { [key: string]: { label: string; options: string[] } } =
   {
-    "Cắt Tóc Nam (Men’s Haircut)": {
+    "Men's Haircut": {
       label: "Hair Length",
       options: ["Short", "Medium", "Long"],
     },
-    "Cắt Fade (Men’s Skin Fade)": {
+    "Cut Fade": {
       label: "Fade Style",
       options: ["Low Fade", "Mid Fade", "High Fade", "Taper"],
     },
-    "Cạo Râu Nóng (Hot Towel Shave)": {
+    "Hot Shave": {
       label: "Add-On",
       options: ["None", "Facial Moisturizer", "Aftershave Treatment"],
     },
-    "Tỉa Râu (Beard Trim)": {
+    "Beard Trimming": {
       label: "Beard Style",
       options: ["Short Trim", "Full Shape", "Detailed Design"],
     },
-    "Cắt Tóc Nữ (Women’s Haircut)": {
+    "Women's Haircut": {
       label: "Hair Length",
       options: ["Short", "Medium", "Long", "Extra Long"],
     },
-    "Nhuộm Tóc (Colour)": {
+    "Hair Coloring": {
       label: "Colour Type",
       options: ["Full Colour", "Root Touch-Up", "Balayage"],
     },
@@ -82,47 +81,47 @@ const serviceOptions: { [key: string]: { label: string; options: string[] } } =
       label: "Highlight Style",
       options: ["Partial Highlights", "Full Highlights", "Lowlights"],
     },
-    "Uốn Tóc (Perm)": {
+    "Hair Perm": {
       label: "Curl Type",
       options: ["Loose Waves", "Medium Curls", "Tight Curls"],
     },
-    "Duỗi Tóc (Relaxer)": {
+    "Hair Straightening": {
       label: "Hair Type",
       options: ["Fine", "Medium", "Coarse"],
     },
-    "Búi Tóc (Updo)": {
+    Updo: {
       label: "Style Preference",
       options: ["Classic Updo", "Modern Updo", "Braided Updo"],
     },
-    "Cắt Tóc Bé Trai (Boys’ Haircut)": {
+    "Boys Haircuts": {
       label: "Hair Length",
       options: ["Short", "Medium"],
     },
-    "Cắt Tóc Bé Gái (Girls’ Haircut)": {
+    "Baby Girl Haircut": {
       label: "Hair Length",
       options: ["Short", "Medium", "Long"],
     },
-    "Gội Đầu (Wash)": {
+    "Head washing": {
       label: "Add-On",
       options: ["None", "Conditioner Treatment"],
     },
-    "Gội & Tạo Kiểu (Wash & Style)": {
+    "Shampoo & Styling": {
       label: "Style Preference",
       options: ["Blowout", "Curls", "Straight"],
     },
-    "Liệu Trình Dưỡng Tóc (Nourishing Shampoo Therapy)": {
+    "Hair Treatment": {
       label: "Focus Area",
       options: ["Hydration", "Damage Repair", "Volume"],
     },
-    "Massage Da Đầu (Scalp Massage)": {
+    "Scalp Massage": {
       label: "Duration",
       options: ["15 Minutes", "30 Minutes"],
     },
-    "Chăm Sóc Da Mặt (Facial - 1 Hour)": {
+    "Facial Care": {
       label: "Skin Concern",
       options: ["Hydration", "Anti-Aging", "Acne Treatment"],
     },
-    "Tẩy Lông (Waxing)": {
+    Waxing: {
       label: "Area",
       options: [
         "Eyebrows",
@@ -133,11 +132,11 @@ const serviceOptions: { [key: string]: { label: string; options: string[] } } =
         "Bikini",
       ],
     },
-    "Nối Mi (Eyelash Extensions)": {
+    "Eyelash Extensions": {
       label: "Lash Style",
       options: ["Natural", "Dramatic", "Volume"],
     },
-    "Phun Xăm Thẩm Mỹ Microblading (Microblading PMU)": {
+    "Microblading Cosmetic Tattooing": {
       label: "Brow Style",
       options: ["Natural", "Bold", "Feathered"],
     },
@@ -160,60 +159,60 @@ const BookingPage = () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
- const handleChange = (
-  e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-) => {
-  const { name, value } = e.target;
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
 
-  // Reset service và serviceOption khi category thay đổi
-  if (name === "category") {
-    setFormData((prevState) => ({
-      ...prevState,
-      category: value,
-      service: "",
-      serviceOption: "N/A",
-    }));
-    setError(null);
-  }
-  // Reset serviceOption khi service thay đổi
-  else if (name === "service") {
-    setFormData((prevState) => ({
-      ...prevState,
-      service: value,
-      serviceOption: serviceOptions[value] ? "" : "N/A",
-    }));
-    setError(null);
-  }
-  // Validation cho phone
-  else if (name === "phone") {
-    // Cập nhật giá trị phone ngay cả khi đang nhập
-    setFormData((prevState) => ({
-      ...prevState,
-      phone: value,
-    }));
-    // Chỉ kiểm tra lỗi khi có giá trị
-    if (value) {
-      const phoneRegex = /^[0-9]{0,15}$/;
-      if (!phoneRegex.test(value)) {
-        setError("Please enter only digits (up to 15 digits).");
-      } else if (value.length < 10) {
-        setError("Phone number must be 10-15 digits.");
-      } else {
-        setError(null);
-      }
-    } else {
-      setError(null); // Xóa lỗi nếu phone rỗng
+    // Reset service và serviceOption khi category thay đổi
+    if (name === "category") {
+      setFormData((prevState) => ({
+        ...prevState,
+        category: value,
+        service: "",
+        serviceOption: "N/A",
+      }));
+      setError(null);
     }
-  }
-  // Các trường khác
-  else {
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-    setError(null);
-  }
-};
+    // Reset serviceOption khi service thay đổi
+    else if (name === "service") {
+      setFormData((prevState) => ({
+        ...prevState,
+        service: value,
+        serviceOption: serviceOptions[value] ? "" : "N/A",
+      }));
+      setError(null);
+    }
+    // Validation cho phone
+    else if (name === "phone") {
+      // Cập nhật giá trị phone ngay cả khi đang nhập
+      setFormData((prevState) => ({
+        ...prevState,
+        phone: value,
+      }));
+      // Chỉ kiểm tra lỗi khi có giá trị
+      if (value) {
+        const phoneRegex = /^[0-9]{0,15}$/;
+        if (!phoneRegex.test(value)) {
+          setError("Please enter only digits (up to 15 digits).");
+        } else if (value.length < 10) {
+          setError("Phone number must be 10-15 digits.");
+        } else {
+          setError(null);
+        }
+      } else {
+        setError(null); // Xóa lỗi nếu phone rỗng
+      }
+    }
+    // Các trường khác
+    else {
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }));
+      setError(null);
+    }
+  };
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);

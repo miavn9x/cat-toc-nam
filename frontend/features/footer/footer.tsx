@@ -4,101 +4,115 @@ import React from "react";
 const Footer = () => {
   const services = [
     {
-      category: "Dịch Vụ Tóc Nam",
+      category: "Men's Hair Services",
       items: [
         {
-          name: "Cắt Tóc Nam",
-          link: "/service-and-price/dich-vu-toc-nam/cat-toc-nam",
+          name: "Men's Haircut",
+          link: "/service-and-price/mens-hair-services/mens-haircut",
         },
         {
-          name: "Cắt Fade",
-          link: "/service-and-price/dich-vu-toc-nam/cat-fade",
+          name: "Cut Fade",
+          link: "/service-and-price/mens-hair-services/fade-haircut",
         },
         {
-          name: "Cạo Râu Nóng",
-          link: "/service-and-price/dich-vu-toc-nam/cao-rau-nong",
+          name: "Hot Shaveg",
+          link: "/service-and-price/mens-hair-services/hot-shave",
         },
-        { name: "Tỉa Râu", link: "/service-and-price/dich-vu-toc-nam/tia-rau" },
+        {
+          name: "Beard Trimming",
+          link: "/service-and-price/mens-hair-services/beard-trim",
+        },
       ],
     },
     {
-      category: "Dịch Vụ Tóc Nữ",
+      category: "Women's Hair Services",
       items: [
         {
-          name: "Cắt Tóc Nữ",
-          link: "/service-and-price/dich-vu-toc-nu/cat-toc-nu",
+          name: "Women's Haircut",
+          link: "/service-and-price/womens-hair-services/womens-haircut",
         },
         {
-          name: "Nhuộm Tóc",
-          link: "/service-and-price/dich-vu-toc-nu/nhuom-toc",
+          name: "Hair Coloring",
+          link: "/service-and-price/womens-hair-services/hair-coloring",
         },
         {
           name: "Highlight",
-          link: "/service-and-price/dich-vu-toc-nu/highlight",
+          link: "/service-and-price/womens-hair-services/hair-highlights",
         },
-        { name: "Uốn Tóc", link: "/service-and-price/dich-vu-toc-nu/uon-toc" },
         {
-          name: "Duỗi Tóc",
-          link: "/service-and-price/dich-vu-toc-nu/duoi-toc",
+          name: "Hair Perm",
+          link: "/service-and-price/womens-hair-services/hair-perm",
         },
-        { name: "Búi Tóc", link: "/service-and-price/dich-vu-toc-nu/bui-toc" },
+        {
+          name: "Hair Straightening",
+          link: "/service-and-price/womens-hair-services/hair-straightening",
+        },
+        {
+          name: "Updo",
+          link: "/service-and-price/womens-hair-services/hair-updo",
+        },
       ],
     },
     {
-      category: "Dịch Vụ Tóc Cho Bé",
+      category: "Baby Hair Services",
       items: [
         {
-          name: "Cắt Tóc Bé Trai",
-          link: "/service-and-price/dich-vu-toc-cho-be/cat-toc-be-trai",
+          name: "Boys Haircuts",
+          link: "/service-and-price/kids-hair-services/boys-haircut",
         },
         {
-          name: "Cắt Tóc Bé Gái",
-          link: "/service-and-price/dich-vu-toc-cho-be/cat-toc-be-gai",
+          name: "Baby Girl Haircut",
+          link: "/service-and-price/kids-hair-services/girls-haircut",
         },
       ],
     },
     {
-      category: "Chăm Sóc & Tạo Kiểu Tóc",
+      category: "Hair Care & Styling",
       items: [
         {
-          name: "Gội Đầu",
-          link: "/service-and-price/dieu-tri-va-tao-kieu-toc",
+          name: "Head washing",
+          link: "/service-and-price/hair-treatment-and-styling/hair-wash",
         },
         {
-          name: "Gội & Tạo Kiểu",
-          link: "/service-and-price/dieu-tri-va-tao-kieu-toc/goi-tao-kieu",
+          name: "Shampoo & Styling",
+          link: "/service-and-price/hair-treatment-and-styling/wash-and-style",
         },
         {
-          name: "Liệu Trình Dưỡng Tóc",
-          link: "/service-and-price/dieu-tri-va-tao-kieu-toc/lieu-trinh-duong-toc",
+          name: "Hair Treatment",
+          link: "/service-and-price/hair-treatment-and-styling/hair-treatment",
         },
         {
-          name: "Massage Da Đầu",
-          link: "/service-and-price/dieu-tri-va-tao-kieu-toc/massage-da-dau",
+          name: "Scalp Massage",
+          link: "/service-and-price/hair-treatment-and-styling/scalp-massage",
         },
       ],
     },
     {
-      category: "Chăm Sóc Sắc Đẹp",
+      category: "Beauty Care Services",
       items: [
         {
-          name: "Chăm Sóc Da Mặt",
-          link: "/service-and-price/dich-vu-tham-my/cham-soc-da-mat",
+          name: "Facial Care",
+          link: "/service-and-price/beauty-services/facial-treatment",
         },
         {
-          name: "Tẩy Lông",
-          link: "/service-and-price/dich-vu-tham-my/tay-long",
+          name: "Waxing",
+          link: "/service-and-price/beauty-services/body-waxing",
         },
-        { name: "Nối Mi", link: "/service-and-price/dich-vu-tham-my/noi-mi" },
         {
-          name: "Phun Xăm Thẩm Mỹ Microblading",
-          link: "/service-and-price/dich-vu-tham-my/phun-xam-tham-my",
+          name: "Eyelash Extensions",
+          link: "/service-and-price/beauty-services/eyelash-extension",
+        },
+        {
+          name: "Microblading Cosmetic Tattooing",
+          link: "/service-and-price/beauty-services/microblading",
         },
       ],
     },
     {
-      category: "Dịch Vụ Khác",
-      items: [{ name: "Liên hệ để biết thêm", link: "/service-and-price" }],
+      category: "Other Services",
+      items: [
+        { name: "Contact us for more information", link: "/service-and-price" },
+      ],
     },
   ];
 
@@ -153,24 +167,22 @@ const Footer = () => {
               </h3>
               <div className="flex flex-col gap-2 items-stretch text-justify">
                 <p className="text-gray-300 text-sm lg:text-base leading-relaxed">
-                  Nơi làm đẹp sang trọng với giá Việt Nam! Tọa lạc tại{" "}
+                  Luxury beauty at Vietnamese prices! Located at{" "}
                   <span
                     itemProp="address"
                     itemScope
                     itemType="https://schema.org/PostalAddress"
                     className="text-amber-200"
                   >
-                    <span itemProp="streetAddress">3347 Bloor Street West</span>,{" "}
-                    <span itemProp="addressLocality">Etobicoke</span>,{" "}
+                    <span itemProp="streetAddress">3347 Bloor Street West</span>
+                    , <span itemProp="addressLocality">Etobicoke</span>,{" "}
                     <span itemProp="addressRegion">Ontario</span>
                   </span>
-                  . Chúng tôi mang đến không gian thân thiện, thư giãn, nơi bạn có
-                  thể nghỉ ngơi, tái tạo năng lượng và rời đi với vẻ ngoài tự tin,
-                  rạng rỡ.
+                  . We provide a friendly, relaxing space where you can rest,
+                  recharge and leave looking confident, radiant.
                 </p>
                 <p className="text-gray-300 text-sm lg:text-base">
-                  Chăm sóc tóc và làm đẹp chất lượng cao với mức giá phải chăng,
-                  đảm bảo giá trị tuyệt vời mỗi khi ghé thăm.
+                 High quality hair care and beauty at affordable prices, ensuring great value every time you visit.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center items-center">
@@ -178,13 +190,13 @@ const Footer = () => {
                   href="/booking"
                   className="inline-block px-6 py-3 bg-amber-400 text-gray-900 font-semibold rounded-full hover:bg-amber-500 transition-colors text-center"
                 >
-                  Đặt Lịch
+                  Book
                 </a>
                 <a
                   href="/contact"
                   className="inline-block px-6 py-3 border-2 border-amber-400 text-amber-400 font-semibold rounded-full hover:bg-amber-400 hover:text-gray-900 transition-colors text-center"
                 >
-                  Liên Hệ
+                  Contact
                 </a>
               </div>
             </div>
@@ -192,12 +204,12 @@ const Footer = () => {
             {/* Contact Section */}
             <div className="space-y-4 bg-gray-800/50 p-6 rounded-lg">
               <h3 className="text-xl lg:text-2xl font-bold text-amber-300">
-                Thông Tin Liên Hệ
+                Contact Information
               </h3>
               <div className="space-y-3">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2">
                   <span className="font-semibold text-amber-200 text-sm lg:text-base">
-                    Địa Chỉ:
+                    Address:
                   </span>
                   <span
                     itemProp="address"
@@ -212,7 +224,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2">
                   <span className="font-semibold text-amber-200 text-sm lg:text-base">
-                    Điện Thoại:
+                    Phone:
                   </span>
                   <span itemProp="telephone" className="text-gray-300">
                     <a
@@ -230,7 +242,7 @@ const Footer = () => {
           {/* Right Section - Services (60% on desktop) */}
           <div className="lg:col-span-3">
             <h3 className="text-xl lg:text-2xl font-bold text-amber-300 mb-6 lg:mb-8 text-center">
-              Dịch Vụ Của Chúng Tôi
+              Our Services
             </h3>
 
             {/* Services Grid - Responsive */}
@@ -267,20 +279,20 @@ const Footer = () => {
         <div className="mt-8 lg:mt-12 pt-6 lg:pt-8 border-t border-gray-700">
           <div className="flex flex-col items-center gap-2">
             <p className="text-gray-400 text-xs lg:text-sm text-center">
-              © 2025 Winchair Beauty Spa. Thiết kế bởi{" "}
+              © 2025 Winchair Beauty Spa. Designed by{" "}
               <span
-            id="wfour-link"
-            className="text-amber-300 hover:text-amber-500 transition-colors cursor-pointer font-medium"
-            onClick={handleLinkClick}
-            role="link"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                handleLinkClick();
-              }
-            }}
+                id="wfour-link"
+                className="text-amber-300 hover:text-amber-500 transition-colors cursor-pointer font-medium"
+                onClick={handleLinkClick}
+                role="link"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    handleLinkClick();
+                  }
+                }}
               >
-            W-FOUR TECH
+                W-FOUR TECH
               </span>
             </p>
           </div>

@@ -54,7 +54,7 @@ export default function ServicePage() {
             )}
           </div>
           <div className="mt-8 text-center">
-            <Link href="/service-and-price/dich-vu-toc-nam">
+            <Link href="/service-and-price/mens-hair-services">
               <Button
                 variant="contained"
                 style={{
@@ -101,7 +101,7 @@ export default function ServicePage() {
             )}
           </div>
           <div className="mt-8 text-center">
-            <Link href="/service-and-price/dich-vu-toc-nu">
+            <Link href="/service-and-price/womens-hair-services">
               <Button
                 variant="contained"
                 style={{
@@ -193,7 +193,7 @@ export default function ServicePage() {
             )}
           </div>
           <div className="mt-8 text-center">
-            <Link href="/service-and-price/dieu-tri-va-tao-kieu-toc">
+            <Link href="/service-and-price/hair-treatment-and-styling">
               <Button
                 variant="contained"
                 style={{
@@ -241,7 +241,7 @@ export default function ServicePage() {
             )}
           </div>
           <div className="mt-8 text-center">
-            <Link href="/service-and-price/dich-vu-tham-my">
+            <Link href="/service-and-price/beauty-services">
               <Button
                 variant="contained"
                 style={{

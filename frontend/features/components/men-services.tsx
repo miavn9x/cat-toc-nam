@@ -1,41 +1,42 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const MenServices = () => {
   const services = [
     {
-      name: "Cắt Tóc Nam",
-      price: "Từ $35 + tax",
+      name: "Men's Haircut",
+      price: "From $35 + tax",
       description:
-        "Kiểu tóc được thiết kế riêng, hoàn hảo với phong cách và cuộc sống của bạn. Bao gồm gội đầu thư giãn và tạo kiểu chuyên nghiệp.",
+        "Tailored hairstyles to suit your style and lifestyle. Includes relaxing shampoo and professional styling.",
       benefits:
-        "Nền tảng cho một vẻ ngoài luôn gọn gàng, sắc sảo lâu hơn, tiết kiệm chi phí",
+        "The foundation for a longer lasting, sharper look that's cost-effective",
       image: "/placeholder.svg",
     },
     {
-      name: "Cắt Fade",
-      price: "Từ $40 + tax",
+      name: "Cut Fade",
+      price: "From $40 + tax",
       description:
-        "Kiểu fade siêu gọn gàng, hiện đại được thực hiện hoàn hảo từng lần bởi các chuyên gia.",
+        "Super clean, modern fade done perfectly every time by the pros.",
       benefits:
-        "Fade cực kỳ sạch sẽ, chính xác, giữ form lâu bền, giảm chi phí chỉnh sửa thường xuyên",
+        "Extremely clean, precise fade, long lasting form, reducing the cost of frequent editing",
       image: "/placeholder.svg",
     },
     {
-      name: "Cạo Râu Nóng",
-      price: "Từ $55 + tax",
+      name: "Hot Shave",
+      price: "From $55 + tax",
       description:
-        "Trải nghiệm cạo râu truyền thống đỉnh cao với khăn nóng, mang lại cảm giác cạo sát và thoải mái.",
+        "Experience the ultimate traditional shave with a hot towel, delivering a close and comfortable shave.",
       benefits:
-        "Không chỉ cạo râu mà còn là trị liệu mặt thư giãn, thúc đẩy sức khỏe da",
+        "Not just a shave but a relaxing facial treatment that promotes skin health",
       image: "/placeholder.svg",
     },
     {
-      name: "Tỉa Râu",
-      price: "Từ $16 + tax",
+      name: "Beard Trimming",
+      price: "From $16 + tax",
       description:
-        "Giữ bộ râu của bạn luôn trong tình trạng tốt nhất với dịch vụ tỉa và tạo dáng chuyên nghiệp.",
+        "Keep your beard in tip-top condition with professional trimming and styling services.",
       benefits:
-        "Bộ râu được tạo hình chuyên nghiệp mọc đều hơn, dễ tự chăm sóc tại nhà",
+        "Professionally shaped beard grows more evenly and is easy to care for at home",
       image: "/placeholder.svg",
     },
   ];
@@ -45,13 +46,15 @@ const MenServices = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 lg:mb-24">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-slate-900 mb-6 leading-tight">
-            Dịch Vụ{" "}
-            <span className="text-gray-500 font-extralight">Tóc Nam</span>
+            Service{" "}
+            <span className="text-gray-500 font-extralight">
+              Men&#39;s Hair
+            </span>
           </h2>
           <div className="w-24 h-px bg-slate-900 mx-auto mb-8"></div>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto font-light leading-relaxed">
-            Phong Cách Đỉnh Cao, Chi Tiêu Thông Minh! Đầu tư vào chất lượng và
-            phong cách bền vững thật sự đáng giá.
+            High Style, Smart Spending! Investing in quality and sustainable
+            style is worth it.
           </p>
         </div>
 
@@ -91,14 +94,17 @@ const MenServices = () => {
 
                     <div className="bg-white group-hover:bg-gray-800 p-6 mb-6 transition-all duration-700 border-l-2 border-slate-900 group-hover:border-white">
                       <p className="text-sm text-slate-900 group-hover:text-white font-light transition-colors duration-700">
-                        <strong className="font-normal">Lợi ích:</strong>{" "}
+                        <strong className="font-normal">Benefit:</strong>{" "}
                         {service.benefits}
                       </p>
                     </div>
 
-                    <button className="w-full bg-slate-900 group-hover:bg-white text-white group-hover:text-slate-900 font-light py-4 transition-all duration-700 tracking-wide">
-                      ĐẶT LỊCH NGAY
-                    </button>
+                    <Link
+                      href="/booking"
+                      className="block w-full bg-slate-900 group-hover:bg-white text-white group-hover:text-slate-900 font-light py-4 transition-all duration-700 tracking-wide text-center"
+                    >
+                      BOOK NOW
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -109,7 +115,7 @@ const MenServices = () => {
         <div className="text-center mt-16">
           <div className="bg-slate-900 text-white p-12 shadow-2xl max-w-5xl mx-auto">
             <h3 className="text-3xl font-light mb-8">
-              Tại Sao Chọn Dịch Vụ Tóc Nam Tại Winchair?
+              Why Choose Men&#39;s Hair Services At Winchair?
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
@@ -117,10 +123,10 @@ const MenServices = () => {
                   <span className="text-3xl">✂️</span>
                 </div>
                 <h4 className="font-light text-white mb-3 text-lg">
-                  Chuyên Gia Lành Nghề
+                  Skilled Professional
                 </h4>
                 <p className="text-sm text-gray-400 font-light">
-                  Stylist giàu kinh nghiệm, hiểu rõ xu hướng nam giới
+                  Experienced stylist, understands men&#39;s trends
                 </p>
               </div>
               <div>
@@ -128,10 +134,10 @@ const MenServices = () => {
                   <span className="text-3xl">💰</span>
                 </div>
                 <h4 className="font-light text-white mb-3 text-lg">
-                  Giá Cả Hợp Lý
+                  Reasonable Price
                 </h4>
                 <p className="text-sm text-gray-400 font-light">
-                  Chất lượng cao với mức giá phải chăng nhất thị trường
+                  High quality with the most affordable price on the market
                 </p>
               </div>
               <div>
@@ -139,10 +145,10 @@ const MenServices = () => {
                   <span className="text-3xl">⏱️</span>
                 </div>
                 <h4 className="font-light text-white mb-3 text-lg">
-                  Tiết Kiệm Thời Gian
+                  Save Time
                 </h4>
                 <p className="text-sm text-gray-400 font-light">
-                  Dịch vụ nhanh chóng, hiệu quả cho lối sống bận rộn
+                  Fast, efficient service for busy lifestyles
                 </p>
               </div>
             </div>

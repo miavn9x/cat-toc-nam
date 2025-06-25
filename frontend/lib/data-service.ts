@@ -15,10 +15,10 @@ export interface HairStyle {
   duration?: string; // Thời gian thực hiện (ví dụ: "15-20 phút")
 }
 
-// Định nghĩa interface cho Service, biểu diễn một dịch vụ (ví dụ: Cắt Tóc Nam)
+// Định nghĩa interface cho Service, biểu diễn một dịch vụ (ví dụ: Men's Haircut)
 export interface Service {
   id: string; // Mã định danh duy nhất của dịch vụ
-  title: string; // Tiêu đề dịch vụ (ví dụ: "Cắt Tóc Nam")
+  title: string; // Tiêu đề dịch vụ (ví dụ: "Men's Haircut")
   subtitle: string; // Phụ đề dịch vụ (ví dụ: "Men's Haircut")
   price: string; // Giá dịch vụ (ví dụ: "Từ $35 + tax")
   description: string; // Mô tả ngắn gọn về dịch vụ
@@ -32,7 +32,7 @@ export interface Service {
 // Định nghĩa interface cho ServiceCategory, biểu diễn một danh mục dịch vụ
 export interface ServiceCategory {
   id: string; // Mã định danh duy nhất của danh mục
-  title: string; // Tiêu đề danh mục (ví dụ: "Dịch Vụ Tóc Nam")
+  title: string; // Tiêu đề danh mục (ví dụ: "Men's Hair Services")
   subtitle: string; // Phụ đề danh mục (ví dụ: "Hair Services for Men")
   description: string; // Mô tả chi tiết về danh mục
   tagline: string; // Khẩu hiệu của danh mục (ví dụ: "Phong Cách Đỉnh Cao")

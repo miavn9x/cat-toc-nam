@@ -8,7 +8,7 @@ const About = () => {
           <div className="space-y-8 lg:space-y-12">
             <div className="space-y-6">
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-slate-900 leading-tight">
-                Vì Sao Nên Chọn
+                Why Choose
                 <br />
                 <span className="text-gray-500 font-extralight">
                   Winchair Beauty Spa?
@@ -19,36 +19,34 @@ const About = () => {
 
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed font-light text-justify">
               <p>
-                Chào bạn! Giữa cuộc sống bận rộn ở Canada, việc dành thời gian
-                chăm sóc bản thân không chỉ là điều xa xỉ – đó là một nhu cầu
-                thiết yếu.
+                Hi! In the midst of busy Canadian life, taking time to take care
+                of yourself is not just a luxury – it is a necessity.
               </p>
 
               <p>
-                Tại Winchair Beauty Spa, chúng tôi hiểu rõ điều đó. Chúng tôi đã
-                tạo ra một không gian thân thiện, thư giãn, nơi bạn có thể thật
-                sự nghỉ ngơi, tái tạo năng lượng và rời đi với vẻ ngoài tự tin,
-                rạng rỡ.
+                At Winchair Beauty Spa, we understand that. We have created a
+                friendly, relaxing space where you can truly relax, recharge and
+                leave looking confident and radiant.
               </p>
 
               <p className="text-slate-900 font-normal">
-                Điều gì làm nên sự khác biệt của chúng tôi? Chúng tôi tin rằng
-                chăm sóc tóc và làm đẹp chất lượng cao không cần phải tốn kém.
+                What makes us different? We believe that high-quality hair care
+                and beauty doesn&#39;t have to be expensive.
               </p>
 
               <p>
-                Đó là lý do vì sao chúng tôi mang đến vẻ đẹp sang trọng với mức
-                giá phải chăng, đảm bảo bạn luôn nhận được dịch vụ đẳng cấp và
-                giá trị tuyệt vời mỗi khi ghé thăm.
+                That&#39;s why we offer luxury at an affordable price, ensuring
+                you receive first-class service and great value every time you
+                visit.
               </p>
             </div>
 
             <div className="bg-gray-100 p-8 border-l-2 border-slate-900">
               <p className="text-sm text-gray-500 italic font-light leading-relaxed">
-                <strong className="font-normal">Lưu ý:</strong> Mức giá có chữ
-                &quot;từ&quot; có thể thay đổi tùy thuộc vào độ dài, độ dày của
-                tóc, độ phức tạp của dịch vụ hoặc lượng sản phẩm sử dụng. Tất cả
-                giá đều chưa bao gồm thuế áp dụng.
+                <strong className="font-normal">Note:</strong> Prices marked
+                with &quot;from&quot; may vary depending on hair length,
+                thickness, complexity of service, or amount of product used. All
+                prices do not include applicable taxes.
               </p>
             </div>
           </div>
@@ -74,10 +72,10 @@ const About = () => {
                 </div>
                 <div>
                   <p className="font-light text-white text-lg">
-                    Chất Lượng Cao
+                    High Quality
                   </p>
                   <p className="text-sm text-gray-400 font-light">
-                    Giá Phải Chăng
+                    Affordable
                   </p>
                 </div>
               </div>

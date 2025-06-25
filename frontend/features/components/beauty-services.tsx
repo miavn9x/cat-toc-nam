@@ -1,61 +1,61 @@
-import { Button } from "@mui/material";
+import Link from "next/link";
 import Image from "next/image";
 
 const BeautyServices = () => {
   const services = [
     {
-      name: "Chăm Sóc Da Mặt",
-      duration: "1 Giờ",
-      price: "Từ $90 + tax",
+      name: "Facial Care",
+      duration: "1 Hour",
+      price: "From $90 + tax",
       description:
-        "Trẻ hóa làn da với các liệu trình chăm sóc da mặt tùy chỉnh – được thiết kế để làm sạch, nuôi dưỡng và phục hồi làn da.",
+        "Rejuvenate your skin with customized facial treatments – designed to cleanse, nourish and restore your skin.",
       benefits:
-        "Phân tích da chuyên nghiệp, kết quả rõ rệt lâu dài, cải thiện sức khỏe da",
+        "Professional skin analysis, long lasting visible results, improve skin health",
       image: "/placeholder.svg?height=250&width=350",
       icon: "✨",
     },
     {
-      name: "Tẩy Lông",
-      duration: "Tùy vùng",
-      price: "Từ $16 + tax",
+      name: "Waxing",
+      duration: "Depends on region",
+      price: "From $16 + tax",
       description:
-        "Đạt được làn da mềm mại, mịn màng với dịch vụ tẩy lông chuyên nghiệp cho nhiều vùng khác nhau.",
+        "Achieve soft, smooth skin with professional hair removal for multiple areas.",
       benefits:
-        "Giảm thiểu khó chịu, kết quả bền lâu hơn cạo, ít lần tẩy lông hơn",
+        "Less discomfort, longer lasting results than shaving, fewer waxing sessions",
       image: "/placeholder.svg?height=250&width=350",
       icon: "🪒",
     },
     {
-      name: "Nối Mi",
-      duration: "2-3 Giờ",
-      price: "Từ $85 + tax",
+      name: "Eyelash Extensions",
+      duration: "2-3 Hours",
+      price: "From $85 + tax",
       description:
-        "Nâng cao vẻ đẹp tự nhiên với hàng mi dài hơn, dày hơn, được nối một cách chuyên nghiệp để có vẻ ngoài tuyệt đẹp.",
+        "Enhance natural beauty with longer, thicker lashes, professionally applied for a stunning look.",
       benefits:
-        "Thức dậy với mi đẹp tự nhiên, loại bỏ mascara hàng ngày, tiết kiệm thời gian",
+        "Wake up with naturally beautiful lashes, eliminate daily mascara, save time",
       image: "/placeholder.svg?height=250&width=350",
       icon: "👁️",
     },
     {
-      name: "Phun Xăm Thẩm Mỹ Microblading",
-      duration: "2-3 Giờ",
+      name: "Microblading Cosmetic Tattooing",
+      duration: "2-3 Hours",
       price: "$450 + tax",
       description:
-        "Đạt được cặp chân mày được định hình và rõ nét hoàn hảo với dịch vụ microblading bán vĩnh viễn, bao gồm 1 lần dặm lại miễn phí.",
+        "Achieve perfectly defined and defined brows with semi-permanent microblading, including 1 free touch-up.",
       benefits:
-        "Chân mày hoàn hảo mỗi ngày, tiết kiệm thời gian trang điểm, giải pháp lâu dài",
+        "Perfect eyebrows every day, save makeup time, long-term solution",
       image: "/placeholder.svg?height=250&width=350",
       icon: "🎨",
     },
   ];
 
   const waxingAreas = [
-    { area: "Chân", price: "Từ $45" },
-    { area: "Tay", price: "Từ $35" },
-    { area: "Mặt", price: "Từ $16" },
-    { area: "Bikini", price: "Từ $55" },
-    { area: "Lưng", price: "Từ $65" },
-    { area: "Nách", price: "Từ $25" },
+    { area: "Foot", price: "From $45" },
+    { area: "Hand", price: "From $35" },
+    { area: "Face", price: "From $16" },
+    { area: "Bikini", price: "From $55" },
+    { area: "Back", price: "From $65" },
+    { area: "Armpit", price: "From $25" },
   ];
 
   return (
@@ -63,12 +63,12 @@ const BeautyServices = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            Dịch Vụ <span className="text-amber-600">Chăm Sóc Sắc Đẹp</span>
+            Service <span className="text-amber-600">Beauty Care</span>
           </h2>
           <div className="w-20 h-1 bg-amber-500 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Rạng Rỡ, Thư Giãn & Kết Quả Thực Tế! Nâng cao vẻ rạng rỡ tự nhiên và
-            thúc đẩy sức khỏe tổng thể.
+            Radiant, Relaxed & Real Results! Enhances natural radiance and
+            promotes overall health.
           </p>
         </div>
 
@@ -119,27 +119,18 @@ const BeautyServices = () => {
 
                     <div className="bg-amber-50 p-3 rounded-lg mb-4">
                       <p className="text-xs text-amber-800">
-                        <strong>✨ Lợi ích:</strong> {service.benefits}
+                        <strong>✨ Benefit:</strong> {service.benefits}
                       </p>
                     </div>
 
                     <div className="mt-auto flex justify-center">
-                      <Button
-                        variant="contained"
-                        className="font-semibold rounded-full"
-                        sx={{
-                          backgroundColor: "#d97706", // amber-600
-                          "&:hover": { backgroundColor: "#b45309" }, // amber-700
-                          textTransform: "none",
-                          fontWeight: 600,
-                          paddingX: "24px",
-                          paddingY: "8px",
-                          borderRadius: "9999px",
-                          width: "192px",
-                        }}
+                      <Link
+                        href="/booking"
+                        className="inline-block font-semibold rounded-full px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white transition-colors duration-300 text-center"
+                        style={{ width: "192px" }}
                       >
-                        Đặt Lịch Ngay
-                      </Button>
+                        Book Now
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -151,7 +142,7 @@ const BeautyServices = () => {
         {/* Waxing Services */}
         <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12 mb-12">
           <h3 className="text-2xl lg:text-3xl font-bold text-center text-slate-900 mb-8">
-            Dịch Vụ Tẩy Lông Chuyên Nghiệp
+            Professional Hair Removal Service
           </h3>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -169,49 +160,40 @@ const BeautyServices = () => {
           </div>
 
           <div className="text-center mt-8">
-            <Button
-              variant="contained"
-              className="font-semibold rounded-full"
-              sx={{
-                backgroundColor: "#d97706", // amber-600
-                "&:hover": { backgroundColor: "#b45309" }, // amber-700
-                textTransform: "none",
-                fontWeight: 600,
-                paddingX: "32px",
-                paddingY: "12px",
-                borderRadius: "9999px",
-              }}
+            <Link
+              href="/service-and-price/beauty-services"
+              className="inline-block font-semibold rounded-full px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white transition-colors duration-300 text-center"
             >
-              Xem Bảng Giá Đầy Đủ
-            </Button>
+              View Full Price List
+            </Link>
           </div>
         </div>
 
         {/* Testimonials */}
         <div className="bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl p-8 lg:p-12 text-white">
           <h3 className="text-2xl lg:text-3xl font-bold text-center mb-8">
-            Khách Hàng Nói Gì Về Chúng Tôi?
+            What Do Our Customers Say About Us?
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 name: "Minh Anh",
-                service: "Chăm Sóc Da Mặt",
+                service: "Facial Care",
                 quote:
-                  "Làn da của tôi đã thay đổi hoàn toàn sau liệu trình chăm sóc da mặt tại Winchair. Các chuyên viên rất tận tâm và chuyên nghiệp!",
+                  "My skin has completely changed after the facial treatment at Winchair. The specialists are very dedicated and professional!",
               },
               {
                 name: "Thanh Hà",
-                service: "Nối Mi",
+                service: "Eyelash Extensions",
                 quote:
-                  "Tôi rất hài lòng với dịch vụ nối mi tại đây. Hàng mi tự nhiên, đẹp và bền. Giờ tôi không cần trang điểm mắt mỗi sáng nữa!",
+                  "I am very satisfied with the eyelash extension service here. The lashes are natural, beautiful and long lasting. Now I don't need to put on eye makeup every morning!",
               },
               {
                 name: "Thu Trang",
                 service: "Microblading",
                 quote:
-                  "Chân mày của tôi đã trở nên hoàn hảo sau khi phun xăm tại Winchair. Tiết kiệm rất nhiều thời gian và luôn trông thật tự nhiên.",
+                  "My eyebrows are perfect after getting them done at Winchair. Saves a lot of time and always looks natural.",
               },
             ].map((testimonial, index) => (
               <div

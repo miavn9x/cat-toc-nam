@@ -4,35 +4,35 @@ const WhyChooseUs = () => {
   const benefits = [
     {
       icon: "💎",
-      title: "Chất Lượng Đẳng Cấp",
-      description: "Sản phẩm và dịch vụ chất lượng cao với công nghệ hiện đại",
+      title: "Top Quality",
+      description: "High quality products and services with modern technology",
     },
     {
       icon: "💰",
-      title: "Giá Cả Phải Chăng",
+      title: "Affordable Price",
       description:
-        "Vẻ đẹp sang trọng với mức giá Việt Nam, phù hợp mọi túi tiền",
+        "Luxurious beauty at Vietnamese prices, suitable for all budgets",
     },
     {
       icon: "🏆",
-      title: "Chuyên Gia Giàu Kinh Nghiệm",
-      description: "Đội ngũ stylist và chuyên viên thẩm mỹ lành nghề, tận tâm",
+      title: "Experienced Professional",
+      description: "A team of skilled and dedicated stylists and beauticians",
     },
     {
       icon: "🌟",
-      title: "Không Gian Thư Giãn",
-      description: "Môi trường thân thiện, sạch sẽ và thoải mái nhất",
+      title: "Relaxation Space",
+      description: "The most friendly, clean and comfortable environment",
     },
     {
       icon: "⏰",
-      title: "Tiết Kiệm Thời Gian",
-      description: "Dịch vụ nhanh chóng, hiệu quả mà vẫn đảm bảo chất lượng",
+      title: "Save Time",
+      description: "Fast, efficient service while still ensuring quality",
     },
     {
       icon: "🎯",
-      title: "Tư Vấn Cá Nhân Hóa",
+      title: "Personalized Consulting",
       description:
-        "Dịch vụ được thiết kế riêng theo nhu cầu và phong cách của bạn",
+        "Services tailored to your needs and style",
     },
   ];
 
@@ -41,13 +41,12 @@ const WhyChooseUs = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 md:mb-20 lg:mb-24">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-medium text-slate-800 mb-6">
-            Tại Sao Chọn{" "}
-            <span className="text-amber-600 font-light">Chúng Tôi?</span>
+            Why Choose <span className="text-amber-600 font-light">We?</span>
           </h2>
           <div className="w-32 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto mb-8"></div>
           <p className="text-xl sm:text-2xl font-inter text-slate-600 max-w-4xl mx-auto font-light leading-relaxed">
-            Bạn đã sẵn sàng khám phá cách Winchair Beauty Spa giúp bạn đẹp hơn
-            và cảm thấy tuyệt vời hơn mà không lo {"cháy túi"} chưa?
+            Are you ready to discover how Winchair Beauty Spa can help you look
+            and feel great without breaking the bank?
           </p>
         </div>
 
@@ -57,7 +56,7 @@ const WhyChooseUs = () => {
               key={index}
               className="group bg-white p-10 rounded-xl border border-stone-200 hover:bg-gradient-to-br hover:from-slate-800 hover:to-slate-900 hover:border-amber-500 transition-all duration-300 ease-in-out hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 text-center"
               tabIndex={0}
-              aria-label={`Lợi ích: ${benefit.title}`}
+              aria-label={`Benefit: ${benefit.title}`}
             >
               <div className="text-5xl mb-6 group-hover:scale-105 group-hover:text-amber-400 transition-all duration-300 ease-in-out">
                 {benefit.icon}

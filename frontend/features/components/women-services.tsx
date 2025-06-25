@@ -1,60 +1,58 @@
-import { Button } from "@mui/material";
+import Link from "next/link";
 import Image from "next/image";
 
 const WomenServices = () => {
   const services = [
     {
-      name: "Cắt Tóc Nữ",
-      price: "Từ $55 + tax",
+      name: "Women's Haircut",
+      price: "From $55 + tax",
       description:
-        "Trải nghiệm tạo kiểu riêng biệt nhằm tôn vinh vẻ đẹp tự nhiên và phù hợp với lối sống của bạn. Bao gồm gội đầu sang trọng và tạo kiểu chuyên nghiệp.",
+        "A bespoke styling experience that enhances your natural beauty and suits your lifestyle. Includes luxury shampooing and professional styling.",
       benefits:
-        "Tư vấn kỹ lưỡng đảm bảo kiểu tóc hoàn hảo, ít 'ngày tóc xấu' và tự tin vô giá",
+        "Thorough consultation ensures perfect hairstyle, fewer 'bad hair days' and priceless confidence",
       image: "/placeholder.svg",
     },
     {
-      name: "Nhuộm Tóc",
-      price: "Từ $65 + tax",
+      name: "Hair Coloring",
+      price: "From $65 + tax",
       description:
-        "Màu tóc mới rực rỡ hoặc làm tươi mới màu hiện có với sự tư vấn chuyên nghiệp về tông màu hoàn hảo.",
+        "Get a vibrant new hair colour or refresh your existing colour with professional advice on the perfect shade.",
       benefits:
-        "Sản phẩm chất lượng cao bảo vệ tóc, màu bền lâu và độ bóng rực rỡ",
+        "High quality products protect hair, long lasting color and brilliant shine",
       image: "/placeholder.svg",
     },
     {
       name: "Highlight",
-      price: "Từ $180 + tax",
+      price: "From $180 + tax",
       description:
-        "Thêm chiều sâu và sự lấp lánh cho mái tóc bằng những sợi highlight tuyệt đẹp, tùy chỉnh để tạo hiệu ứng tự nhiên hoặc cá tính.",
+        "Add depth and sparkle to hair with stunning, custom highlights for a natural or dramatic effect.",
       benefits:
-        "Kỹ thuật chuyên nghiệp đảm bảo pha trộn liền mạch, ít cần chỉnh sửa thường xuyên",
+        "Professional technique ensures seamless blending, with less need for frequent tweaking",
       image: "/placeholder.svg",
     },
     {
-      name: "Uốn Tóc",
-      price: "Từ $85 + tax",
+      name: "Hair Perm",
+      price: "From $85 + tax",
       description:
-        "Thêm độ bồng bềnh, phồng và những lọn sóng hoặc xoăn đẹp mắt cho mái tóc với dịch vụ uốn chuyên nghiệp.",
-      benefits:
-        "Kết cấu tóc hoàn hảo, kết quả bền lâu nhiều tháng, giá trị tuyệt vời",
+        "Add volume, bounce and beautiful waves or curls to your hair with a professional perm service.",
+      benefits: "Perfect hair texture, months lasting results, great value",
       image: "/placeholder.svg",
     },
     {
-      name: "Duỗi Tóc",
-      price: "Từ $160 + tax",
+      name: "Hair Straightening",
+      price: "From $160 + tax",
       description:
-        "Mái tóc suôn mượt, óng ả và dễ quản lý với liệu trình duỗi tóc chuyên nghiệp giúp giảm xoăn cứng.",
+        "Smooth, shiny and manageable hair with a professional straightening treatment that reduces frizz.",
       benefits:
-        "Giảm thiểu hư tổn, tối đa độ mượt mà, tạo kiểu hàng ngày nhanh hơn",
+        "Minimize damage, maximize smoothness, and create everyday styles faster.",
       image: "/placeholder.svg",
     },
     {
-      name: "Búi Tóc",
+      name: "Updo",
       price: "$120 + tax",
       description:
-        "Hoàn hảo cho các dịp đặc biệt, kiểu búi tóc được tạo kiểu tinh xảo để mang lại vẻ ngoài thanh lịch và đáng nhớ.",
-      benefits:
-        "Đảm bảo hoàn hảo và giữ nếp suốt cả ngày/đêm, tận hưởng không lo lắng",
+        "Perfect for special occasions, the updo is intricately styled for an elegant and memorable look.",
+      benefits: "Guaranteed perfect and hold all day/night, enjoy worry-free",
       image: "/placeholder.svg",
     },
   ];
@@ -64,12 +62,12 @@ const WomenServices = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            Dịch Vụ <span className="text-pink-600">Tóc Nữ</span>
+            Service <span className="text-pink-600">Women&#39;s Hair</span>
           </h2>
           <div className="w-20 h-1 bg-pink-500 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Đẹp Tự Nhiên, Giá Trị Vượt Trội! Biến mái tóc của bạn thành một tài
-            sản đẹp, bền vững.
+            Natural Beauty, Outstanding Value! Turn your hair into a beautiful,
+            sustainable asset.
           </p>
         </div>
 
@@ -104,28 +102,19 @@ const WomenServices = () => {
 
                   <div className="bg-pink-50 p-3 rounded-lg mb-4">
                     <p className="text-xs text-pink-800">
-                      <strong>💎 Lợi ích:</strong> {service.benefits}
+                      <strong>💎 Benefit:</strong> {service.benefits}
                     </p>
                   </div>
 
                   {/* Nút nằm sát đáy */}
                   <div className="mt-auto flex justify-center">
-                    <Button
-                      variant="contained"
-                      className="font-semibold rounded-full"
-                      sx={{
-                        backgroundColor: "#db2777", // pink-600
-                        "&:hover": { backgroundColor: "#be185d" }, // pink-700
-                        textTransform: "none",
-                        fontWeight: 600,
-                        paddingX: "24px",
-                        paddingY: "8px",
-                        borderRadius: "9999px",
-                        width: "160px",
-                      }}
+                    <Link
+                      href="/booking"
+                      className="inline-block font-semibold rounded-full px-6 py-2 text-white bg-pink-600 hover:bg-pink-700 transition-colors duration-300 text-center"
+                      style={{ width: "160px" }}
                     >
-                      Đặt Lịch Ngay
-                    </Button>
+                      BOOK NOW
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -137,50 +126,25 @@ const WomenServices = () => {
         <div className="mt-16">
           <div className="bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl p-8 lg:p-12 text-white text-center">
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-              Ưu Đãi Đặc Biệt Cho Khách Hàng Nữ
+              Special Offer For Female Customers
             </h3>
             <p className="text-lg mb-6 opacity-90">
-              Đặt combo 2 dịch vụ trở lên và nhận ngay ưu đãi 15% cho lần đầu
-              tiên!
+              Book a combo of 2 or more services and get 15% off your first
+              time!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                variant="contained"
-                className="font-semibold rounded-full"
-                sx={{
-                  backgroundColor: "#ffffff",
-                  color: "#db2777", // pink-600
-                  "&:hover": { backgroundColor: "#f1f5f9" }, // slate-100
-                  textTransform: "none",
-                  fontWeight: 600,
-                  paddingX: "24px",
-                  paddingY: "12px",
-                  borderRadius: "9999px",
-                }}
+              <Link
+                href="/service-and-price/womens-hair-services"
+                className="inline-block font-semibold rounded-full px-6 py-3 text-pink-600 bg-white hover:bg-slate-100 transition-colors duration-300 text-center"
               >
-                Xem Combo Ưu Đãi
-              </Button>
-              <Button
-                variant="outlined"
-                className="font-semibold rounded-full"
-                sx={{
-                  borderColor: "#ffffff",
-                  color: "#ffffff",
-                  "&:hover": {
-                    backgroundColor: "#ffffff",
-                    color: "#db2777", // pink-600
-                    borderColor: "#ffffff",
-                  },
-                  textTransform: "none",
-                  fontWeight: 600,
-                  paddingX: "24px",
-                  paddingY: "12px",
-                  borderRadius: "9999px",
-                  borderWidth: "2px",
-                }}
+                View Combo Offers
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-block font-semibold rounded-full px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-pink-600 transition-colors duration-300 text-center"
               >
-                Tư Vấn Miễn Phí
-              </Button>
+                Free Consultation
+              </Link>
             </div>
           </div>
         </div>

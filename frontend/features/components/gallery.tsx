@@ -7,62 +7,62 @@ import Image from "next/image";
 const Gallery = () => {
   // Categories for filtering
   const categories = [
-    "Tất Cả",
-    "Tóc Nam",
-    "Tóc Nữ",
-    "Tóc Trẻ Em",
-    "Chăm Sóc Da",
-    "Không Gian Spa",
+    "All",
+    "Men's Hair",
+    "Women's Hair",
+    "Children's Hair",
+    "Skin Care",
+    "Spa Space",
   ];
-  const [activeCategory, setActiveCategory] = useState("Tất Cả");
+  const [activeCategory, setActiveCategory] = useState("All");
 
   // Gallery images with categories
   const galleryImages = [
     {
       src: "/placeholder.svg?height=400&width=600",
-      alt: "Kiểu tóc nam hiện đại",
-      category: "Tóc Nam",
+      alt: "Modern Men's Hairstyles",
+      category: "Men's Hair",
     },
     {
       src: "/placeholder.svg?height=400&width=600",
-      alt: "Kiểu tóc nữ sang trọng",
-      category: "Tóc Nữ",
+      alt: "Elegant female hairstyles",
+      category: "Women's Hair",
     },
     {
       src: "/placeholder.svg?height=400&width=600",
-      alt: "Chăm sóc da mặt",
-      category: "Chăm Sóc Da",
+      alt: "Facial care",
+      category: "Skin Care",
     },
     {
       src: "/placeholder.svg?height=400&width=600",
-      alt: "Không gian spa",
-      category: "Không Gian Spa",
+      alt: "Spa space",
+      category: "Spa Space",
     },
     {
       src: "/placeholder.svg?height=400&width=600",
-      alt: "Kiểu tóc trẻ em",
-      category: "Tóc Trẻ Em",
+      alt: "Children's hairstyles",
+      category: "Children's Hair",
     },
     {
       src: "/placeholder.svg?height=400&width=600",
-      alt: "Kiểu tóc nữ hiện đại",
-      category: "Tóc Nữ",
+      alt: "Modern female hairstyles",
+      category: "Women's Hair",
     },
     {
       src: "/placeholder.svg?height=400&width=600",
-      alt: "Kiểu tóc nam cổ điển",
-      category: "Tóc Nam",
+      alt: "Classic Men's Hairstyles",
+      category: "Men's Hair",
     },
     {
       src: "/placeholder.svg?height=400&width=600",
-      alt: "Khu vực tiếp tân",
-      category: "Không Gian Spa",
+      alt: "Reception area",
+      category: "Spa Space",
     },
   ];
 
   // Filter images based on active category
   const filteredImages =
-    activeCategory === "Tất Cả"
+    activeCategory === "All"
       ? galleryImages
       : galleryImages.filter((img) => img.category === activeCategory);
 
@@ -71,12 +71,12 @@ const Gallery = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            Bộ Sưu Tập <span className="text-amber-600">Hình Ảnh</span>
+            Collection <span className="text-amber-600">Image</span>
           </h2>
           <div className="w-20 h-1 bg-amber-500 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Khám phá không gian và các dịch vụ tuyệt vời của Winchair Beauty Spa
-            qua bộ sưu tập hình ảnh
+            Explore the space and wonderful services of Winchair Beauty Spa
+            through the image gallery
           </p>
         </div>
 
@@ -152,7 +152,7 @@ const Gallery = () => {
               width: "192px",
             }}
           >
-            Xem Thêm Hình Ảnh
+            See More Images
           </Button>
         </div>
       </div>

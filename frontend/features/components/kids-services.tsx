@@ -1,25 +1,25 @@
-import { Button } from "@mui/material";
+import Link from "next/link";
 import Image from "next/image";
 
 const KidsServices = () => {
   const services = [
     {
-      name: "Cắt Tóc Bé Trai",
-      price: "Từ $25",
+      name: "Boys Haircuts",
+      price: "From $25",
       description:
-        "Trải nghiệm cắt tóc thân thiện, không rắc rối cho các bé, đảm bảo các bé sẽ rời đi với một kiểu tóc sành điệu và thoải mái.",
+        "A friendly, hassle-free haircut experience for kids, guaranteed to leave with a stylish and comfortable hairstyle.",
       benefits:
-        "Stylist kiên nhẫn đảm bảo trải nghiệm tích cực, giúp những lần cắt tóc sau không căng thẳng",
+        "Patient stylists ensure a positive experience, making future haircuts stress-free",
       image: "/placeholder.svg?height=200&width=300",
       icon: "👦",
     },
     {
-      name: "Cắt Tóc Bé Gái",
-      price: "Từ $35",
+      name: "Baby Girl Haircut",
+      price: "From $35",
       description:
-        "Kiểu tóc thời trang và phù hợp lứa tuổi cho các bé gái, được tạo kiểu theo sở thích và loại tóc của bé.",
+        "Fashionable and age-appropriate hairstyles for girls, styled according to your child's preferences and hair type.",
       benefits:
-        "Kiểu tóc dễ thương và dễ quản lý cho ba mẹ, giải pháp thiết thực cho gia đình bận rộn",
+        "Cute and easy to manage hairstyles for parents, practical solutions for busy families",
       image: "/placeholder.svg?height=200&width=300",
       icon: "👧",
     },
@@ -28,24 +28,24 @@ const KidsServices = () => {
   const features = [
     {
       icon: "🎈",
-      title: "Môi Trường Thân Thiện",
-      description:
-        "Không gian vui vẻ, thoải mái được thiết kế riêng cho trẻ em",
+      title: "Environment Friendly",
+      description: "Fun, comfortable space designed specifically for children",
     },
     {
       icon: "🎮",
-      title: "Giải Trí Trong Lúc Cắt",
-      description: "Hoạt động vui chơi giúp bé không cảm thấy nhàm chán",
+      title: "Entertainment While Cutting",
+      description: "Fun activities help children not feel bored",
     },
     {
       icon: "👨‍👩‍👧‍👦",
-      title: "Ba Mẹ Yên Tâm",
-      description: "Dịch vụ chuyên nghiệp, an toàn và giá cả phải chăng",
+      title: "Parents Rest Assured",
+      description: "Professional, safe and affordable service",
     },
     {
       icon: "⭐",
-      title: "Trải Nghiệm Tích Cực",
-      description: "Tạo ấn tượng tốt để bé thích thú với việc cắt tóc",
+      title: "Positive Experience",
+      description:
+        "Make a good impression so your child enjoys getting a haircut.",
     },
   ];
 
@@ -55,12 +55,12 @@ const KidsServices = () => {
         {/* Tiêu đề chính */}
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            Dịch Vụ <span className="text-emerald-600">Tóc Cho Bé</span>
+            Service <span className="text-emerald-600">Baby Hair</span>
           </h2>
           <div className="w-20 h-1 bg-emerald-500 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Tóc Xinh, Ba Mẹ Hài Lòng! Môi trường vui vẻ và thoải mái cho những
-            khách hàng nhỏ tuổi nhất.
+            Beautiful Hair, Happy Parents! Fun and comfortable environment for
+            even the youngest customers.
           </p>
         </div>
 
@@ -99,26 +99,17 @@ const KidsServices = () => {
                   </p>
                   <div className="bg-emerald-50 p-4 rounded-lg mb-4">
                     <p className="text-sm text-emerald-800">
-                      <strong>🌟 Lợi ích:</strong> {service.benefits}
+                      <strong>🌟 Benefit:</strong> {service.benefits}
                     </p>
                   </div>
                   <div className="mt-auto flex justify-center">
-                    <Button
-                      variant="contained"
-                      className="font-semibold rounded-full"
-                      sx={{
-                        backgroundColor: "#059669",
-                        "&:hover": { backgroundColor: "#047857" },
-                        textTransform: "none",
-                        fontWeight: 600,
-                        paddingX: "24px",
-                        paddingY: "8px",
-                        borderRadius: "9999px",
-                        width: "192px",
-                      }}
+                    <Link
+                      href="/booking"
+                      className="inline-block font-semibold rounded-full px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white transition-colors duration-300 text-center"
+                      style={{ width: "192px" }}
                     >
-                      Đặt Lịch Cho Bé
-                    </Button>
+                      Schedule Your Baby
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -129,7 +120,7 @@ const KidsServices = () => {
         {/* Tính năng nổi bật */}
         <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12">
           <h3 className="text-3xl font-bold text-center text-slate-900 mb-8">
-            Tại Sao Ba Mẹ Tin Tưởng Chọn Winchair?
+            Why Do Parents Trust Winchair?
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
@@ -150,8 +141,8 @@ const KidsServices = () => {
           <div className="text-center mt-8">
             <div className="bg-emerald-50 p-6 rounded-xl inline-block">
               <p className="text-emerald-800 font-medium">
-                💡 <strong>Mẹo nhỏ:</strong> Đặt lịch vào buổi sáng khi bé còn
-                tỉnh táo và vui vẻ để có trải nghiệm tốt nhất!
+                💡 <strong>Tips:</strong> Schedule in the morning when baby is
+                alert and happy for the best experience!
               </p>
             </div>
           </div>
@@ -161,28 +152,17 @@ const KidsServices = () => {
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
-              Lần Đầu Cắt Tóc Của Bé? 🎉
+              Baby&#39;s First Haircut? 🎉
             </h3>
             <p className="text-lg mb-6 opacity-90">
-              Chúng tôi sẽ tạo ra trải nghiệm đặc biệt và đáng nhớ cho bé yêu
-              của bạn!
+              We will create a special and memorable experience for your baby!
             </p>
-            <Button
-              variant="contained"
-              className="font-semibold rounded-full"
-              sx={{
-                backgroundColor: "#ffffff",
-                color: "#059669", // emerald-600
-                "&:hover": { backgroundColor: "#f1f5f9" }, // slate-100
-                textTransform: "none",
-                fontWeight: 600,
-                paddingX: "32px",
-                paddingY: "12px",
-                borderRadius: "9999px",
-              }}
+            <Link
+              href="/booking"
+              className="inline-block font-semibold rounded-full px-8 py-3 bg-white text-emerald-600 hover:bg-slate-100 transition-colors duration-300 text-center"
             >
-              Đặt Lịch Đặc Biệt
-            </Button>
+              Special Reservations
+            </Link>
           </div>
         </div>
       </div>

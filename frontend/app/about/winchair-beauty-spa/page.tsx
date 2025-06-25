@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 const AboutPage = () => {
   return (
@@ -36,7 +37,7 @@ const AboutPage = () => {
               <div className="inline-flex items-center px-4 sm:px-8 py-2 sm:py-4 rounded-full bg-white/5 backdrop-blur-xl border border-amber-500/30 mb-8 sm:mb-12">
                 <div className="w-2 sm:w-3 h-2 sm:h-3 bg-amber-400 rounded-full mr-2 sm:mr-4 animate-pulse"></div>
                 <span className="text-amber-300 font-semibold text-xs sm:text-lg tracking-wide uppercase">
-                  Chào Mừng Đến Với Winchair Beauty Spa
+                  Welcome To Winchair Beauty Spa
                 </span>
               </div>
 
@@ -58,21 +59,21 @@ const AboutPage = () => {
               </h2>
 
               <p className="text-base sm:text-2xl text-gray-400 max-w-5xl mx-auto leading-relaxed mb-12 sm:mb-16 px-4">
-                Tọa lạc tại{" "}
+                Located at{" "}
                 <span className="text-amber-300 font-semibold">
                   3347 Bloor Street West, Etobicoke, Ontario
                 </span>
-                , chúng tôi mang đến không gian thư giãn sang trọng nơi bạn có
-                thể tái tạo năng lượng và tỏa sáng với vẻ đẹp tự nhiên.
+                , we offer a luxurious relaxing space where you can recharge and
+                shine with natural beauty.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
                 <button className="group relative px-8 sm:px-16 py-4 sm:py-6 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 rounded-full text-black font-bold text-lg sm:text-2xl tracking-wide shadow-2xl shadow-amber-500/40 hover:shadow-amber-500/60 transform hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-                  <span className="relative z-10">Khám Phá Ngay</span>
+                  <span className="relative z-10">Explore Now</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
                 <button className="px-8 sm:px-16 py-4 sm:py-6 border-2 border-amber-400/50 rounded-full text-amber-300 font-semibold text-lg sm:text-2xl backdrop-blur-sm hover:bg-amber-400/10 hover:border-amber-400 transition-all duration-300">
-                  Xem Bảng Giá
+                  View Price List
                 </button>
               </div>
             </div>
@@ -84,7 +85,7 @@ const AboutPage = () => {
                   5+
                 </div>
                 <div className="text-gray-300 font-medium uppercase tracking-wider text-xs sm:text-base">
-                  Năm Kinh Nghiệm
+                  Years of Experience
                 </div>
               </div>
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-white/10 text-center hover:bg-white/10 transition-all duration-300">
@@ -92,7 +93,7 @@ const AboutPage = () => {
                   2000+
                 </div>
                 <div className="text-gray-300 font-medium uppercase tracking-wider text-xs sm:text-base">
-                  Khách Hàng
+                  Client
                 </div>
               </div>
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-white/10 text-center hover:bg-white/10 transition-all duration-300">
@@ -100,7 +101,7 @@ const AboutPage = () => {
                   15+
                 </div>
                 <div className="text-gray-300 font-medium uppercase tracking-wider text-xs sm:text-base">
-                  Dịch Vụ
+                  Service
                 </div>
               </div>
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-white/10 text-center hover:bg-white/10 transition-all duration-300">
@@ -108,7 +109,7 @@ const AboutPage = () => {
                   100%
                 </div>
                 <div className="text-gray-300 font-medium uppercase tracking-wider text-xs sm:text-base">
-                  Chất Lượng
+                  Quality
                 </div>
               </div>
             </div>
@@ -120,10 +121,10 @@ const AboutPage = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-20">
               <span className="text-amber-400 font-semibold text-sm sm:text-lg tracking-wider uppercase mb-4 sm:mb-8 block">
-                Câu Chuyện Của Chúng Tôi
+                Our Story
               </span>
               <h2 className="text-3xl sm:text-6xl lg:text-7xl font-extralight text-white leading-tight mb-4 sm:mb-8 px-4">
-                Vì Sao Nên Chọn
+                Why Choose
                 <span className="block bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent font-light mt-2 sm:mt-4">
                   Winchair Beauty Spa
                 </span>
@@ -143,10 +144,10 @@ const AboutPage = () => {
                   <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8">
                     <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20">
                       <h3 className="text-white font-semibold text-lg sm:text-xl mb-1 sm:mb-2">
-                        Không Gian Đẳng Cấp
+                        Classy Space
                       </h3>
                       <p className="text-gray-300 text-xs sm:text-sm">
-                        Thiết kế hiện đại, sang trọng tại trung tâm Etobicoke
+                        Modern, luxurious design in the heart of Etobicoke
                       </p>
                     </div>
                   </div>
@@ -160,21 +161,21 @@ const AboutPage = () => {
               <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
                 <div className="space-y-6 sm:space-y-8 text-base sm:text-xl text-gray-300 leading-relaxed text-justify">
                   <p>
-                    Giữa cuộc sống bận rộn ở Canada, chăm sóc bản thân không chỉ
-                    là điều xa xỉ mà là một nhu cầu thiết yếu. Tại Winchair
-                    Beauty Spa, chúng tôi hiểu rằng mỗi khách hàng đều xứng đáng
-                    được trải nghiệm dịch vụ đẳng cấp.
+                    In the midst of Canada&#39;s busy life, self-care is not
+                    just a luxury but a necessity. At Winchair Beauty Spa, we
+                    understand that every client deserves to experience
+                    first-class service.
                   </p>
                   <p>
-                    Chúng tôi tự hào mang đến không gian thư giãn sang trọng nơi
-                    bạn có thể tạm quên đi những căng thẳng hàng ngày, tái tạo
-                    năng lượng và tự tin tỏa sáng với vẻ đẹp tự nhiên nhất của
-                    mình.
+                    We pride ourselves on providing a luxurious, relaxing space
+                    where you can temporarily forget about your daily stresses,
+                    recharge your energy and confidently shine with your most
+                    natural beauty.
                   </p>
                   <p>
-                    Với đội ngũ chuyên gia giàu kinh nghiệm và trang thiết bị
-                    hiện đại, chúng tôi cam kết mang đến trải nghiệm làm đẹp
-                    hoàn hảo với mức giá mà mọi người đều có thể tiếp cận.
+                    With a team of experienced professionals and modern
+                    equipment, we are committed to providing the perfect beauty
+                    experience at a price that everyone can access.
                   </p>
                 </div>
 
@@ -187,14 +188,14 @@ const AboutPage = () => {
                     </div>
                     <div>
                       <h3 className="text-amber-300 font-bold text-lg sm:text-xl mb-2 sm:mb-3">
-                        Cam Kết Minh Bạch
+                        Commitment to Transparency
                       </h3>
-                        <p className="text-gray-300 leading-relaxed text-sm sm:text-lg text-justify">
-                        Mức giá &quot;từ&quot; có thể thay đổi tùy thuộc vào độ phức tạp,
-                        độ dài tóc và lượng sản phẩm sử dụng. Tất cả giá chưa
-                        bao gồm thuế. Chúng tôi luôn tư vấn chi tiết trước khi
-                        thực hiện dịch vụ.
-                        </p>
+                      <p className="text-gray-300 leading-relaxed text-sm sm:text-lg text-justify">
+                        Price level &quot;from&quot; may vary depending on
+                        complexity, hair length and amount of product used. All
+                        prices do not include tax. We always provide detailed
+                        consultations before performing the service.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -208,31 +209,31 @@ const AboutPage = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-20">
               <span className="text-blue-400 font-semibold text-sm sm:text-lg tracking-wider uppercase mb-4 sm:mb-8 block">
-                Dịch Vụ Của Chúng Tôi
+                Our Services
               </span>
               <h2 className="text-3xl sm:text-6xl lg:text-7xl font-extralight text-white leading-tight mb-4 sm:mb-8 px-4">
-                Trải Nghiệm Toàn Diện
+                The Complete Experience
               </h2>
               <p className="text-lg sm:text-2xl bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-light mb-4 sm:mb-8">
-                Cho Mọi Nhu Cầu Làm Đẹp
+                For All Beauty Needs
               </p>
               <p className="text-base sm:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed px-4">
-                Từ cắt tóc nam nữ đến các liệu trình chăm sóc da chuyên sâu,
-                chúng tôi mang đến giải pháp làm đẹp hoàn hảo.
+                From men&#39;s and women&#39;s haircuts to intensive skin care
+                treatments, we offer the perfect beauty solution.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-6">
               {[
                 {
-                  category: "Dịch Vụ Tóc Nam",
+                  category: "Men's Hair Services",
                   icon: "👨‍💼",
                   image: "/placeholder.svg?height=400&width=600",
                   services: [
-                    "Cắt Tóc Nam",
-                    "Cắt Fade",
-                    "Cạo Râu Nóng",
-                    "Tỉa Râu",
+                    "Men's Haircut",
+                    "Cut Fade",
+                    "Hot Shave",
+                    "Beard Trimming",
                   ],
                   priceRange: "$16 - $55",
                   color: "from-blue-400 to-cyan-400",
@@ -240,14 +241,14 @@ const AboutPage = () => {
                   borderColor: "border-blue-400/30",
                 },
                 {
-                  category: "Dịch Vụ Tóc Nữ",
+                  category: "Women's Hair Services",
                   icon: "👩‍💼",
                   image: "/placeholder.svg?height=400&width=600",
                   services: [
-                    "Cắt Tóc Nữ",
-                    "Nhuộm Tóc",
+                    "Women's Haircut",
+                    "Hair Coloring",
                     "Highlight",
-                    "Uốn/Duỗi",
+                    "Bending/Stretching",
                   ],
                   priceRange: "$55 - $180",
                   color: "from-rose-400 to-pink-400",
@@ -255,20 +256,20 @@ const AboutPage = () => {
                   borderColor: "border-rose-400/30",
                 },
                 {
-                  category: "Dịch Vụ Trẻ Em",
+                  category: "Children's Services",
                   icon: "👶",
                   image: "/placeholder.svg?height=400&width=600",
-                  services: ["Cắt Tóc Bé Trai", "Cắt Tóc Bé Gái"],
+                  services: ["Boys Haircuts", "Girls Haircuts"],
                   priceRange: "$25 - $35",
                   color: "from-purple-400 to-indigo-400",
                   bgColor: "from-purple-900/20 to-indigo-900/20",
                   borderColor: "border-purple-400/30",
                 },
                 {
-                  category: "Chăm Sóc & Làm Đẹp",
+                  category: "Care & Beauty",
                   icon: "✨",
                   image: "/placeholder.svg?height=400&width=600",
-                  services: ["Chăm Sóc Da Mặt", "Tẩy Lông", "Massage Da Đầu"],
+                  services: ["Facial Care", "Hair Removal", "Scalp Massage"],
                   priceRange: "$16 - $90",
                   color: "from-emerald-400 to-teal-400",
                   bgColor: "from-emerald-900/20 to-teal-900/20",
@@ -335,14 +336,14 @@ const AboutPage = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-20">
               <span className="text-amber-400 font-semibold text-sm sm:text-lg tracking-wider uppercase mb-4 sm:mb-8 block">
-                Ưu Điểm Vượt Trội
+                Outstanding Advantages
               </span>
               <h2 className="text-3xl sm:text-6xl lg:text-7xl font-extralight text-white leading-tight mb-4 sm:mb-8 px-4">
-                Tại Sao Chọn Chúng Tôi
+                Why Choose Us
               </h2>
               <p className="text-base sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4">
-                Chúng tôi cam kết mang đến trải nghiệm làm đẹp tuyệt vời với
-                chất lượng dịch vụ hàng đầu.
+                We are committed to providing a wonderful beauty experience with
+                top quality service.
               </p>
             </div>
 
@@ -350,38 +351,38 @@ const AboutPage = () => {
               {[
                 {
                   icon: "💎",
-                  title: "Chất Lượng Cao Cấp",
-                  desc: "Sử dụng sản phẩm và thiết bị hàng đầu thế giới, đảm bảo kết quả tối ưu cho mọi dịch vụ.",
+                  title: "Premium Quality",
+                  desc: "Using world-class products and equipment, ensuring optimal results for every service.",
                   image: "/placeholder.svg?height=300&width=400",
                 },
                 {
                   icon: "👨‍💼",
-                  title: "Đội Ngũ Chuyên Gia",
-                  desc: "Các stylist và chuyên viên thẩm mỹ được đào tạo bài bản, có nhiều năm kinh nghiệm trong ngành.",
+                  title: "Team of Experts",
+                  desc: "Stylists and estheticians are well trained and have many years of experience in the industry.",
                   image: "/placeholder.svg?height=300&width=400",
                 },
                 {
                   icon: "🏢",
-                  title: "Không Gian Sang Trọng",
-                  desc: "Thiết kế hiện đại, sang trọng với môi trường thư giãn, sạch sẽ tại trung tâm Etobicoke.",
+                  title: "Luxurious Space",
+                  desc: "Modern, luxurious design with a relaxing, clean environment in the heart of Etobicoke.",
                   image: "/placeholder.svg?height=300&width=400",
                 },
                 {
                   icon: "🎯",
-                  title: "Dịch Vụ Cá Nhân Hóa",
-                  desc: "Mỗi dịch vụ được thiết kế riêng theo nhu cầu, phong cách và đặc điểm cá nhân của bạn.",
+                  title: "Personalized Service",
+                  desc: "Each service is tailored to your needs, style and personal characteristics.",
                   image: "/placeholder.svg?height=300&width=400",
                 },
                 {
                   icon: "💰",
-                  title: "Giá Cả Hợp Lý",
-                  desc: "Dịch vụ chất lượng cao với mức giá cạnh tranh, phù hợp với mọi ngân sách và nhu cầu.",
+                  title: "Reasonable Price",
+                  desc: "High quality service at competitive prices to suit every budget and need.",
                   image: "/placeholder.svg?height=300&width=400",
                 },
                 {
                   icon: "⭐",
-                  title: "Cam Kết Hài Lòng",
-                  desc: "Chúng tôi cam kết mang đến sự hài lòng 100% với chính sách bảo hành và hỗ trợ tận tình.",
+                  title: "Satisfaction Guarantee",
+                  desc: "We are committed to providing 100% satisfaction with our dedicated warranty and support policies.",
                   image: "/placeholder.svg?height=300&width=400",
                 },
               ].map((feature, index) => (
@@ -417,13 +418,13 @@ const AboutPage = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-20">
               <span className="text-emerald-400 font-semibold text-sm sm:text-lg tracking-wider uppercase mb-4 sm:mb-8 block">
-                Vị Trí & Liên Hệ
+                Location and Contact
               </span>
               <h2 className="text-3xl sm:text-6xl lg:text-7xl font-extralight text-white leading-tight mb-4 sm:mb-8 px-4">
-                Ghé Thăm Chúng Tôi
+                Visit Us
               </h2>
               <p className="text-lg sm:text-2xl bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent font-light">
-                Tại Trung Tâm Etobicoke
+                At Etobicoke Centre
               </p>
             </div>
 
@@ -439,7 +440,7 @@ const AboutPage = () => {
                     </div>
                     <div>
                       <h3 className="text-emerald-300 font-bold text-lg sm:text-2xl mb-2 sm:mb-3">
-                        Địa Chỉ
+                        Address
                       </h3>
                       <p className="text-gray-300 leading-relaxed text-sm sm:text-lg">
                         3347 Bloor Street West
@@ -459,12 +460,12 @@ const AboutPage = () => {
                     </div>
                     <div>
                       <h3 className="text-blue-300 font-bold text-lg sm:text-2xl mb-2 sm:mb-3">
-                        Giao Thông
+                        Traffic
                       </h3>
                       <p className="text-gray-300 leading-relaxed text-sm sm:text-lg">
-                        Dễ dàng tiếp cận bằng xe hơi và phương tiện công cộng
+                        Easily accessible by car and public transport
                         <br />
-                        Có chỗ đậu xe thuận tiện
+                        Convenient parking available
                       </p>
                     </div>
                   </div>
@@ -479,10 +480,10 @@ const AboutPage = () => {
                     </div>
                     <div>
                       <h3 className="text-amber-300 font-bold text-lg sm:text-2xl mb-2 sm:mb-3">
-                        Giờ Làm Việc
+                        Working Hours
                       </h3>
                       <p className="text-gray-300 leading-relaxed text-sm sm:text-lg">
-                        Thứ 2 - Chủ Nhật
+                        Monday - Sunday
                         <br />
                         9:00 AM - 8:00 PM
                       </p>
@@ -509,7 +510,7 @@ const AboutPage = () => {
                         3347 Bloor Street West, Etobicoke, ON
                       </p>
                       <button className="px-4 sm:px-6 py-2 sm:py-3 border border-white/30 rounded-full text-white font-medium backdrop-blur-sm hover:border-emerald-400/50 hover:bg-emerald-400/10 transition-all duration-300 text-sm sm:text-base">
-                        Xem Bản Đồ
+                        View Map
                       </button>
                     </div>
                   </div>
@@ -528,7 +529,7 @@ const AboutPage = () => {
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="bg-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-8 sm:p-20 border border-white/10">
               <h2 className="text-3xl sm:text-6xl lg:text-7xl font-extralight text-white leading-tight mb-8 sm:mb-12 px-4">
-                Sẵn Sàng Tỏa Sáng Với
+                Ready to Shine With
                 <span className="block bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent font-light mt-2 sm:mt-4">
                   Winchair Beauty Spa?
                 </span>
@@ -541,13 +542,15 @@ const AboutPage = () => {
               </div>
 
               <p className="text-base sm:text-2xl text-gray-300 leading-relaxed mb-12 sm:mb-16 max-w-4xl mx-auto px-4">
-                Hãy đến với chúng tôi để trải nghiệm dịch vụ đẳng cấp với giá cả
-                phải chăng. Đặt lịch ngay hôm nay để khám phá vẻ đẹp tự nhiên
-                của bạn!
+                Come to us to experience high-class service at affordable
+                prices. Book an appointment today to discover your natural
+                beauty!
               </p>
 
               <button className="group relative px-12 sm:px-20 py-4 sm:py-8 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 rounded-full text-black font-bold text-xl sm:text-3xl tracking-wide shadow-2xl shadow-amber-500/40 hover:shadow-amber-500/60 transform hover:-translate-y-2 transition-all duration-300 overflow-hidden w-full sm:w-auto">
-                <span className="relative z-10">Đặt Lịch Hẹn Ngay</span>
+                <Link href={"/booking"} className="relative z-10">
+                  Make an Appointment Now
+                </Link>
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
             </div>

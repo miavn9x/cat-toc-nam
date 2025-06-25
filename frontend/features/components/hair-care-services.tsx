@@ -1,45 +1,43 @@
-import { Button } from "@mui/material";
+import Link from "next/link";
 import Image from "next/image";
 
 const HairCareServices = () => {
   const services = [
     {
-      name: "Gội Đầu",
-      price: "Từ $20 + tax",
+      name: "Head washing",
+      price: "From $20 + tax",
       description:
-        "Gội đầu sảng khoái sau đó sấy khô chuyên nghiệp bằng máy sấy khí, giúp tóc bạn sạch sẽ và nhẹ nhàng.",
-      benefits:
-        "Làm mới diện mạo tức thì và tiết kiệm thời gian trong ngày bận rộn",
+        "Refreshing shampoo followed by professional blow drying with an air dryer leaves your hair clean and soft.",
+      benefits: "Instantly refresh your look and save time on your busy day",
       image: "/placeholder.svg?height=200&width=300",
       icon: "🧴",
     },
     {
-      name: "Gội & Tạo Kiểu",
-      price: "Tư vấn khi đặt lịch",
+      name: "Shampoo & Styling",
+      price: "Advice when booking",
       description:
-        "Tận hưởng việc gội đầu sang trọng sau đó là tạo kiểu tóc đẹp bằng lược hoặc máy uốn/duỗi, hoàn hảo cho vẻ ngoài hoàn thiện.",
-      benefits:
-        "Vẻ 'vừa bước ra từ salon', tiết kiệm công sức tự tạo kiểu tại nhà",
+        "Enjoy a luxurious shampoo followed by beautiful styling with a brush or curling/straightening iron, perfect for a finished look.",
+      benefits: "'Just out of the salon' look, save effort in styling at home",
       image: "/placeholder.svg?height=200&width=300",
       icon: "💇‍♀️",
     },
     {
-      name: "Liệu Trình Dưỡng Tóc",
+      name: "Hair Treatment",
       price: "$90 + tax",
       description:
-        "Nuôi dưỡng sâu và phục hồi sức sống cho mái tóc với liệu trình gội đầu dưỡng chuyên biệt, phục hồi sức khỏe và độ bóng.",
+        "Deeply nourish and revitalize hair with a specialized conditioning shampoo treatment that restores health and shine.",
       benefits:
-        "Sửa chữa hư tổn, tăng độ bóng và cải thiện khả năng quản lý tóc lâu dài",
+        "Repairs damage, increases shine and improves long-term hair manageability",
       image: "/placeholder.svg?height=200&width=300",
       icon: "✨",
     },
     {
-      name: "Massage Da Đầu",
+      name: "Scalp Massage",
       price: "$85 + tax",
       description:
-        "Đắm mình trong liệu trình massage da đầu thư giãn sâu và trị liệu, thúc đẩy lưu thông máu đến da đầu.",
+        "Indulge in a deeply relaxing and therapeutic scalp massage that promotes blood circulation to the scalp.",
       benefits:
-        "Khuyến khích tóc mọc khỏe mạnh, giảm căng thẳng và cải thiện sức khỏe tổng thể",
+        "Promotes healthy hair growth, reduces stress and improves overall health",
       image: "/placeholder.svg?height=200&width=300",
       icon: "💆‍♀️",
     },
@@ -48,25 +46,26 @@ const HairCareServices = () => {
   const benefits = [
     {
       icon: "🌿",
-      title: "Sản Phẩm Tự Nhiên",
+      title: "Natural Products",
       description:
-        "Sử dụng các sản phẩm chăm sóc tóc cao cấp, an toàn cho mọi loại tóc",
+        "Use high quality hair care products that are safe for all hair types",
     },
     {
       icon: "🔬",
-      title: "Công Nghệ Hiện Đại",
-      description: "Áp dụng kỹ thuật và thiết bị tiên tiến nhất trong ngành",
+      title: "Modern Technology",
+      description:
+        "Applying the most advanced techniques and equipment in the industry",
     },
     {
       icon: "👩‍⚕️",
-      title: "Chuyên Gia Tư Vấn",
+      title: "Consultant",
       description:
-        "Đội ngũ chuyên viên giàu kinh nghiệm tư vấn phù hợp từng loại tóc",
+        "Experienced team of experts provide advice suitable for each hair type",
     },
     {
       icon: "💎",
-      title: "Kết Quả Bền Lâu",
-      description: "Hiệu quả duy trì lâu dài, giúp tiết kiệm chi phí dài hạn",
+      title: "Long Lasting Results",
+      description: "Long lasting effect, helps save long term costs",
     },
   ];
 
@@ -75,12 +74,12 @@ const HairCareServices = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            <span className="text-indigo-600">Chăm Sóc</span> & Tạo Kiểu Tóc
+            <span className="text-indigo-600">Take care of</span> & Hair Styling
           </h2>
           <div className="w-20 h-1 bg-indigo-500 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Tóc Khỏe Đẹp, Vẻ Đẹp Rạng Ngời Tự Nhiên! Đầu tư vào sức khỏe và sức
-            sống của mái tóc bạn.
+            Healthy Hair, Naturally Radiant Beauty! Invest in the health and
+            vitality of your hair.
           </p>
         </div>
 
@@ -126,28 +125,19 @@ const HairCareServices = () => {
 
                     <div className="bg-indigo-50 p-3 rounded-lg mb-4">
                       <p className="text-xs text-indigo-700">
-                        <strong>💜 Lợi ích:</strong> {service.benefits}
+                        <strong>💜 Benefit:</strong> {service.benefits}
                       </p>
                     </div>
 
                     {/* Button luôn sát đáy */}
                     <div className="mt-auto flex justify-center">
-                      <Button
-                        variant="contained"
-                        className="font-semibold rounded-full"
-                        sx={{
-                          backgroundColor: "#4f46e5", // indigo-600
-                          "&:hover": { backgroundColor: "#4338ca" }, // indigo-700
-                          textTransform: "none",
-                          fontWeight: 600,
-                          paddingX: "24px",
-                          paddingY: "8px",
-                          borderRadius: "9999px",
-                          width: "192px",
-                        }}
+                      <Link
+                        href="/booking"
+                        className="inline-block font-semibold rounded-full px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white transition-colors duration-300 text-center"
+                        style={{ width: "192px" }}
                       >
-                        Đặt Lịch Ngay
-                      </Button>
+                        Book Now
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -159,7 +149,7 @@ const HairCareServices = () => {
         {/* Benefits Section */}
         <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12 mb-12">
           <h3 className="text-2xl lg:text-3xl font-bold text-center text-slate-900 mb-8">
-            Tại Sao Chọn Dịch Vụ Chăm Sóc Tóc Tại Winchair?
+            Why Choose Hair Care Services At Winchair?
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -182,30 +172,30 @@ const HairCareServices = () => {
         {/* Treatment Process */}
         <div className="bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-2xl p-8 lg:p-12 text-white">
           <h3 className="text-2xl lg:text-3xl font-bold text-center mb-8">
-            Quy Trình Chăm Sóc Chuyên Nghiệp
+            Professional Care Process
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
               {
                 step: "01",
-                title: "Tư Vấn",
-                desc: "Phân tích tình trạng tóc và da đầu",
+                title: "Advise",
+                desc: "Hair and scalp condition analysis",
               },
               {
                 step: "02",
-                title: "Điều Trị",
-                desc: "Áp dụng liệu trình phù hợp",
+                title: "Treatment",
+                desc: "Apply appropriate treatment",
               },
               {
                 step: "03",
-                title: "Chăm Sóc",
-                desc: "Massage và nuôi dưỡng sâu",
+                title: "Take care of",
+                desc: "Massage and deep nourishment",
               },
               {
                 step: "04",
-                title: "Hoàn Thiện",
-                desc: "Tạo kiểu và hướng dẫn bảo quản",
+                title: "Complete",
+                desc: "Styling and care instructions",
               },
             ].map((process, index) => (
               <div key={index} className="text-center">
@@ -219,22 +209,12 @@ const HairCareServices = () => {
           </div>
 
           <div className="text-center mt-8">
-            <Button
-              variant="contained"
-              className="font-semibold rounded-full"
-              sx={{
-                backgroundColor: "#ffffff",
-                color: "#4f46e5", // indigo-600
-                "&:hover": { backgroundColor: "#f1f5f9" }, // slate-100
-                textTransform: "none",
-                fontWeight: 600,
-                paddingX: "32px",
-                paddingY: "12px",
-                borderRadius: "9999px",
-              }}
+            <Link
+              href="/contact"
+              className="inline-block font-semibold rounded-full px-8 py-3 bg-white text-indigo-600 hover:bg-slate-100 transition-colors duration-300 text-center"
             >
-              Tư Vấn Miễn Phí
-            </Button>
+              Free Consultation
+            </Link>
           </div>
         </div>
       </div>

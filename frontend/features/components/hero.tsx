@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -32,29 +33,30 @@ const Hero = () => {
 
           <div className="mb-8 lg:mb-12">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-inter font-light text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Nơi Làm Đẹp Sang Trọng Với Giá Việt Nam
+              Luxury Beauty Salon With Vietnamese Prices
             </h2>
             <p className="text-base sm:text-lg font-inter text-gray-400 max-w-2xl mx-auto mt-4 leading-relaxed">
               3347 Bloor Street West, Etobicoke, Ontario
-              <br />
-              Không gian thân thiện, thư giãn - nơi bạn tái tạo năng lượng và
-              rời đi với vẻ ngoài tự tin, rạng rỡ
+              <br />A friendly, relaxing space - where you can recharge and
+              leave feeling confident and radiant
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-6">
-            <button
+            <Link
+              href="/booking"
               className="bg-white text-black font-inter font-light text-lg px-8 py-3 rounded-lg transition-all duration-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
-              aria-label="Đặt lịch ngay"
+              aria-label="Book Now"
             >
-              ĐẶT LỊCH NGAY
-            </button>
-            <button
+              BOOK NOW
+            </Link>
+            <Link
+              href="/service-and-price"
               className="border border-white text-white font-inter font-light text-lg px-8 py-3 rounded-lg transition-all duration-300 hover:bg-white hover:text-black hover:border-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
-              aria-label="Xem dịch vụ"
+              aria-label="View Services"
             >
-              XEM DỊCH VỤ
-            </button>
+              VIEW SERVICES
+            </Link>
           </div>
 
           {/* Contact Info */}
@@ -66,11 +68,11 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border border-white/30 rounded-full flex justify-center">
           <div className="w-px h-3 bg-white/50 rounded-full mt-2"></div>
         </div>
-      </div>
+      </div> */}
 
       <style jsx>{`
         @keyframes bounce {

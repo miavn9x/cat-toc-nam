@@ -70,133 +70,133 @@ const Menu = () => {
   };
 
   const menuItems: MenuItem[] = [
-    { name: "Trang Chủ", link: "/" },
+    { name: "Home", link: "/" },
     {
-      name: "Về Chúng Tôi",
+      name: "About Us",
       subItems: [
-        { name: "Giới Thiệu", link: "/about/winchair-beauty-spa" },
-        { name: "Ưu Điểm Nổi Bật", link: "/about/features" },
+        { name: "Introduce", link: "/about/winchair-beauty-spa" },
+        { name: "Outstanding Advantages", link: "/about/features" },
       ],
     },
     {
-      name: "Dịch Vụ & Giá",
+      name: "Services & Prices",
       link: "/service-and-price",
       subItems: [
         {
-          name: "Dịch Vụ Tóc Nam",
-          link: "/service-and-price/dich-vu-toc-nam",
+          name: "Men's Hair Services",
+          link: "/service-and-price/mens-hair-services",
           subItems: [
             {
-              name: "Cắt Tóc Nam",
-              link: "/service-and-price/dich-vu-toc-nam/cat-toc-nam",
+              name: "Men's Haircut",
+              link: "/service-and-price/mens-hair-services/mens-haircut",
             },
             {
-              name: "Cắt Fade",
-              link: "/service-and-price/dich-vu-toc-nam/cat-fade",
+              name: "Cut Fade",
+              link: "/service-and-price/mens-hair-services/fade-haircut",
             },
             {
-              name: "Cạo Râu Nóng",
-              link: "/service-and-price/dich-vu-toc-nam/cao-rau-nong",
+              name: "Hot Shave",
+              link: "/service-and-price/mens-hair-services/hot-shave",
             },
             {
-              name: "Tỉa Râu",
-              link: "/service-and-price/dich-vu-toc-nam/tia-rau",
+              name: "Beard Trimming",
+              link: "/service-and-price/mens-hair-services/beard-trim",
             },
           ],
         },
         {
-          name: "Dịch Vụ Tóc Nữ",
-          link: "/service-and-price/dich-vu-toc-nu",
+          name: "Women's Hair Services",
+          link: "/service-and-price/womens-hair-services",
           subItems: [
             {
-              name: "Cắt Tóc Nữ",
-              link: "/service-and-price/dich-vu-toc-nu/cat-toc-nu",
+              name: "Women's Haircut",
+              link: "/service-and-price/womens-hair-services/womens-haircut",
             },
             {
-              name: "Nhuộm Tóc",
-              link: "/service-and-price/dich-vu-toc-nu/nhuom-toc",
+              name: "Hair Coloring",
+              link: "/service-and-price/womens-hair-services/hair-coloring",
             },
             {
               name: "Highlight",
-              link: "/service-and-price/dich-vu-toc-nu/highlight",
+              link: "/service-and-price/womens-hair-services/hair-highlights",
             },
             {
-              name: "Uốn Tóc",
-              link: "/service-and-price/dich-vu-toc-nu/uen-toc",
+              name: "Hair Perm",
+              link: "/service-and-price/womens-hair-services/hair-perm",
             },
             {
-              name: "Duỗi Tóc",
-              link: "/service-and-price/dich-vu-toc-nu/duoi-toc",
+              name: "Hair Straightening",
+              link: "/service-and-price/womens-hair-services/hair-straightening",
             },
             {
-              name: "Búi Tóc",
-              link: "/service-and-price/dich-vu-toc-nu/bui-toc",
+              name: "Updo",
+              link: "/service-and-price/womens-hair-services/hair-updo",
             },
           ],
         },
         {
-          name: "Dịch Vụ Tóc Cho Bé",
-          link: "/service-and-price/dich-vu-toc-cho-be",
+          name: "Baby Hair Services",
+          link: "/service-and-price/kids-hair-services",
           subItems: [
             {
-              name: "Cắt Tóc Bé Trai",
-              link: "/service-and-price/dich-vu-toc-cho-be/cat-toc-be-trai",
+              name: "Boys Haircuts",
+              link: "/service-and-price/kids-hair-services/boys-haircut",
             },
             {
-              name: "Cắt Tóc Bé Gái",
-              link: "/service-and-price/dich-vu-toc-cho-be/cat-toc-be-gai",
+              name: "Baby Girl Haircut",
+              link: "/service-and-price/kids-hair-services/girls-haircut",
             },
           ],
         },
         {
-          name: "Chăm Sóc & Tạo Kiểu Tóc",
-          link: "/service-and-price/dieu-tri-va-tao-kieu-toc",
+          name: "Hair Care & Styling",
+          link: "/service-and-price/hair-treatment-and-styling",
           subItems: [
             {
-              name: "Gội Đầu",
-              link: "/service-and-price/dieu-tri-va-tao-kieu-toc",
+              name: "Head washing",
+              link: "/service-and-price/hair-treatment-and-styling/hair-wash",
             },
             {
-              name: "Gội & Tạo Kiểu",
-              link: "/service-and-price/dieu-tri-va-tao-kieu-toc/goi-tao-kieu",
+              name: "Shampoo & Styling",
+              link: "/service-and-price/hair-treatment-and-styling/wash-and-style",
             },
             {
-              name: "Liệu Trình Dưỡng Tóc",
-              link: "/service-and-price/dieu-tri-va-tao-kieu-toc/lieu-trinh-duong-toc",
+              name: "Hair Treatment",
+              link: "/service-and-price/hair-treatment-and-styling/hair-treatment",
             },
             {
-              name: "Massage Da Đầu",
-              link: "/service-and-price/dieu-tri-va-tao-kieu-toc/massage-da-dau",
+              name: "Scalp Massage",
+              link: "/service-and-price/hair-treatment-and-styling/scalp-massage",
             },
           ],
         },
         {
-          name: "Dịch Vụ Chăm Sóc Sắc Đẹp",
-          link: "/service-and-price/dich-vu-tham-my",
+          name: "Beauty Care Services",
+          link: "/service-and-price/beauty-services",
           subItems: [
             {
-              name: "Chăm Sóc Da Mặt",
-              link: "/service-and-price/dich-vu-tham-my/cham-soc-da-mat",
+              name: "Facial Care",
+              link: "/service-and-price/beauty-services/facial-treatment",
             },
             {
-              name: "Tẩy Lông (Waxing)",
-              link: "/service-and-price/dich-vu-tham-my/tay-long",
+              name: "Waxing",
+              link: "/service-and-price/beauty-services/body-waxing",
             },
             {
-              name: "Nối Mi",
-              link: "/service-and-price/dich-vu-tham-my/noi-mi",
+              name: "Eyelash Extensions",
+              link: "/service-and-price/beauty-services/eyelash-extension",
             },
             {
-              name: "Phun Xăm Thẩm Mỹ Microblading",
-              link: "/service-and-price/dich-vu-tham-my/phun-xam-tham-my",
+              name: "Microblading Cosmetic Tattooing",
+              link: "/service-and-price/beauty-services/microblading",
             },
           ],
         },
-        { name: "Dịch Vụ Khác", link: "/service-and-price" },
+        { name: "Other Services", link: "/service-and-price" },
       ],
     },
-    { name: "Đặt Lịch Hẹn", link: "/booking" },
-    { name: "Liên Hệ", link: "/contact" },
+    { name: "Make an Appointment", link: "/booking" },
+    { name: "Contact", link: "/contact" },
   ];
 
   return (

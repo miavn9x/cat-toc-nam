@@ -1,41 +1,52 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const ServicesOverview = () => {
   const serviceCategories = [
     {
-      title: "Dịch Vụ Tóc Nam",
-      description: "Phong cách đỉnh cao, chi tiêu thông minh",
+      title: "Men's Hair Services",
+      description: "High style, smart spending",
       image: "/placeholder.svg",
-      services: ["Cắt Tóc Nam", "Cắt Fade", "Cạo Râu Nóng", "Tỉa Râu"],
+      services: ["Men's Haircut", "Fade Cut", "Hot Shave", "Beard Trim"],
       priceFrom: "$16",
+      href: "/mens-hair-services",
     },
     {
-      title: "Dịch Vụ Tóc Nữ",
-      description: "Đẹp tự nhiên, giá trị vượt trội",
+      title: "Women's Hair Services",
+      description: "Natural beauty, outstanding value",
       image: "/placeholder.svg",
-      services: ["Cắt Tóc Nữ", "Nhuộm Tóc", "Highlight", "Uốn Tóc"],
+      services: ["Women's Haircut", "Hair Color", "Highlight", "Hair Perm"],
       priceFrom: "$55",
+      href: "/womens-hair-services",
     },
     {
-      title: "Dịch Vụ Tóc Cho Bé",
-      description: "Tóc xinh, ba mẹ hài lòng",
+      title: "Baby Hair Services",
+      description: "Beautiful hair, happy parents",
       image: "/placeholder.svg",
-      services: ["Cắt Tóc Bé Trai", "Cắt Tóc Bé Gái"],
+      services: ["Boy Haircut", "Girl Haircut"],
       priceFrom: "$25",
+      href: "/kids-hair-services",
     },
     {
-      title: "Chăm Sóc & Tạo Kiểu",
-      description: "Tóc khỏe đẹp, vẻ đẹp rạng ngời",
+      title: "Care & Styling",
+      description: "Healthy hair, radiant beauty",
       image: "/placeholder.svg",
-      services: ["Gội Đầu", "Liệu Trình Dưỡng", "Massage Da Đầu"],
+      services: ["Hair Wash", "Treatment", "Scalp Massage"],
       priceFrom: "$20",
+      href: "/hair-treatment-and-styling",
     },
     {
-      title: "Chăm Sóc Sắc Đẹp",
-      description: "Rạng rỡ, thư giãn & kết quả thực tế",
+      title: "Beauty Care",
+      description: "Radiant, relaxing & real results",
       image: "/placeholder.svg",
-      services: ["Chăm Sóc Da Mặt", "Tẩy Lông", "Nối Mi", "Microblading"],
+      services: [
+        "Facial Care",
+        "Hair Removal",
+        "Eyelash Extensions",
+        "Microblading",
+      ],
       priceFrom: "$16",
+      href: "/beauty-services",
     },
   ];
 
@@ -44,13 +55,12 @@ const ServicesOverview = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 lg:mb-24">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light mb-6 leading-tight">
-            Dịch Vụ{" "}
-            <span className="text-gray-500 font-extralight">Của Chúng Tôi</span>
+            Service <span className="text-gray-500 font-extralight">Our</span>
           </h2>
           <div className="w-24 h-px bg-white mx-auto mb-8"></div>
           <p className="text-xl text-gray-400 max-w-4xl mx-auto font-light leading-relaxed">
-            Khám phá đầy đủ các dịch vụ chăm sóc tóc và làm đẹp chuyên nghiệp
-            tại Winchair Beauty Spa
+            Discover a full range of professional hair and beauty services at
+            Winchair Beauty Spa
           </p>
         </div>
 
@@ -69,7 +79,7 @@ const ServicesOverview = () => {
                   />
                   <div className="absolute inset-0 bg-slate-900/60"></div>
                   <div className="absolute top-6 right-6 bg-white text-slate-900 px-4 py-2 text-sm font-light tracking-wide">
-                    TỪ {category.priceFrom}
+                    FROM {category.priceFrom}
                   </div>
                 </div>
 
@@ -94,14 +104,18 @@ const ServicesOverview = () => {
                     ))}
                     {category.services.length > 3 && (
                       <div className="text-sm text-gray-400 font-light">
-                        +{category.services.length - 3} dịch vụ khác
+                        +{category.services.length - 3} other services
                       </div>
                     )}
                   </div>
 
-                  <button className="w-full border border-white text-white hover:bg-white hover:text-slate-900 font-light tracking-wide py-2 text-sm transition-all duration-300">
-                    XEM CHI TIẾT
-                  </button>
+                  <Link
+                    href={`service-and-price/${category.href}`}
+                    aria-label={`See details for ${category.title}`}
+                    className="block w-full border border-white text-white hover:bg-white hover:text-slate-900 font-light tracking-wide py-2 text-sm text-center transition-all duration-300"
+                  >
+                    SEE DETAILS
+                  </Link>
                 </div>
               </div>
             </div>
@@ -109,9 +123,12 @@ const ServicesOverview = () => {
         </div>
 
         <div className="text-center">
-          <button className="bg-white hover:bg-gray-100 text-slate-900 font-light px-12 py-4 text-lg tracking-wide transition-all duration-500">
-            XEM TẤT CẢ DỊCH VỤ
-          </button>
+          <Link
+            href="/service-and-price"
+            className="bg-white hover:bg-gray-100 text-slate-900 font-light px-12 py-4 text-lg tracking-wide transition-all duration-500"
+          >
+            VIEW ALL SERVICES
+          </Link>
         </div>
       </div>
     </section>

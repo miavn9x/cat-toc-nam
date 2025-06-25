@@ -1,20 +1,20 @@
 import Head from "next/head";
+import Link from "next/link";
 
 const FeaturesPage = () => {
   return (
     <>
       <Head>
         <title>
-          Ưu Điểm Dịch Vụ - Winchair Beauty Spa | Làm Đẹp Sang Trọng Giá Việt
-          Nam
+          Service Advantages - Winchair Beauty Spa | Luxury Beauty Vietnam Price
         </title>
         <meta
           name="description"
-          content="Khám phá ưu điểm vượt trội của Winchair Beauty Spa - Dịch vụ tóc và làm đẹp chất lượng cao với giá cả phải chăng tại Etobicoke, Ontario. Phong cách đỉnh cao, chi tiêu thông minh."
+          content="Discover the great benefits of Winchair Beauty Spa - High quality hair and beauty services at affordable prices in Etobicoke, Ontario. High style, smart spending."
         />
         <meta
           name="keywords"
-          content="ưu điểm dịch vụ, Winchair Beauty Spa, salon tóc Etobicoke, cắt tóc nam nữ, nhuộm tóc, chăm sóc da, giá rẻ, chất lượng cao"
+          content="service advantages, Winchair Beauty Spa, Etobicoke hair salon, men's and women's haircuts, hair coloring, skin care, cheap, high quality"
         />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,8 +27,8 @@ const FeaturesPage = () => {
             {
               "@context": "https://schema.org",
               "@type": "WebPage",
-              "name": "Ưu Điểm Dịch Vụ - Winchair Beauty Spa",
-              "description": "Dịch vụ làm đẹp chất lượng cao với giá cả phải chăng",
+              "name": "Service Advantages - Winchair Beauty Spa",
+              "description": "High quality beauty services at affordable prices",
               "provider": {
                 "@type": "LocalBusiness",
                 "name": "Winchair Beauty Spa",
@@ -65,7 +65,7 @@ const FeaturesPage = () => {
             </div>
 
             <h1 className="text-3xl sm:text-6xl lg:text-8xl font-extralight text-white leading-none mb-6 sm:mb-8 px-4">
-              Vì Sao Nên Chọn
+              Why Choose
               <span className="block font-light bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent mt-2 sm:mt-4">
                 Winchair Beauty Spa
               </span>
@@ -74,35 +74,39 @@ const FeaturesPage = () => {
             <div className="w-16 sm:w-32 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-8 sm:mb-12"></div>
 
             <p className="text-lg sm:text-2xl lg:text-3xl text-gray-300 font-light mb-4 sm:mb-6 max-w-4xl mx-auto leading-relaxed px-4">
-              Nơi Làm Đẹp Sang Trọng Với Giá Việt Nam
+              Luxury Beauty Salon With Vietnamese Prices
             </p>
 
             <p className="text-sm sm:text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-12 px-4">
-              Tại{" "}
+              At{" "}
               <span className="text-amber-300 font-medium">
                 3347 Bloor Street West, Etobicoke, Ontario
               </span>
-              , chúng tôi mang đến trải nghiệm làm đẹp đẳng cấp quốc tế với mức
-              giá phải chăng.
+              , We offer world-class beauty experiences at affordable prices.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
               <button className="group relative px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 rounded-full text-black font-semibold text-base sm:text-lg tracking-wide shadow-2xl shadow-amber-500/30 hover:shadow-amber-500/50 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden w-full sm:w-auto">
-                <span className="relative z-10">Đặt Lịch Hẹn Ngay</span>
+                <Link href={"/booking"} className="relative z-10">
+                  Make an Appointment Now
+                </Link>
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
-              <button className="px-8 sm:px-12 py-4 sm:py-5 border-2 border-white/20 rounded-full text-white font-medium text-base sm:text-lg tracking-wide backdrop-blur-sm hover:border-amber-400/50 hover:bg-amber-400/10 transition-all duration-300 w-full sm:w-auto">
-                Tư Vấn Miễn Phí
-              </button>
+              <Link
+                href={"/contact"}
+                className="px-8 sm:px-12 py-4 sm:py-5 border-2 border-white/20 rounded-full text-white font-medium text-base sm:text-lg tracking-wide backdrop-blur-sm hover:border-amber-400/50 hover:bg-amber-400/10 transition-all duration-300 w-full sm:w-auto"
+              >
+                Free Consultation
+              </Link>
             </div>
           </div>
 
           {/* Scroll Indicator - Hidden on mobile */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
+          {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
             <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
               <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
             </div>
-          </div>
+          </div> */}
         </section>
 
         {/* Value Proposition - Responsive */}
@@ -113,21 +117,20 @@ const FeaturesPage = () => {
               <div className="order-2 lg:order-1">
                 <div className="mb-6 sm:mb-8">
                   <span className="text-amber-400 font-medium text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 block">
-                    Triết Lý Của Chúng Tôi
+                    Our Philosophy
                   </span>
                   <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extralight text-white leading-tight mb-6 sm:mb-8">
-                    Điều Gì Làm Nên
+                    What to Do
                     <span className="block bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent font-light mt-2">
-                      Sự Khác Biệt
+                      The Difference
                     </span>
                   </h2>
                 </div>
 
                 <p className="text-base sm:text-xl text-gray-300 leading-relaxed mb-8 sm:mb-12 text-justify">
-                  Chúng tôi tin rằng vẻ đẹp không phải là đặc quyền của những
-                  người giàu có. Tại Winchair Beauty Spa, chúng tôi mang đến
-                  dịch vụ đẳng cấp quốc tế với mức giá mà mọi người đều có thể
-                  tiếp cận.
+                  We believe that beauty is not the privilege of the rich. At
+                  Winchair Beauty Spa, we offer world-class services at prices
+                  that are accessible to everyone.
                 </p>
 
                 <div className="bg-gradient-to-r from-amber-900/20 to-yellow-900/20 border border-amber-500/30 rounded-2xl p-6 sm:p-8 backdrop-blur-sm">
@@ -139,12 +142,13 @@ const FeaturesPage = () => {
                     </div>
                     <div>
                       <h3 className="text-amber-300 font-semibold text-base sm:text-lg mb-2">
-                        Lưu Ý Quan Trọng
+                        Important Note
                       </h3>
                       <p className="text-gray-300 leading-relaxed text-sm sm:text-base text-justify">
-                        Mức giá &quot;từ&quot; có thể thay đổi tùy thuộc vào độ phức tạp,
-                        độ dài tóc và lượng sản phẩm sử dụng. Tất cả giá chưa
-                        bao gồm thuế. Chúng tôi cam kết minh bạch về giá cả.
+                        Price level &quot;from&quot; may vary depending on
+                        complexity, hair length and amount of product used. All
+                        prices exclude tax. We are committed to transparency in
+                        our pricing.
                       </p>
                     </div>
                   </div>
@@ -162,10 +166,10 @@ const FeaturesPage = () => {
                   <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8">
                     <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20">
                       <h3 className="text-white font-semibold text-lg sm:text-xl mb-1 sm:mb-2">
-                        Không Gian Sang Trọng
+                        Luxurious Space
                       </h3>
                       <p className="text-gray-300 text-xs sm:text-sm text-justify">
-                        Thiết kế hiện đại, trang thiết bị cao cấp
+                        Modern design, high-end equipment
                       </p>
                     </div>
                   </div>
@@ -184,17 +188,17 @@ const FeaturesPage = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-20">
               <span className="text-blue-400 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6 block">
-                Dành Cho Quý Ông
+                For Gentlemen
               </span>
               <h2 className="text-3xl sm:text-5xl lg:text-7xl font-extralight text-white leading-tight mb-6 sm:mb-8 px-4">
-                Dịch Vụ Tóc Nam
+                Men&#39;s Hair Services
                 <span className="block text-lg sm:text-3xl lg:text-4xl bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-light mt-2 sm:mt-4">
-                  Phong Cách Đỉnh Cao, Chi Tiêu Thông Minh
+                  High Style, Smart Spending
                 </span>
               </h2>
               <p className="text-base sm:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed px-4 text-justify">
-                Một kiểu tóc đẹp không chỉ là cắt tỉa – đó là phong cách cá nhân
-                và sự tự tin của bạn.
+                A great hairstyle is more than just a cut – it&#39;s about your
+                personal style and confidence.
               </p>
             </div>
 
@@ -212,11 +216,11 @@ const FeaturesPage = () => {
               <div className="flex items-center">
                 <div className="bg-white/5 backdrop-blur-md rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/10 w-full">
                   <h3 className="text-xl sm:text-2xl font-light text-white mb-4 sm:mb-6">
-                    Chuyên Nghiệp & Hiện Đại
+                    Professional & Modern
                   </h3>
                   <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base text-justify">
-                    Từ những kiểu cắt cổ điển đến xu hướng mới nhất, chúng tôi
-                    tạo ra phong cách phù hợp với từng cá nhân và lối sống.
+                    From classic cuts to the latest trends, we create styles to
+                    suit every individual and lifestyle.
                   </p>
                   <div className="flex items-center space-x-3 sm:space-x-4">
                     <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center">
@@ -225,7 +229,7 @@ const FeaturesPage = () => {
                       </span>
                     </div>
                     <span className="text-blue-300 font-medium text-sm sm:text-base">
-                      Đảm Bảo Hài Lòng 100%
+                      100% Satisfaction Guaranteed
                     </span>
                   </div>
                 </div>
@@ -235,60 +239,60 @@ const FeaturesPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-6">
               {[
                 {
-                  title: "Cắt Tóc Nam Cao Cấp",
+                  title: "High-end Men's Haircut",
                   subtitle: "Premium Men's Haircut",
-                  price: "Từ $35",
+                  price: "From $35",
                   image: "/placeholder.svg?height=300&width=400",
                   features: [
-                    "Tư vấn phong cách cá nhân",
-                    "Gội đầu thư giãn",
-                    "Tạo kiểu chuyên nghiệp",
-                    "Bảo hành kiểu tóc",
+                    "Personal Style Advice",
+                    "Relaxing Shampoo",
+                    "Professional Styling",
+                    "Hairstyle Guarantee",
                   ],
                   description:
-                    "Kiểu tóc được thiết kế riêng, hoàn hảo với phong cách và cuộc sống của bạn.",
+                    "Custom hair styles that perfectly fit your style and your life.",
                 },
                 {
-                  title: "Cắt Fade Chuyên Nghiệp",
+                  title: "Professional Fade Cut",
                   subtitle: "Professional Skin Fade",
-                  price: "Từ $40",
+                  price: "From $40",
                   image: "/placeholder.svg?height=300&width=400",
                   features: [
-                    "Fade chính xác",
-                    "Kỹ thuật hiện đại",
-                    "Giữ form lâu bền",
-                    "Tư vấn bảo dưỡng",
+                    "Precise Fade",
+                    "Modern Technique",
+                    "Long Lasting Form",
+                    "Maintenance Advice",
                   ],
                   description:
-                    "Kiểu fade siêu gọn gàng, hiện đại với độ chính xác cao từ các chuyên gia.",
+                    "Super clean, modern fade with precision from the pros.",
                 },
                 {
-                  title: "Cạo Râu Khăn Nóng",
+                  title: "Hot Towel Shave",
                   subtitle: "Traditional Hot Towel Shave",
-                  price: "Từ $55",
+                  price: "From $55",
                   image: "/placeholder.svg?height=300&width=400",
                   features: [
-                    "Khăn nóng thư giãn",
-                    "Cạo râu truyền thống",
-                    "Chăm sóc da mặt",
-                    "Massage thư giãn",
+                    "Relaxing Hot Towel",
+                    "Traditional Shave",
+                    "Facial Care",
+                    "Relaxing Massage",
                   ],
                   description:
-                    "Trải nghiệm cạo râu đẳng cấp với kỹ thuật truyền thống và hiện đại.",
+                    "A classy shaving experience with traditional and modern techniques.",
                 },
                 {
-                  title: "Tỉa Râu Nghệ Thuật",
+                  title: "Artistic Beard Trimming",
                   subtitle: "Artistic Beard Trim",
-                  price: "Từ $16",
+                  price: "From $16",
                   image: "/placeholder.svg?height=300&width=400",
                   features: [
-                    "Tạo dáng chuyên nghiệp",
-                    "Tư vấn phong cách",
-                    "Sản phẩm cao cấp",
-                    "Hướng dẫn chăm sóc",
+                    "Professional styling",
+                    "Style advice",
+                    "Premium products",
+                    "Care instructions",
                   ],
                   description:
-                    "Tạo dáng râu chuyên nghiệp, phù hợp với khuôn mặt và phong cách cá nhân.",
+                    "Professional beard styling that suits your face and personal style.",
                 },
               ].map((service, index) => (
                 <div key={index} className="group">
@@ -348,63 +352,63 @@ const FeaturesPage = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-20">
               <span className="text-rose-400 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6 block">
-                Dành Cho Quý Bà
+                For Ladies
               </span>
               <h2 className="text-3xl sm:text-5xl lg:text-7xl font-extralight text-white leading-tight mb-6 sm:mb-8 px-4">
-                Dịch Vụ Tóc Nữ
+                Women&#39;s Hair Services
                 <span className="block text-lg sm:text-3xl lg:text-4xl bg-gradient-to-r from-rose-400 to-pink-400 bg-clip-text text-transparent font-light mt-2 sm:mt-4">
-                  Đẹp Tự Nhiên, Giá Trị Vượt Trội
+                  Natural Beauty, Outstanding Value
                 </span>
               </h2>
               <p className="text-base sm:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed px-4">
-                Chúng tôi luôn nỗ lực biến mái tóc của bạn thành một tài sản
-                đẹp, bền vững và tự tin.
+                We strive to transform your hair into a beautiful, sustainable
+                and confident asset.
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6">
               {[
                 {
-                  title: "Cắt Tóc Nữ Cao Cấp",
+                  title: "High-end Women's Haircut",
                   subtitle: "Premium Women's Haircut",
-                  price: "Từ $55",
+                  price: "From $55",
                   image: "/placeholder.svg?height=400&width=300",
-                  specialty: "Tư vấn phong cách cá nhân",
+                  specialty: "Personal style advice",
                 },
                 {
-                  title: "Nhuộm Tóc Chuyên Nghiệp",
+                  title: "Professional Hair Coloring",
                   subtitle: "Professional Hair Coloring",
-                  price: "Từ $65",
+                  price: "From $65",
                   image: "/placeholder.svg?height=400&width=300",
-                  specialty: "Sản phẩm cao cấp từ Ý",
+                  specialty: "High quality products from Italy",
                 },
                 {
-                  title: "Highlight Nghệ Thuật",
+                  title: "Art Highlight",
                   subtitle: "Artistic Hair Highlights",
-                  price: "Từ $180",
+                  price: "From $180",
                   image: "/placeholder.svg?height=400&width=300",
-                  specialty: "Kỹ thuật pha trộn liền mạch",
+                  specialty: "Seamless blending technique",
                 },
                 {
-                  title: "Uốn Tóc Hiện Đại",
+                  title: "Modern Hair Perm",
                   subtitle: "Modern Hair Perm",
-                  price: "Từ $85",
+                  price: "From $85",
                   image: "/placeholder.svg?height=400&width=300",
-                  specialty: "Bền lâu trong nhiều tháng",
+                  specialty: "Lasts for months",
                 },
                 {
-                  title: "Duỗi Tóc Cao Cấp",
+                  title: "High Quality Hair Straightening",
                   subtitle: "Premium Hair Relaxer",
-                  price: "Từ $160",
+                  price: "From $160",
                   image: "/placeholder.svg?height=400&width=300",
-                  specialty: "Công nghệ Keratin tiên tiến",
+                  specialty: "Advanced Keratin Technology",
                 },
                 {
-                  title: "Búi Tóc Dạ Hội",
+                  title: "Prom Hairstyle",
                   subtitle: "Elegant Evening Updo",
                   price: "$120",
                   image: "/placeholder.svg?height=400&width=300",
-                  specialty: "Hoàn hảo cho sự kiện đặc biệt",
+                  specialty: "Perfect for special events",
                 },
               ].map((service, index) => (
                 <div key={index} className="group">
@@ -428,7 +432,7 @@ const FeaturesPage = () => {
                           <span className="text-lg sm:text-2xl font-light bg-gradient-to-r from-rose-400 to-pink-400 bg-clip-text text-transparent">
                             {service.price}
                           </span>
-                          <span className="text-gray-500 text-xs">+ thuế</span>
+                          <span className="text-gray-500 text-xs">+ tax</span>
                         </div>
                       </div>
 
@@ -456,40 +460,39 @@ const FeaturesPage = () => {
               <div>
                 <div className="mb-8 sm:mb-12">
                   <span className="text-purple-400 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6 block">
-                    Dành Cho Bé Yêu
+                    For Baby
                   </span>
                   <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extralight text-white leading-tight mb-4 sm:mb-6">
-                    Dịch Vụ Tóc Trẻ Em
+                    Children&#39;s Hair Services
                     <span className="block text-base sm:text-2xl bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent font-light mt-1 sm:mt-2">
-                      Tóc Xinh, Ba Mẹ Hài Lòng
+                      Pretty Hair, Happy Parents
                     </span>
                   </h2>
                   <p className="text-gray-400 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
-                    Môi trường vui vẻ và thoải mái cho những khách hàng nhỏ tuổi
-                    nhất của chúng tôi.
+                    Fun and comfortable environment for our youngest customers.
                   </p>
                 </div>
 
                 <div className="space-y-4 sm:space-y-6">
                   {[
                     {
-                      title: "Cắt Tóc Bé Trai",
-                      price: "Từ $25",
+                      title: "Boys Haircuts",
+                      price: "From $25",
                       image: "/placeholder.svg?height=200&width=300",
                       features: [
-                        "Không gian thân thiện",
-                        "Stylist kiên nhẫn",
-                        "Đồ chơi giải trí",
+                        "Friendly space",
+                        "Patient stylist",
+                        "Entertainment toys",
                       ],
                     },
                     {
-                      title: "Cắt Tóc Bé Gái",
-                      price: "Từ $35",
+                      title: "Baby Girl Haircut",
+                      price: "From $35",
                       image: "/placeholder.svg?height=200&width=300",
                       features: [
-                        "Kiểu tóc dễ thương",
-                        "Phù hợp lứa tuổi",
-                        "Dễ dàng chăm sóc",
+                        "Cute hairstyle",
+                        "Age appropriate",
+                        "Easy care",
                       ],
                     },
                   ].map((service, index) => (
@@ -538,48 +541,48 @@ const FeaturesPage = () => {
               <div>
                 <div className="mb-8 sm:mb-12">
                   <span className="text-emerald-400 font-medium text-xs sm:text-sm tracking-wider uppercase mb-4 sm:mb-6 block">
-                    Chăm Sóc & Làm Đẹp
+                    Care & Beauty
                   </span>
                   <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extralight text-white leading-tight mb-4 sm:mb-6">
-                    Dịch Vụ Cao Cấp
+                    Premium Service
                     <span className="block text-base sm:text-2xl bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent font-light mt-1 sm:mt-2">
-                      Rạng Rỡ & Thư Giãn
+                      Radiant & Relaxing
                     </span>
                   </h2>
                   <p className="text-gray-400 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
-                    Các liệu trình chăm sóc chuyên sâu để nâng cao vẻ đẹp tự
-                    nhiên và sức khỏe tổng thể.
+                    Intensive treatments to enhance natural beauty and overall
+                    health.
                   </p>
                 </div>
 
                 <div className="space-y-4 sm:space-y-6">
                   {[
                     {
-                      title: "Chăm Sóc Da Mặt Cao Cấp",
+                      title: "Premium Facial Care",
                       subtitle: "Premium Facial Treatment",
-                      price: "Từ $90",
-                      duration: "60 phút",
+                      price: "From $90",
+                      duration: "60 minutes",
                       image: "/placeholder.svg?height=200&width=300",
                     },
                     {
-                      title: "Liệu Trình Dưỡng Tóc",
+                      title: "Hair Treatment",
                       subtitle: "Hair Nourishing Therapy",
                       price: "$90",
-                      duration: "45 phút",
+                      duration: "45 minutes",
                       image: "/placeholder.svg?height=200&width=300",
                     },
                     {
-                      title: "Massage Da Đầu Thư Giãn",
+                      title: "Relaxing Scalp Massage",
                       subtitle: "Relaxing Scalp Massage",
                       price: "$85",
-                      duration: "30 phút",
+                      duration: "30 minutes",
                       image: "/placeholder.svg?height=200&width=300",
                     },
                     {
-                      title: "Tẩy Lông Chuyên Nghiệp",
+                      title: "Professional Hair Removal",
                       subtitle: "Professional Waxing",
-                      price: "Từ $16",
-                      duration: "15-30 phút",
+                      price: "From $16",
+                      duration: "15-30 minutes",
                       image: "/placeholder.svg?height=200&width=300",
                     },
                   ].map((service, index) => (
@@ -630,26 +633,33 @@ const FeaturesPage = () => {
           <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="bg-white/5 backdrop-blur-md rounded-2xl sm:rounded-3xl p-8 sm:p-16 border border-white/10">
               <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extralight text-white leading-tight mb-6 sm:mb-8 px-4">
-                Sẵn Sàng Khám Phá
+                Ready to Explore
                 <span className="block bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent font-light mt-2">
-                  Vẻ Đẹp Đẳng Cấp?
+                  Classy Beauty?
                 </span>
               </h2>
 
               <div className="w-16 sm:w-32 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-8 sm:mb-12"></div>
 
               <p className="text-base sm:text-xl text-gray-300 leading-relaxed mb-12 sm:mb-16 max-w-3xl mx-auto px-4">
-                Hãy để chúng tôi giúp bạn tỏa sáng với vẻ đẹp tự nhiên và phong cách riêng biệt. Đặt lịch ngay hôm nay để trải nghiệm sự khác biệt tại Winchair Beauty Spa.
+                Let us help you shine with your natural beauty and unique style.
+                Book an appointment today to experience the difference at
+                Winchair Beauty Spa.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
                 <button className="group relative px-12 sm:px-16 py-4 sm:py-6 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 rounded-full text-black font-bold text-lg sm:text-xl tracking-wide shadow-2xl shadow-amber-500/30 hover:shadow-amber-500/50 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden w-full sm:w-auto">
-                  <span className="relative z-10">Đặt Lịch Hẹn Ngay</span>
+                  <Link href={"/booking"} className="relative z-10 text-lg">
+                    Make an Appointment Now
+                  </Link>
                   <div className="absolute inset-0 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
-                <button className="px-12 sm:px-16 py-4 sm:py-6 border-2 border-white/20 rounded-full text-white font-semibold text-lg sm:text-xl tracking-wide backdrop-blur-sm hover:border-amber-400/50 hover:bg-amber-400/10 transition-all duration-300 w-full sm:w-auto">
-                  Tư Vấn Miễn Phí
-                </button>
+                <Link
+                  href={"/contact"}
+                  className="px-12 sm:px-16 py-4 sm:py-6 border-2 border-white/20 rounded-full text-white font-semibold text-lg tracking-wide backdrop-blur-sm hover:border-amber-400/50 hover:bg-amber-400/10 transition-all duration-300 w-full sm:w-auto"
+                >
+                  Free Consultation
+                </Link>
               </div>
             </div>
           </div>
