@@ -6,7 +6,7 @@ const ServicesOverview = () => {
     {
       title: "Men's Hair Services",
       description: "High style, smart spending",
-      image: "/placeholder.svg",
+      image: "/img/mens-hair-services.webp",
       services: ["Men's Haircut", "Fade Cut", "Hot Shave", "Beard Trim"],
       priceFrom: "$16",
       href: "/mens-hair-services",
@@ -14,7 +14,7 @@ const ServicesOverview = () => {
     {
       title: "Women's Hair Services",
       description: "Natural beauty, outstanding value",
-      image: "/placeholder.svg",
+      image: "/img/womens-hair-services.webp",
       services: ["Women's Haircut", "Hair Color", "Highlight", "Hair Perm"],
       priceFrom: "$55",
       href: "/womens-hair-services",
@@ -22,7 +22,7 @@ const ServicesOverview = () => {
     {
       title: "Baby Hair Services",
       description: "Beautiful hair, happy parents",
-      image: "/placeholder.svg",
+      image: "/img/kids-hair-services.webp",
       services: ["Boy Haircut", "Girl Haircut"],
       priceFrom: "$25",
       href: "/kids-hair-services",
@@ -30,7 +30,7 @@ const ServicesOverview = () => {
     {
       title: "Care & Styling",
       description: "Healthy hair, radiant beauty",
-      image: "/placeholder.svg",
+      image: "/img/hair-treatment-and-styling.webp",
       services: ["Hair Wash", "Treatment", "Scalp Massage"],
       priceFrom: "$20",
       href: "/hair-treatment-and-styling",
@@ -38,7 +38,7 @@ const ServicesOverview = () => {
     {
       title: "Beauty Care",
       description: "Radiant, relaxing & real results",
-      image: "/placeholder.svg",
+      image: "/img/beauty-services.webp",
       services: [
         "Facial Care",
         "Hair Removal",
@@ -69,15 +69,14 @@ const ServicesOverview = () => {
             <div key={index} className="group cursor-pointer">
               <div className="bg-gray-800 overflow-hidden hover:transform hover:scale-105 transition-all duration-500 hover:shadow-2xl border border-gray-700 hover:border-gray-500">
                 {/* Image */}
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden  aspect-[4/3]">
                   <Image
                     src={category.image || "/placeholder.svg"}
                     alt={category.title}
-                    width={500}
-                    height={256}
-                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-slate-900/60"></div>
                   <div className="absolute top-6 right-6 bg-white text-slate-900 px-4 py-2 text-sm font-light tracking-wide">
                     FROM {category.priceFrom}
                   </div>

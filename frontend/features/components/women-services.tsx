@@ -10,7 +10,7 @@ const WomenServices = () => {
         "A bespoke styling experience that enhances your natural beauty and suits your lifestyle. Includes luxury shampooing and professional styling.",
       benefits:
         "Thorough consultation ensures perfect hairstyle, fewer 'bad hair days' and priceless confidence",
-      image: "/placeholder.svg",
+      image: "/img/women-haircut.webp",
     },
     {
       name: "Hair Coloring",
@@ -19,7 +19,7 @@ const WomenServices = () => {
         "Get a vibrant new hair colour or refresh your existing colour with professional advice on the perfect shade.",
       benefits:
         "High quality products protect hair, long lasting color and brilliant shine",
-      image: "/placeholder.svg",
+      image: "/img/hair-coloring.webp",
     },
     {
       name: "Highlight",
@@ -28,7 +28,7 @@ const WomenServices = () => {
         "Add depth and sparkle to hair with stunning, custom highlights for a natural or dramatic effect.",
       benefits:
         "Professional technique ensures seamless blending, with less need for frequent tweaking",
-      image: "/placeholder.svg",
+      image: "/img/highlight.webp",
     },
     {
       name: "Hair Perm",
@@ -36,7 +36,7 @@ const WomenServices = () => {
       description:
         "Add volume, bounce and beautiful waves or curls to your hair with a professional perm service.",
       benefits: "Perfect hair texture, months lasting results, great value",
-      image: "/placeholder.svg",
+      image: "/img/hair-perm.webp",
     },
     {
       name: "Hair Straightening",
@@ -45,7 +45,7 @@ const WomenServices = () => {
         "Smooth, shiny and manageable hair with a professional straightening treatment that reduces frizz.",
       benefits:
         "Minimize damage, maximize smoothness, and create everyday styles faster.",
-      image: "/placeholder.svg",
+      image: "/img/hair-straightening.webp",
     },
     {
       name: "Updo",
@@ -53,7 +53,7 @@ const WomenServices = () => {
       description:
         "Perfect for special occasions, the updo is intricately styled for an elegant and memorable look.",
       benefits: "Guaranteed perfect and hold all day/night, enjoy worry-free",
-      image: "/placeholder.svg",
+      image: "/img/updo.webp",
     },
   ];
 
@@ -73,16 +73,16 @@ const WomenServices = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="group h-full">
+            <div key={index} className="group ">
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col h-full">
                 {/* Image */}
-                <div className="relative h-64 shrink-0">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={service.image || "/placeholder.svg"}
                     alt={service.name}
-                    width={350}
-                    height={250}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    width={800}
+                    height={600}
+                    className="w-full h-full  object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-pink-600/20 to-transparent"></div>
                   <div className="absolute top-4 right-4 bg-white text-pink-600 px-3 py-1 rounded-full text-sm font-semibold">

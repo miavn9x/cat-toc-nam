@@ -11,7 +11,7 @@ const BeautyServices = () => {
         "Rejuvenate your skin with customized facial treatments – designed to cleanse, nourish and restore your skin.",
       benefits:
         "Professional skin analysis, long lasting visible results, improve skin health",
-      image: "/placeholder.svg?height=250&width=350",
+      image: "/img/facial-care.webp",
       icon: "✨",
     },
     {
@@ -22,7 +22,7 @@ const BeautyServices = () => {
         "Achieve soft, smooth skin with professional hair removal for multiple areas.",
       benefits:
         "Less discomfort, longer lasting results than shaving, fewer waxing sessions",
-      image: "/placeholder.svg?height=250&width=350",
+      image: "/img/waxing-service.webp",
       icon: "🪒",
     },
     {
@@ -33,7 +33,7 @@ const BeautyServices = () => {
         "Enhance natural beauty with longer, thicker lashes, professionally applied for a stunning look.",
       benefits:
         "Wake up with naturally beautiful lashes, eliminate daily mascara, save time",
-      image: "/placeholder.svg?height=250&width=350",
+      image: "/img/eyelash-extensions.webp",
       icon: "👁️",
     },
     {
@@ -44,7 +44,7 @@ const BeautyServices = () => {
         "Achieve perfectly defined and defined brows with semi-permanent microblading, including 1 free touch-up.",
       benefits:
         "Perfect eyebrows every day, save makeup time, long-term solution",
-      image: "/placeholder.svg?height=250&width=350",
+      image: "/img/microblading-cosmetic-tattooing.webp",
       icon: "🎨",
     },
   ];
@@ -73,10 +73,10 @@ const BeautyServices = () => {
         </div>
 
         {/* Main Services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
-            <div key={index} className="group">
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
+            <div key={index} className="group h-full">
+    <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
                 <div className="flex flex-col md:flex-row h-full">
                   {/* Image */}
                   <div className="md:w-2/5 relative">
@@ -84,8 +84,8 @@ const BeautyServices = () => {
                       <Image
                         src={service.image}
                         alt={service.name}
-                        width={350}
-                        height={250}
+                        width={300}
+                        height={200}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-amber-600/20 to-transparent"></div>

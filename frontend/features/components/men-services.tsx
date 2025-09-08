@@ -10,7 +10,7 @@ const MenServices = () => {
         "Tailored hairstyles to suit your style and lifestyle. Includes relaxing shampoo and professional styling.",
       benefits:
         "The foundation for a longer lasting, sharper look that's cost-effective",
-      image: "/placeholder.svg",
+      image: "/img/mens-haircut.webp",
     },
     {
       name: "Cut Fade",
@@ -19,7 +19,7 @@ const MenServices = () => {
         "Super clean, modern fade done perfectly every time by the pros.",
       benefits:
         "Extremely clean, precise fade, long lasting form, reducing the cost of frequent editing",
-      image: "/placeholder.svg",
+      image: "/img/mens-fade-cut.webp",
     },
     {
       name: "Hot Shave",
@@ -28,7 +28,7 @@ const MenServices = () => {
         "Experience the ultimate traditional shave with a hot towel, delivering a close and comfortable shave.",
       benefits:
         "Not just a shave but a relaxing facial treatment that promotes skin health",
-      image: "/placeholder.svg",
+      image: "/img/mens-hot-shave.webp",
     },
     {
       name: "Beard Trimming",
@@ -37,7 +37,7 @@ const MenServices = () => {
         "Keep your beard in tip-top condition with professional trimming and styling services.",
       benefits:
         "Professionally shaped beard grows more evenly and is easy to care for at home",
-      image: "/placeholder.svg",
+      image: "/img/mens-beard-trim.webp",
     },
   ];
 

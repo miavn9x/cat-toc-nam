@@ -136,7 +136,7 @@ const AboutPage = () => {
               <div className="relative order-2 lg:order-1">
                 <div className="aspect-square rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
                   <img
-                    src="/placeholder.svg?height=600&width=600"
+                    src="/img/classy-space.webp"
                     alt="Winchair Beauty Spa elegant interior"
                     className="w-full h-full object-cover"
                   />
@@ -228,7 +228,7 @@ const AboutPage = () => {
                 {
                   category: "Men's Hair Services",
                   icon: "👨‍💼",
-                  image: "/placeholder.svg?height=400&width=600",
+                  image: "/img/mens-hair-services.webp",
                   services: [
                     "Men's Haircut",
                     "Cut Fade",
@@ -243,7 +243,7 @@ const AboutPage = () => {
                 {
                   category: "Women's Hair Services",
                   icon: "👩‍💼",
-                  image: "/placeholder.svg?height=400&width=600",
+                  image: "/img/womens-hair-services.webp",
                   services: [
                     "Women's Haircut",
                     "Hair Coloring",
@@ -258,7 +258,7 @@ const AboutPage = () => {
                 {
                   category: "Children's Services",
                   icon: "👶",
-                  image: "/placeholder.svg?height=400&width=600",
+                  image: "/img/kids-hair-services.webp",
                   services: ["Boys Haircuts", "Girls Haircuts"],
                   priceRange: "$25 - $35",
                   color: "from-purple-400 to-indigo-400",
@@ -268,7 +268,7 @@ const AboutPage = () => {
                 {
                   category: "Care & Beauty",
                   icon: "✨",
-                  image: "/placeholder.svg?height=400&width=600",
+                  image: "/img/hair-treatment-and-styling.webp",
                   services: ["Facial Care", "Hair Removal", "Scalp Massage"],
                   priceRange: "$16 - $90",
                   color: "from-emerald-400 to-teal-400",
@@ -353,37 +353,37 @@ const AboutPage = () => {
                   icon: "💎",
                   title: "Premium Quality",
                   desc: "Using world-class products and equipment, ensuring optimal results for every service.",
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/img/premium-quality.webp",
                 },
                 {
                   icon: "👨‍💼",
                   title: "Team of Experts",
                   desc: "Stylists and estheticians are well trained and have many years of experience in the industry.",
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/img/team-of-experts.webp",
                 },
                 {
                   icon: "🏢",
                   title: "Luxurious Space",
                   desc: "Modern, luxurious design with a relaxing, clean environment in the heart of Etobicoke.",
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/img/classy-space.webp",
                 },
                 {
                   icon: "🎯",
                   title: "Personalized Service",
                   desc: "Each service is tailored to your needs, style and personal characteristics.",
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/img/personalized-service.webp",
                 },
                 {
                   icon: "💰",
                   title: "Reasonable Price",
                   desc: "High quality service at competitive prices to suit every budget and need.",
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/img/reasonable-price.webp",
                 },
                 {
                   icon: "⭐",
                   title: "Satisfaction Guarantee",
                   desc: "We are committed to providing 100% satisfaction with our dedicated warranty and support policies.",
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/img/satisfaction-guarantee.webp",
                 },
               ].map((feature, index) => (
                 <div key={index} className="group">
@@ -496,7 +496,7 @@ const AboutPage = () => {
               <div className="relative order-1 lg:order-2">
                 <div className="aspect-square rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
                   <img
-                    src="/placeholder.svg?height=600&width=600"
+                    src="/img/classy-space.webp"
                     alt="Winchair Beauty Spa location and exterior"
                     className="w-full h-full object-cover"
                   />

@@ -55,7 +55,7 @@ const About = () => {
           <div className="relative">
             <div className="relative overflow-hidden shadow-2xl">
               <Image
-                src="/placeholder.svg"
+                src="/img/high-quality.webp"
                 alt="Spa Interior"
                 width={600}
                 height={700}
@@ -71,12 +71,8 @@ const About = () => {
                   <span className="font-light text-2xl">✨</span>
                 </div>
                 <div>
-                  <p className="font-light text-white text-lg">
-                    High Quality
-                  </p>
-                  <p className="text-sm text-gray-400 font-light">
-                    Affordable
-                  </p>
+                  <p className="font-light text-white text-lg">High Quality</p>
+                  <p className="text-sm text-gray-400 font-light">Affordable</p>
                 </div>
               </div>
             </div>

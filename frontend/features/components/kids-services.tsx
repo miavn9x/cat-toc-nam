@@ -10,7 +10,7 @@ const KidsServices = () => {
         "A friendly, hassle-free haircut experience for kids, guaranteed to leave with a stylish and comfortable hairstyle.",
       benefits:
         "Patient stylists ensure a positive experience, making future haircuts stress-free",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/img/boy-haircut.webp",
       icon: "👦",
     },
     {
@@ -20,7 +20,7 @@ const KidsServices = () => {
         "Fashionable and age-appropriate hairstyles for girls, styled according to your child's preferences and hair type.",
       benefits:
         "Cute and easy to manage hairstyles for parents, practical solutions for busy families",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/img/girl-haircut.webp",
       icon: "👧",
     },
   ];
@@ -70,12 +70,12 @@ const KidsServices = () => {
             <div key={index} className="group h-full">
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden h-full flex flex-col">
                 <div className="relative">
-                  <div className="relative overflow-hidden h-48">
+                  <div className="relative overflow-hidden aspect-[4/3]">
                     <Image
                       src={service.image}
                       alt={service.name}
-                      width={300}
-                      height={200}
+                      width={600}
+                      height={400}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-emerald-600/20 to-transparent" />

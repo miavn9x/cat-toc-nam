@@ -19,42 +19,42 @@ const Gallery = () => {
   // Gallery images with categories
   const galleryImages = [
     {
-      src: "/placeholder.svg?height=400&width=600",
+      src: "/img/men-hair.webp",
       alt: "Modern Men's Hairstyles",
       category: "Men's Hair",
     },
     {
-      src: "/placeholder.svg?height=400&width=600",
+      src: "/img/hair-treatment-and-styling.webp",
       alt: "Elegant female hairstyles",
       category: "Women's Hair",
     },
     {
-      src: "/placeholder.svg?height=400&width=600",
+      src: "/img/facial-care.webp",
       alt: "Facial care",
       category: "Skin Care",
     },
     {
-      src: "/placeholder.svg?height=400&width=600",
+      src: "/img/spa-space.webp",
       alt: "Spa space",
       category: "Spa Space",
     },
     {
-      src: "/placeholder.svg?height=400&width=600",
+      src: "/img/kids-hair-services.webp",
       alt: "Children's hairstyles",
       category: "Children's Hair",
     },
     {
-      src: "/placeholder.svg?height=400&width=600",
+      src: "/img/modern-female-hairstyles.webp",
       alt: "Modern female hairstyles",
       category: "Women's Hair",
     },
     {
-      src: "/placeholder.svg?height=400&width=600",
+      src: "/img/classic-mens-hairstyles.webp",
       alt: "Classic Men's Hairstyles",
       category: "Men's Hair",
     },
     {
-      src: "/placeholder.svg?height=400&width=600",
+      src: "/img/beauty-services.webp",
       alt: "Reception area",
       category: "Spa Space",
     },

@@ -8,436 +8,489 @@
       "tagline": "Top Style, Smart Spending",
       "color": "blue",
       "services": {
-      "mens-haircut": {
-        "id": "mens-haircut",
-        "title": "Men's Haircut",
-        "subtitle": "Men's Haircut",
-        "price": "From $35 + tax",
-        "description": "A custom-designed haircut, perfect for your style and lifestyle.",
-        "longDescription": "A custom-designed haircut, perfect for your style and lifestyle. Includes a relaxing shampoo and professional styling. This is more than just a haircut; it's the foundation for a sharp, tidy look that lasts longer, meaning fewer trips to the salon and more money saved for other things.",
-        "images": [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600"
-        ],
-        "features": ["Personal style consultation", "Relaxing shampoo", "Professional styling", "Style guarantee"],
-        "benefits": [
-        "Long-lasting sharp, tidy look",
-        "Fewer salon visits",
-        "Save money",
-        "Confidence in a professional appearance"
-        ],
-        "styles": {
-        "classic-business": {
-          "id": "classic-business",
-          "name": "Classic Business",
-          "description": "Elegant hairstyle, suitable for office environments and formal events.",
+        "mens-haircut": {
+          "id": "mens-haircut",
+          "title": "Men's Haircut",
+          "subtitle": "Men's Haircut",
+          "price": "From $35 + tax",
+          "description": "A custom-designed haircut, perfect for your style and lifestyle.",
+          "longDescription": "A custom-designed haircut, perfect for your style and lifestyle. Includes a relaxing shampoo and professional styling. This is more than just a haircut; it's the foundation for a sharp, tidy look that lasts longer, meaning fewer trips to the salon and more money saved for other things.",
           "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+            "/img/men-hair-services/men-haircut.webp",
+            "/img/men-hair-services/men-haircut-1.webp",
+            "/img/men-hair-services/men-haircut-3.webp",
+            "/img/men-hair-services/men-haircut-2.webp"
           ],
-          "difficulty": "Easy",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Square", "Rectangle"],
-          "popular": true
+          "features": [
+            "Personal style consultation",
+            "Relaxing shampoo",
+            "Professional styling",
+            "Style guarantee"
+          ],
+          "benefits": [
+            "Long-lasting sharp, tidy look",
+            "Fewer salon visits",
+            "Save money",
+            "Confidence in a professional appearance"
+          ],
+          "styles": {
+            "classic-business": {
+              "id": "classic-business",
+              "name": "Classic Business",
+              "description": "Elegant hairstyle, suitable for office environments and formal events.",
+              "images": [
+                "/img/men-hair-services/classic-business.webp",
+                "/img/men-hair-services/classic-business-1.webp",
+                "/img/men-hair-services/classic-business-2.webp",
+                "/img/men-hair-services/classic-business-1.webp"
+              ],
+              "difficulty": "Easy",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Square", "Rectangle"],
+              "popular": true
+            },
+            "modern-quiff": {
+              "id": "modern-quiff",
+              "name": "Modern Quiff",
+              "description": "Modern style with volume on top, showing strong personality.",
+              "images": [
+                "/img/men-hair-services/modern-quiff.webp",
+                "/img/men-hair-services/modern-quiff-1.webp",
+                "/img/men-hair-services/modern-quiff-2.webp",
+                "/img/men-hair-services/modern-quiff-3.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Round", "Rectangle"],
+              "popular": true
+            },
+            "textured-crop": {
+              "id": "textured-crop",
+              "name": "Textured Crop",
+              "description": "Short hair with natural texture, easy to style and suitable for all activities.",
+              "images": [
+                "/img/men-hair-services/textured-crop.webp",
+                "/img/men-hair-services/textured-crop-1.webp",
+                "/img/men-hair-services/textured-crop-2.webp",
+                "/img/men-hair-services/textured-crop-3.webp"
+              ],
+              "difficulty": "Easy",
+              "maintenance": "Low",
+              "faceShape": ["Round", "Square", "Oval"],
+              "popular": false
+            },
+            "side-part-classic": {
+              "id": "side-part-classic",
+              "name": "Side Part Classic",
+              "description": "Classic side-part hairstyle, elegant and suitable for all ages.",
+              "images": [
+                "/img/men-hair-services/side-part-classic.webp",
+                "/img/men-hair-services/side-part-classic-1.webp",
+                "/img/men-hair-services/side-part-classic-2.webp",
+                "/img/men-hair-services/side-part-classic-3.webp"
+              ],
+              "difficulty": "Easy",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Rectangle", "Square"],
+              "popular": true
+            },
+            "pompadour-modern": {
+              "id": "pompadour-modern",
+              "name": "Modern Pompadour",
+              "description": "Modern version of the classic pompadour, making a bold statement.",
+              "images": [
+                "/img/men-hair-services/modern-pompadour.webp",
+                "/img/men-hair-services/modern-pompadour-1.webp"
+              ],
+              "difficulty": "Hard",
+              "maintenance": "High",
+              "faceShape": ["Oval", "Rectangle"],
+              "popular": false
+            },
+            "buzz-cut-styled": {
+              "id": "buzz-cut-styled",
+              "name": "Styled Buzz Cut",
+              "description": "Refined buzz cut, strong and easy to maintain.",
+              "images": [
+                "/img/men-hair-services/styled-buzz-cut.webp",
+                "/img/men-hair-services/styled-buzz-cut-1.webp",
+                "/img/men-hair-services/styled-buzz-cut-3.webp",
+                "/img/men-hair-services/styled-buzz-cut-2.webp"
+              ],
+              "difficulty": "Easy",
+              "maintenance": "Low",
+              "faceShape": ["Square", "Oval", "Round"],
+              "popular": false
+            },
+            "messy-fringe": {
+              "id": "messy-fringe",
+              "name": "Messy Fringe",
+              "description": "Natural fringe style, perfect for a youthful, dynamic look.",
+              "images": [
+                "/img/men-hair-services/messy-fringe.webp",
+                "/img/men-hair-services/messy-fringe-1.webp",
+                "/img/men-hair-services/messy-fringe-2.webp",
+                "/img/men-hair-services/messy-fringe-1.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Rectangle", "Round"],
+              "popular": true
+            },
+            "slicked-back": {
+              "id": "slicked-back",
+              "name": "Slicked Back",
+              "description": "Sleek, combed-back hairstyle, showing elegance and power.",
+              "images": [
+                "/img/men-hair-services/slicked-back.webp",
+                "/img/men-hair-services/slicked-back-1.webp",
+                "/img/men-hair-services/slicked-back-3.webp",
+                "/img/men-hair-services/slicked-back-2.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Square", "Rectangle"],
+              "popular": false
+            }
+          }
         },
-        "modern-quiff": {
-          "id": "modern-quiff",
-          "name": "Modern Quiff",
-          "description": "Modern style with volume on top, showing strong personality.",
+
+        "fade-haircut": {
+          "id": "fade-haircut",
+          "title": "Cut Fade",
+          "subtitle": "Men's Skin Fade",
+          "price": "From $40 + tax",
+          "description": "Super neat, modern fade with high precision.",
+          "longDescription": "Want a super neat, modern fade? Our experts will get it perfect every time. Expect an extremely clean, precise fade that holds its form, helping you get the most out of your haircut and reducing the cost of frequent touch-ups.",
           "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+            "/img/men-hair-services/cut-fade.webp",
+            "/img/men-hair-services/cut-fade-1.webp",
+            "/img/men-hair-services/cut-fade-2.webp",
+            "/img/men-hair-services/cut-fade-3.webp"
           ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Round", "Rectangle"],
-          "popular": true
+          "features": [
+            "Precise fade",
+            "Modern technique",
+            "Long-lasting form",
+            "Maintenance advice"
+          ],
+          "benefits": [
+            "Modern look",
+            "Easy maintenance",
+            "Fits all activities",
+            "Adds personality"
+          ],
+          "styles": {
+            "high-fade": {
+              "id": "high-fade",
+              "name": "High Fade",
+              "description": "High fade for strong contrast, suitable for modern, dynamic styles.",
+              "images": [
+                "/img/men-hair-services/high-fade.webp",
+                "/img/men-hair-services/high-fade-1.webp",
+                "/img/men-hair-services/high-fade-2.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Square", "Round"],
+              "popular": true
+            },
+            "mid-fade": {
+              "id": "mid-fade",
+              "name": "Mid Fade",
+              "description": "Balanced mid fade, suitable for most face shapes and styles.",
+              "images": [
+                "/img/men-hair-services/mid-fade.webp",
+                "/img/men-hair-services/mid-fade-1.webp",
+                "/img/men-hair-services/mid-fade-2.webp",
+                "/img/men-hair-services/mid-fade-3.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Rectangle", "Square"],
+              "popular": true
+            },
+            "low-fade": {
+              "id": "low-fade",
+              "name": "Low Fade",
+              "description": "Subtle low fade for a soft, natural transition.",
+              "images": [
+                "/img/men-hair-services/low-fade.webp",
+                "/img/men-hair-services/low-fade-1.webp"
+              ],
+              "difficulty": "Easy",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Round", "Rectangle"],
+              "popular": true
+            },
+            "skin-fade": {
+              "id": "skin-fade",
+              "name": "Skin Fade",
+              "description": "Fade down to the skin for the sharpest, boldest effect.",
+              "images": [
+                "/img/men-hair-services/slicked-back-2.webp",
+                "/img/men-hair-services/slicked-back-3.webp",
+                "/img/men-hair-services/slicked-back-1.webp",
+                "/img/men-hair-services/slicked-back.webp"
+              ],
+              "difficulty": "Hard",
+              "maintenance": "High",
+              "faceShape": ["Square", "Oval"],
+              "popular": false
+            },
+            "temple-fade": {
+              "id": "temple-fade",
+              "name": "Temple Fade",
+              "description": "Fade only at the temples, keeping length elsewhere.",
+              "images": [
+                "/img/men-hair-services/temple-fade.webp",
+                "/img/men-hair-services/temple-fade-1.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Rectangle", "Round"],
+              "popular": false
+            },
+            "burst-fade": {
+              "id": "burst-fade",
+              "name": "Burst Fade",
+              "description": "Arc-shaped fade around the ear for a unique, bold effect.",
+              "images": [
+                "/img/men-hair-services/burst-fade.webp",
+                "/img/men-hair-services/burst-fade-1.webp",
+                "/img/men-hair-services/burst-fade-2.webp"
+              ],
+              "difficulty": "Hard",
+              "maintenance": "High",
+              "faceShape": ["Oval", "Square"],
+              "popular": false
+            }
+          }
         },
-        "textured-crop": {
-          "id": "textured-crop",
-          "name": "Textured Crop",
-          "description": "Short hair with natural texture, easy to style and suitable for all activities.",
+
+        "hot-shave": {
+          "id": "hot-shave",
+          "title": "Hot Shave",
+          "subtitle": "Hot Towel Shave",
+          "price": "From $55 + tax",
+          "description": "Experience a traditional shave with relaxing hot towels.",
+          "longDescription": "Treat yourself to the ultimate traditional shave. Our classic hot towel shave delivers a close, comfortable shave and rejuvenates your skin. It's not just shaving; it's a relaxing mini facial that boosts skin health, giving you double the benefits for one price.",
           "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+            "/img/men-hair-services/hot-shave.webp",
+            "/img/men-hair-services/hot-shave-1.webp",
+            "/img/men-hair-services/hot-shave-2.webp",
+            "/img/men-hair-services/hot-shave-3.webp"
           ],
-          "difficulty": "Easy",
-          "maintenance": "Low",
-          "faceShape": ["Round", "Square", "Oval"],
-          "popular": false
+          "features": [
+            "Relaxing hot towels",
+            "Traditional shave",
+            "Facial care",
+            "Relaxing massage"
+          ],
+          "benefits": [
+            "Close, comfortable shave",
+            "Rejuvenated skin",
+            "Maximum relaxation",
+            "Improved skin health"
+          ],
+          "styles": {
+            "classic-hot-towel": {
+              "id": "classic-hot-towel",
+              "name": "Classic Hot Towel Shave",
+              "description": "Traditional shave with hot towels for maximum relaxation and smooth skin.",
+              "images": [
+                "/img/men-hair-services/classic-hot-towel.webp",
+                "/img/men-hair-services/classic-hot-towel-1.webp",
+                "/img/men-hair-services/classic-hot-towel-2.webp"
+              ],
+              "difficulty": "Easy",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Square", "Rectangle", "Round"],
+              "popular": true
+            },
+            "premium-beard-shave": {
+              "id": "premium-beard-shave",
+              "name": "Premium Beard Shave",
+              "description": "Premium beard shave with special facial care products and relaxing massage.",
+              "images": [
+                "/img/men-hair-services/premium-beard-shave.webp",
+                "/img/men-hair-services/premium-beard-shave.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Square", "Rectangle"],
+              "popular": true
+            },
+            "mustache-trim-shave": {
+              "id": "mustache-trim-shave",
+              "name": "Mustache Trim & Shave",
+              "description": "Precise mustache trim and shave for sharp lines and a refined look.",
+              "images": [
+                "/img/men-hair-services/mustache-trim-shave.webp",
+                "/img/men-hair-services/mustache-trim-shave.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Rectangle", "Square"],
+              "popular": false
+            },
+            "full-face-shave": {
+              "id": "full-face-shave",
+              "name": "Full Face Shave",
+              "description": "Full face shave with professional technique for perfectly smooth skin.",
+              "images": [
+                "/img/men-hair-services/full-face-shave.webp",
+                "/img/men-hair-services/full-face-shave.webp"
+              ],
+              "difficulty": "Easy",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Round", "Rectangle", "Square"],
+              "popular": true
+            },
+            "precision-shave": {
+              "id": "precision-shave",
+              "name": "Precision Shave",
+              "description": "Precise shave with a traditional straight razor for perfectionists.",
+              "images": [
+                "/img/men-hair-services/precision-shave.webp",
+                "/img/men-hair-services/precision-shave.webp"
+              ],
+              "difficulty": "Hard",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Square"],
+              "popular": false
+            }
+          }
         },
-        "side-part-classic": {
-          "id": "side-part-classic",
-          "name": "Side Part Classic",
-          "description": "Classic side-part hairstyle, elegant and suitable for all ages.",
+
+        "beard-trim": {
+          "id": "beard-trim",
+          "title": "Beard Trimming",
+          "subtitle": "Beard Trim",
+          "price": "From $16 + tax",
+          "description": "Professional beard trimming and shaping to keep your beard perfect.",
+          "longDescription": "Keep your beard in top shape with professional trimming and shaping. A professionally shaped beard not only looks better but also grows more evenly, making it easier to care for at home and saving you time.",
           "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+            "/img/men-hair-services/beard-trimming.webp",
+            "/img/men-hair-services/beard-trimming-1.webp",
+            "/img/men-hair-services/beard-trimming-2.webp",
+            "/img/men-hair-services/beard-trimming-1.webp"
           ],
-          "difficulty": "Easy",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Rectangle", "Square"],
-          "popular": true
-        },
-        "pompadour-modern": {
-          "id": "pompadour-modern",
-          "name": "Modern Pompadour",
-          "description": "Modern version of the classic pompadour, making a bold statement.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+          "features": [
+            "Professional shaping",
+            "Style consultation",
+            "Premium products",
+            "Care guidance"
           ],
-          "difficulty": "Hard",
-          "maintenance": "High",
-          "faceShape": ["Oval", "Rectangle"],
-          "popular": false
-        },
-        "buzz-cut-styled": {
-          "id": "buzz-cut-styled",
-          "name": "Styled Buzz Cut",
-          "description": "Refined buzz cut, strong and easy to maintain.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+          "benefits": [
+            "Better-looking beard",
+            "More even growth",
+            "Easy home care",
+            "Time-saving"
           ],
-          "difficulty": "Easy",
-          "maintenance": "Low",
-          "faceShape": ["Square", "Oval", "Round"],
-          "popular": false
-        },
-        "messy-fringe": {
-          "id": "messy-fringe",
-          "name": "Messy Fringe",
-          "description": "Natural fringe style, perfect for a youthful, dynamic look.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Rectangle", "Round"],
-          "popular": true
-        },
-        "slicked-back": {
-          "id": "slicked-back",
-          "name": "Slicked Back",
-          "description": "Sleek, combed-back hairstyle, showing elegance and power.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Square", "Rectangle"],
-          "popular": false
+          "styles": {
+            "full-beard-trim": {
+              "id": "full-beard-trim",
+              "name": "Full Beard Trim",
+              "description": "Trim the entire beard, shaping it to balance and suit your face.",
+              "images": [
+                "/img/men-hair-services/beard-trimming.webp",
+                "/img/men-hair-services/beard-trimming-1.webp",
+                "/img/men-hair-services/beard-trimming-2.webp",
+                "/img/men-hair-services/beard-trimming-1.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Square", "Rectangle"],
+              "popular": true
+            },
+            "goatee-style": {
+              "id": "goatee-style",
+              "name": "Goatee Style",
+              "description": "Modern goatee style, perfect for a youthful and bold look.",
+              "images": [
+                "/img/men-hair-services/goatee-style.webp",
+                "/img/men-hair-services/goatee-style-1.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Round", "Oval", "Square"],
+              "popular": true
+            },
+            "mustache-trim": {
+              "id": "mustache-trim",
+              "name": "Mustache Trim",
+              "description": "Professional mustache trim for sharp lines and a refined look.",
+              "images": [
+                "/img/men-hair-services/mustache-trim.webp",
+                "/img/men-hair-services/mustache-trim-1.webp",
+                "/img/men-hair-services/mustache-trim-2.webp"
+              ],
+              "difficulty": "Easy",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Rectangle", "Square"],
+              "popular": false
+            },
+            "beard-shaping": {
+              "id": "beard-shaping",
+              "name": "Beard Shaping",
+              "description": "Shape your beard to your personal style, highlighting your facial features.",
+              "images": [
+                "/img/men-hair-services/beard-shaping.webp",
+                "/img/men-hair-services/beard-shaping-1.webp",
+                "/img/men-hair-services/beard-shaping-2.webp"
+              ],
+              "difficulty": "Hard",
+              "maintenance": "High",
+              "faceShape": ["Oval", "Square", "Rectangle"],
+              "popular": true
+            },
+            "designer-beard": {
+              "id": "designer-beard",
+              "name": "Designer Beard",
+              "description": "Premium designer beard with intricate lines, showing unique style.",
+              "images": [
+                "/img/men-hair-services/designer-beard.webp",
+                "/img/men-hair-services/designer-beard.webp"
+              ],
+              "difficulty": "Hard",
+              "maintenance": "High",
+              "faceShape": ["Oval", "Square"],
+              "popular": false
+            },
+            "corporate-beard": {
+              "id": "corporate-beard",
+              "name": "Corporate Beard",
+              "description": "Office-style beard, neat and professional, suitable for the workplace.",
+              "images": [
+                "/img/men-hair-services/corporate-beard.webp",
+                "/img/men-hair-services/corporate-beard.webp"
+              ],
+              "difficulty": "Easy",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Rectangle", "Square"],
+              "popular": true
+            },
+            "vintage-beard": {
+              "id": "vintage-beard",
+              "name": "Vintage Beard",
+              "description": "Classic beard style, exuding masculinity and gentlemanly elegance.",
+              "images": [
+                "/img/men-hair-services/vintage-beard.webp",
+                "/img/men-hair-services/vintage-beard-1.webp",
+                "/img/men-hair-services/vintage-beard-2.webp",
+                "/img/men-hair-services/vintage-beard-3.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Square", "Rectangle"],
+              "popular": false
+            }
+          }
         }
-        }
-      },
-      "fade-haircut": {
-        "id": "fade-haircut",
-        "title": "Cut Fade",
-        "subtitle": "Men's Skin Fade",
-        "price": "From $40 + tax",
-        "description": "Super neat, modern fade with high precision.",
-        "longDescription": "Want a super neat, modern fade? Our experts will get it perfect every time. Expect an extremely clean, precise fade that holds its form, helping you get the most out of your haircut and reducing the cost of frequent touch-ups.",
-        "images": [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600"
-        ],
-        "features": ["Precise fade", "Modern technique", "Long-lasting form", "Maintenance advice"],
-        "benefits": ["Modern look", "Easy maintenance", "Fits all activities", "Adds personality"],
-        "styles": {
-        "high-fade": {
-          "id": "high-fade",
-          "name": "High Fade",
-          "description": "High fade for strong contrast, suitable for modern, dynamic styles.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Square", "Round"],
-          "popular": true
-        },
-        "mid-fade": {
-          "id": "mid-fade",
-          "name": "Mid Fade",
-          "description": "Balanced mid fade, suitable for most face shapes and styles.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Rectangle", "Square"],
-          "popular": true
-        },
-        "low-fade": {
-          "id": "low-fade",
-          "name": "Low Fade",
-          "description": "Subtle low fade for a soft, natural transition.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Easy",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Round", "Rectangle"],
-          "popular": true
-        },
-        "skin-fade": {
-          "id": "skin-fade",
-          "name": "Skin Fade",
-          "description": "Fade down to the skin for the sharpest, boldest effect.",
-          "images": ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
-          "difficulty": "Hard",
-          "maintenance": "High",
-          "faceShape": ["Square", "Oval"],
-          "popular": false
-        },
-        "temple-fade": {
-          "id": "temple-fade",
-          "name": "Temple Fade",
-          "description": "Fade only at the temples, keeping length elsewhere.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Rectangle", "Round"],
-          "popular": false
-        },
-        "burst-fade": {
-          "id": "burst-fade",
-          "name": "Burst Fade",
-          "description": "Arc-shaped fade around the ear for a unique, bold effect.",
-          "images": ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
-          "difficulty": "Hard",
-          "maintenance": "High",
-          "faceShape": ["Oval", "Square"],
-          "popular": false
-        }
-        }
-      },
-      "hot-shave": {
-        "id": "hot-shave",
-        "title": "Hot Shave",
-        "subtitle": "Hot Towel Shave",
-        "price": "From $55 + tax",
-        "description": "Experience a traditional shave with relaxing hot towels.",
-        "longDescription": "Treat yourself to the ultimate traditional shave. Our classic hot towel shave delivers a close, comfortable shave and rejuvenates your skin. It's not just shaving; it's a relaxing mini facial that boosts skin health, giving you double the benefits for one price.",
-        "images": [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600"
-        ],
-        "features": ["Relaxing hot towels", "Traditional shave", "Facial care", "Relaxing massage"],
-        "benefits": ["Close, comfortable shave", "Rejuvenated skin", "Maximum relaxation", "Improved skin health"],
-        "styles": {
-        "classic-hot-towel": {
-          "id": "classic-hot-towel",
-          "name": "Classic Hot Towel Shave",
-          "description": "Traditional shave with hot towels for maximum relaxation and smooth skin.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Easy",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Square", "Rectangle", "Round"],
-          "popular": true
-        },
-        "premium-beard-shave": {
-          "id": "premium-beard-shave",
-          "name": "Premium Beard Shave",
-          "description": "Premium beard shave with special facial care products and relaxing massage.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Medium",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Square", "Rectangle"],
-          "popular": true
-        },
-        "mustache-trim-shave": {
-          "id": "mustache-trim-shave",
-          "name": "Mustache Trim & Shave",
-          "description": "Precise mustache trim and shave for sharp lines and a refined look.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Rectangle", "Square"],
-          "popular": false
-        },
-        "full-face-shave": {
-          "id": "full-face-shave",
-          "name": "Full Face Shave",
-          "description": "Full face shave with professional technique for perfectly smooth skin.",
-          "images": ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
-          "difficulty": "Easy",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Round", "Rectangle", "Square"],
-          "popular": true
-        },
-        "precision-shave": {
-          "id": "precision-shave",
-          "name": "Precision Shave",
-          "description": "Precise shave with a traditional straight razor for perfectionists.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Hard",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Square"],
-          "popular": false
-        }
-        }
-      },
-      "beard-trim": {
-        "id": "beard-trim",
-        "title": "Beard Trimming",
-        "subtitle": "Beard Trim",
-        "price": "From $16 + tax",
-        "description": "Professional beard trimming and shaping to keep your beard perfect.",
-        "longDescription": "Keep your beard in top shape with professional trimming and shaping. A professionally shaped beard not only looks better but also grows more evenly, making it easier to care for at home and saving you time.",
-        "images": ["/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
-        "features": ["Professional shaping", "Style consultation", "Premium products", "Care guidance"],
-        "benefits": ["Better-looking beard", "More even growth", "Easy home care", "Time-saving"],
-        "styles": {
-        "full-beard-trim": {
-          "id": "full-beard-trim",
-          "name": "Full Beard Trim",
-          "description": "Trim the entire beard, shaping it to balance and suit your face.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Square", "Rectangle"],
-          "popular": true
-        },
-        "goatee-style": {
-          "id": "goatee-style",
-          "name": "Goatee Style",
-          "description": "Modern goatee style, perfect for a youthful and bold look.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Round", "Oval", "Square"],
-          "popular": true
-        },
-        "mustache-trim": {
-          "id": "mustache-trim",
-          "name": "Mustache Trim",
-          "description": "Professional mustache trim for sharp lines and a refined look.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Easy",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Rectangle", "Square"],
-          "popular": false
-        },
-        "beard-shaping": {
-          "id": "beard-shaping",
-          "name": "Beard Shaping",
-          "description": "Shape your beard to your personal style, highlighting your facial features.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Hard",
-          "maintenance": "High",
-          "faceShape": ["Oval", "Square", "Rectangle"],
-          "popular": true
-        },
-        "designer-beard": {
-          "id": "designer-beard",
-          "name": "Designer Beard",
-          "description": "Premium designer beard with intricate lines, showing unique style.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Hard",
-          "maintenance": "High",
-          "faceShape": ["Oval", "Square"],
-          "popular": false
-        },
-        "corporate-beard": {
-          "id": "corporate-beard",
-          "name": "Corporate Beard",
-          "description": "Office-style beard, neat and professional, suitable for the workplace.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
-          ],
-          "difficulty": "Easy",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Rectangle", "Square"],
-          "popular": true
-        },
-        "vintage-beard": {
-          "id": "vintage-beard",
-          "name": "Vintage Beard",
-          "description": "Classic beard style, exuding masculinity and gentlemanly elegance.",
-          "images": ["/placeholder.svg?height=600&width=400", "/placeholder.svg?height=600&width=400"],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Square", "Rectangle"],
-          "popular": false
-        }
-        }
-      }
       }
     },
+
     "women-hair": {
       "id": "womens-hair-services",
       "title": "Women's Hair Services",
@@ -454,9 +507,11 @@
           "description": "More than just a haircut, this is a bespoke styling experience that highlights your natural beauty and fits your lifestyle.",
           "longDescription": "More than just a haircut, this is a personalized styling experience designed to enhance your natural beauty and fit your lifestyle. Includes a luxurious shampoo and professional styling. Our experts provide thorough consultation to ensure your hairstyle is perfect, meaning you rarely have a 'bad hair day' and gain priceless confidence.",
           "images": [
-            "/placeholder.svg?height=400&width=600",
-            "/placeholder.svg?height=400&width=600",
-            "/placeholder.svg?height=400&width=600"
+            "/img/women-hair-services/womens-haircut.webp",
+            "/img/women-hair-services/womens-haircut-1.webp",
+            "/img/women-hair-services/womens-haircut-2.webp",
+            "/img/women-hair-services/womens-haircut-3.webp",
+            "/img/women-hair-services/womens-haircut-4.webp"
           ],
           "features": [
             "Personal style consultation",
@@ -476,9 +531,12 @@
               "name": "Layered Cut",
               "description": "Soft layers for volume, suitable for many styles.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/layered-cut.webp",
+                "/img/women-hair-services/layered-cut-1.webp",
+                "/img/women-hair-services/layered-cut-4.webp",
+                "/img/women-hair-services/layered-cut-3.webp",
+                "/img/women-hair-services/layered-cut-5.webp",
+                "/img/women-hair-services/layered-cut-2.webp"
               ],
               "difficulty": "Medium",
               "maintenance": "Medium",
@@ -490,9 +548,11 @@
               "name": "Bob Cut",
               "description": "Classic, elegant bob, easy to style and suitable for all ages.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/bob-cut.webp",
+                "/img/women-hair-services/bob-cut-1.webp",
+                "/img/women-hair-services/bob-cut-2.webp",
+                "/img/women-hair-services/bob-cut-3.webp",
+                "/img/women-hair-services/bob-cut-4.webp"
               ],
               "difficulty": "Easy",
               "maintenance": "Low",
@@ -504,9 +564,10 @@
               "name": "Pixie Cut",
               "description": "Short, dynamic, and bold style for those who love a strong look.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/pixie-cut.webp",
+                "/img/women-hair-services/pixie-cut-1.webp",
+                "/img/women-hair-services/pixie-cut-2.webp",
+                "/img/women-hair-services/pixie-cut-3.webp"
               ],
               "difficulty": "Easy",
               "maintenance": "Low",
@@ -515,6 +576,7 @@
             }
           }
         },
+
         "hair-coloring": {
           "id": "hair-coloring",
           "title": "Hair Coloring",
@@ -523,9 +585,12 @@
           "description": "Ready for a vibrant new hair color or a fresh update to your current shade?",
           "longDescription": "Ready for a vibrant new hair color or a fresh update to your current shade? Our stylists will help you choose the perfect tone. Our professional coloring uses high-quality products to protect hair health, ensuring long-lasting color and shine, helping prevent costly damage later.",
           "images": [
-            "/placeholder.svg?height=400&width=600",
-            "/placeholder.svg?height=400&width=600",
-            "/placeholder.svg?height=400&width=600"
+            "/img/women-hair-services/hair-coloring.webp",
+            "/img/women-hair-services/hair-coloring-1.webp",
+            "/img/women-hair-services/hair-coloring-2.webp",
+            "/img/women-hair-services/hair-coloring-3.webp",
+            "/img/women-hair-services/hair-coloring-4.webp",
+            "/img/women-hair-services/hair-coloring-5.webp"
           ],
           "features": [
             "Tone consultation",
@@ -545,9 +610,11 @@
               "name": "Full Colour",
               "description": "All-over color for a fresh, vibrant look.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/full-colour.webp",
+                "/img/women-hair-services/full-colour-1.webp",
+                "/img/women-hair-services/full-colour-2.webp",
+                "/img/women-hair-services/full-colour-3.webp",
+                "/img/women-hair-services/full-colour-4.webp"
               ],
               "difficulty": "Medium",
               "maintenance": "Medium",
@@ -559,8 +626,11 @@
               "name": "Root Touch-Up",
               "description": "Refreshes color at the roots for an even, natural look.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/root-touch-up.webp",
+                "/img/women-hair-services/root-touch-up-1.webp",
+                "/img/women-hair-services/root-touch-up-2.webp",
+                "/img/women-hair-services/root-touch-up-3.webp",
+                "/img/women-hair-services/root-touch-up-4.webp"
               ],
               "difficulty": "Easy",
               "maintenance": "Low",
@@ -572,9 +642,10 @@
               "name": "Ombre",
               "description": "Gradient coloring from dark to light for a modern, natural effect.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/ombre.webp",
+                "/img/women-hair-services/ombre-1.webp",
+                "/img/women-hair-services/ombre-2.webp",
+                "/img/women-hair-services/ombre-3.webp"
               ],
               "difficulty": "Hard",
               "maintenance": "High",
@@ -583,6 +654,7 @@
             }
           }
         },
+
         "hair-highlights": {
           "id": "hair-highlights",
           "title": "Highlights",
@@ -591,9 +663,10 @@
           "description": "Add depth and sparkle to your hair with beautiful highlights.",
           "longDescription": "Add depth and sparkle to your hair with beautiful highlights, customized for a natural sun-kissed effect or a bold statement. Our professional technique ensures seamless blending and natural regrowth, giving you long-lasting beauty with less need for frequent touch-ups.",
           "images": [
-            "/placeholder.svg?height=400&width=600",
-            "/placeholder.svg?height=400&width=600",
-            "/placeholder.svg?height=400&width=600"
+            "/img/women-hair-services/hair-highlights.webp",
+            "/img/women-hair-services/hair-highlights-1.webp",
+            "/img/women-hair-services/hair-highlights-2.webp",
+            "/img/women-hair-services/hair-highlights-3.webp"
           ],
           "features": [
             "Custom highlights",
@@ -613,9 +686,11 @@
               "name": "Natural Highlights",
               "description": "Soft highlights for a naturally bright, sun-kissed look.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/natural-highlights.webp",
+                "/img/women-hair-services/natural-highlights-1.webp",
+                "/img/women-hair-services/natural-highlights-2.webp",
+                "/img/women-hair-services/natural-highlights-3.webp",
+                "/img/women-hair-services/natural-highlights-4.webp"
               ],
               "difficulty": "Medium",
               "maintenance": "Low",
@@ -627,9 +702,11 @@
               "name": "Bold Highlights",
               "description": "Bold highlights for a strong, standout statement.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/bold-highlights.webp",
+                "/img/women-hair-services/bold-highlights-1.webp",
+                "/img/women-hair-services/bold-highlights-2.webp",
+                "/img/women-hair-services/bold-highlights-3.webp",
+                "/img/women-hair-services/bold-highlights-4.webp"
               ],
               "difficulty": "Hard",
               "maintenance": "High",
@@ -638,6 +715,7 @@
             }
           }
         },
+
         "hair-perm": {
           "id": "hair-perm",
           "title": "Perm",
@@ -646,9 +724,11 @@
           "description": "Add volume, body, and beautiful waves or curls to your hair.",
           "longDescription": "Want to add volume, body, and beautiful waves or curls to your hair? Our professional perm service delivers just that. We create the perfect hair texture, giving you consistent, beautiful results for months—an excellent value for your investment.",
           "images": [
-            "/placeholder.svg?height=400&width=600",
-            "/placeholder.svg?height=400&width=600",
-            "/placeholder.svg?height=400&width=600"
+            "/img/women-hair-services/hair-perm.webp",
+            "/img/women-hair-services/hair-perm-1.webp",
+            "/img/women-hair-services/hair-perm-2.webp",
+            "/img/women-hair-services/hair-perm-3.webp",
+            "/img/women-hair-services/hair-perm-4.webp"
           ],
           "features": [
             "Perfect curls",
@@ -668,9 +748,11 @@
               "name": "Beach Waves",
               "description": "Soft, natural waves for a relaxed beachy look.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/beach-waves.webp",
+                "/img/women-hair-services/beach-waves-1.webp",
+                "/img/women-hair-services/beach-waves-2.webp",
+                "/img/women-hair-services/beach-waves-3.webp",
+                "/img/women-hair-services/beach-waves-4.webp"
               ],
               "difficulty": "Medium",
               "maintenance": "Medium",
@@ -682,9 +764,10 @@
               "name": "Tight Curls",
               "description": "Tight curls for a dynamic, bold look.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/tight-curls.webp",
+                "/img/women-hair-services/tight-curls-1.webp",
+                "/img/women-hair-services/tight-curls-2.webp",
+                "/img/women-hair-services/tight-curls-3.webp"
               ],
               "difficulty": "Hard",
               "maintenance": "High",
@@ -693,6 +776,7 @@
             }
           }
         },
+
         "hair-straightening": {
           "id": "hair-straightening",
           "title": "Hair Straightening",
@@ -701,9 +785,11 @@
           "description": "Dreaming of smooth, shiny, and manageable hair?",
           "longDescription": "Dreaming of smooth, shiny, and manageable hair? Our professional straightening treatments reduce frizz and boost shine. Carefully performed to minimize damage and maximize smoothness, making your daily styling much faster and easier—a real time-saver!",
           "images": [
-            "/placeholder.svg?height=400&width=600",
-            "/placeholder.svg?height=400&width=600",
-            "/placeholder.svg?height=400&width=600"
+            "/img/women-hair-services/hair-straightening.webp",
+            "/img/women-hair-services/hair-straightening-1.webp",
+            "/img/women-hair-services/hair-straightening-2.webp",
+            "/img/women-hair-services/hair-straightening-3.webp",
+            "/img/women-hair-services/hair-straightening-4.webp"
           ],
           "features": [
             "Reduces frizz",
@@ -723,9 +809,9 @@
               "name": "Classic Straight",
               "description": "Sleek, straight hair for an elegant, professional look.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/classic-straight-1.webp",
+                "/img/women-hair-services/classic-straight-2.webp",
+                "/img/women-hair-services/classic-straight.webp"
               ],
               "difficulty": "Medium",
               "maintenance": "Medium",
@@ -737,9 +823,10 @@
               "name": "Sleek Smooth",
               "description": "Ultra-smooth, mirror-shine straight hair.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/sleek-smooth.webp",
+                "/img/women-hair-services/sleek-smooth-1.webp",
+                "/img/women-hair-services/sleek-smooth-2.webp",
+                "/img/women-hair-services/sleek-smooth-3.webp"
               ],
               "difficulty": "Hard",
               "maintenance": "High",
@@ -748,6 +835,7 @@
             }
           }
         },
+
         "hair-updo": {
           "id": "hair-updo",
           "title": "Updo",
@@ -756,9 +844,8 @@
           "description": "Perfect for special occasions, exquisitely styled updos.",
           "longDescription": "Perfect for special occasions, our updos are exquisitely styled for an elegant and memorable look. With professional updos, you are guaranteed perfection and all-day/night hold, so you can enjoy your moment without worrying about your hair.",
           "images": [
-            "/placeholder.svg?height=400&width=600",
-            "/placeholder.svg?height=400&width=600",
-            "/placeholder.svg?height=400&width=600"
+            "/img/women-hair-services/hair-updo.webp",
+            "/img/women-hair-services/hair-updo-1.webp"
           ],
           "features": [
             "Exquisite styling",
@@ -778,9 +865,9 @@
               "name": "Classic Updo",
               "description": "Classic, elegant updo for weddings or formal events.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/classic-updo.webp",
+                "/img/women-hair-services/classic-updo-1.webp",
+                "/img/women-hair-services/classic-updo-2.webp"
               ],
               "difficulty": "Medium",
               "maintenance": "Low",
@@ -792,9 +879,11 @@
               "name": "Messy Bun",
               "description": "Loose, natural bun for a relaxed yet attractive style.",
               "images": [
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400",
-                "/placeholder.svg?height=600&width=400"
+                "/img/women-hair-services/messy-bun.webp",
+                "/img/women-hair-services/messy-bun-1.webp",
+                "/img/women-hair-services/messy-bun-2.webp",
+                "/img/women-hair-services/messy-bun-3.webp",
+                "/img/women-hair-services/messy-bun-4.webp"
               ],
               "difficulty": "Medium",
               "maintenance": "Low",
@@ -805,6 +894,7 @@
         }
       }
     },
+
     "kids-hair": {
       "id": "kids-hair-services",
       "title": "Kids' Hair Services",
@@ -813,102 +903,112 @@
       "tagline": "Cute Hair, Happy Parents!",
       "color": "purple",
       "services": {
-      "boys-haircut": {
-        "id": "boys-haircut",
-        "title": "Boys' Haircut",
-        "subtitle": "Kid's Haircut",
-        "price": "From $25",
-        "description": "A friendly, hassle-free haircut experience for boys, ensuring they leave with a stylish and comfortable look.",
-        "longDescription": "A friendly, hassle-free haircut experience for boys, ensuring they leave with a trendy and comfortable hairstyle. Our patient stylists ensure a positive experience, making future haircuts stress-free for both kids and parents.",
-        "images": ["/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
-        "features": ["Friendly environment", "Kids-specialized stylists", "No pain", "Age-appropriate styles"],
-        "benefits": ["Kids feel comfortable", "Parents feel at ease", "Great hairstyles", "Fun experience"],
-        "styles": {
-        "classic-kid-cut": {
-          "id": "classic-kid-cut",
-          "name": "Classic Kid Cut",
-          "description": "Neat hairstyle, age-appropriate and easy to maintain.",
+        "boys-haircut": {
+          "id": "boys-haircut",
+          "title": "Boys' Haircut",
+          "subtitle": "Kid's Haircut",
+          "price": "From $25",
+          "description": "A friendly, hassle-free haircut experience for boys, ensuring they leave with a stylish and comfortable look.",
+          "longDescription": "A friendly, hassle-free haircut experience for boys, ensuring they leave with a trendy and comfortable hairstyle. Our patient stylists ensure a positive experience, making future haircuts stress-free for both kids and parents.",
           "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+            "/img/baby-hair-services/boys-haircut.webp",
+            "/img/baby-hair-services/boys-haircut-1.webp"
           ],
-          "difficulty": "Easy",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Round", "Square"],
-          "popular": true
+          "features": [
+            "Friendly environment",
+            "Kids-specialized stylists",
+            "No pain",
+            "Age-appropriate styles"
+          ],
+          "benefits": [
+            "Kids feel comfortable",
+            "Parents feel at ease",
+            "Great hairstyles",
+            "Fun experience"
+          ],
+          "styles": {
+            "classic-kid-cut": {
+              "id": "classic-kid-cut",
+              "name": "Classic Kid Cut",
+              "description": "Neat hairstyle, age-appropriate and easy to maintain.",
+              "images": [
+                "/img/baby-hair-services/classic-kid-cut.webp",
+                "/img/baby-hair-services/classic-kid-cut-1.webp",
+                "/img/baby-hair-services/classic-kid-cut-2.webp",
+                "/img/baby-hair-services/classic-kid-cut-3.webp"
+              ],
+              "difficulty": "Easy",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Round", "Square"],
+              "popular": true
+            },
+            "spiky-cut": {
+              "id": "spiky-cut",
+              "name": "Spiky Cut",
+              "description": "Dynamic style with spiked top, perfect for energetic boys.",
+              "images": [
+                "/img/baby-hair-services/spiky-cut-1.webp",
+                "/img/baby-hair-services/spiky-cut.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Round"],
+              "popular": false
+            }
+          }
         },
-        "spiky-cut": {
-          "id": "spiky-cut",
-          "name": "Spiky Cut",
-          "description": "Dynamic style with spiked top, perfect for energetic boys.",
+        "girls-haircut": {
+          "id": "girls-haircut",
+          "title": "Girls' Haircut",
+          "subtitle": "Girl's Haircut",
+          "price": "From $35",
+          "description": "Trendy, age-appropriate hairstyles for girls, styled according to their preferences and hair type.",
+          "longDescription": "Trendy, age-appropriate hairstyles for girls, styled according to their preferences and hair type. We ensure the style is not only cute but also easy for parents to manage, providing a practical beauty solution for busy Canadian families.",
           "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+            "/img/baby-hair-services/girls-haircut.webp"
           ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Round"],
-          "popular": false
-        }
-        }
-      },
-      "girls-haircut": {
-        "id": "girls-haircut",
-        "title": "Girls' Haircut",
-        "subtitle": "Girl's Haircut",
-        "price": "From $35",
-        "description": "Trendy, age-appropriate hairstyles for girls, styled according to their preferences and hair type.",
-        "longDescription": "Trendy, age-appropriate hairstyles for girls, styled according to their preferences and hair type. We ensure the style is not only cute but also easy for parents to manage, providing a practical beauty solution for busy Canadian families.",
-        "images": [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600"
-        ],
-        "features": [
-        "Customized to preferences",
-        "Age-appropriate",
-        "Easy to manage",
-        "Friendly environment"
-        ],
-        "benefits": [
-        "Cute hairstyles",
-        "Easy for parents to manage",
-        "Fun experience",
-        "Confidence for kids"
-        ],
-        "styles": {
-        "bob-kid-cut": {
-          "id": "bob-kid-cut",
-          "name": "Bob Kid Cut",
-          "description": "Cute short bob, easy to care for and perfect for girls.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+          "features": [
+            "Customized to preferences",
+            "Age-appropriate",
+            "Easy to manage",
+            "Friendly environment"
           ],
-          "difficulty": "Easy",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Round"],
-          "popular": true
-        },
-        "layered-kid-cut": {
-          "id": "layered-kid-cut",
-          "name": "Layered Kid Cut",
-          "description": "Lightly layered style, adds volume and easy to style for girls.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+          "benefits": [
+            "Cute hairstyles",
+            "Easy for parents to manage",
+            "Fun experience",
+            "Confidence for kids"
           ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Rectangle"],
-          "popular": false
+          "styles": {
+            "bob-kid-cut": {
+              "id": "bob-kid-cut",
+              "name": "Bob Kid Cut",
+              "description": "Cute short bob, easy to care for and perfect for girls.",
+              "images": [
+                "/img/baby-hair-services/bob-kid-cut.webp"
+              ],
+              "difficulty": "Easy",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Round"],
+              "popular": true
+            },
+            "layered-kid-cut": {
+              "id": "layered-kid-cut",
+              "name": "Layered Kid Cut",
+              "description": "Lightly layered style, adds volume and easy to style for girls.",
+              "images": [
+                "/img/baby-hair-services/layered-kid-cut.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Rectangle"],
+              "popular": false
+            }
+          }
         }
-        }
-      }
       }
     },
+
     "hair-treatments": {
       "id": "hair-treatment-and-styling",
       "title": "Hair Treatments & Styling",
@@ -917,125 +1017,138 @@
       "tagline": "Healthy Hair, Naturally Radiant Beauty!",
       "color": "amber",
       "services": {
-      "hair-wash": {
-        "id": "hair-wash",
-        "title": "Hair Wash",
-        "subtitle": "Wash",
-        "price": "From $20 + tax",
-        "description": "Refreshing hair wash followed by professional blow-drying, leaving your hair clean and light.",
-        "longDescription": "A refreshing hair wash followed by professional blow-drying, leaving your hair clean and light. Sometimes, all you need is a professional wash to instantly refresh your look and save time on a busy day.",
-        "images": ["/placeholder.svg?height=400&width=600", "/placeholder.svg?height=400&width=600"],
-        "features": ["Refreshing wash", "Professional blow-dry", "Premium products", "Scalp massage"],
-        "benefits": ["Clean hair", "Light feeling", "Relaxation", "Healthy scalp"],
-        "styles": {}
-      },
-      "wash-and-style": {
-        "id": "wash-and-style",
-        "title": "Wash & Style",
-        "subtitle": "Wash & Style",
-        "price": "Price advised upon booking",
-        "description": "Enjoy a luxurious wash followed by beautiful styling with a brush or curling/straightening iron.",
-        "longDescription": "Enjoy a luxurious wash followed by beautiful styling with a brush or curling/straightening iron, perfect for a finished look. Let our experts give you that 'just stepped out of the salon' look with ease, saving you time and effort styling at home.",
-        "images": [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600"
-        ],
-        "features": [
-        "Luxurious wash",
-        "Brush/iron styling",
-        "Premium products",
-        "Styling consultation"
-        ],
-        "benefits": [
-        "Finished look",
-        "Time-saving",
-        "Salon-beautiful hair",
-        "Maximum relaxation"
-        ],
-        "styles": {
-        "sleek-blowout": {
-          "id": "sleek-blowout",
-          "name": "Sleek Blowout",
-          "description": "Smooth, shiny blowout for an elegant and professional look.",
+        "hair-wash": {
+          "id": "hair-wash",
+          "title": "Hair Wash",
+          "subtitle": "Wash",
+          "price": "From $20 + tax",
+          "description": "Refreshing hair wash followed by professional blow-drying, leaving your hair clean and light.",
+          "longDescription": "A refreshing hair wash followed by professional blow-drying, leaving your hair clean and light. Sometimes, all you need is a professional wash to instantly refresh your look and save time on a busy day.",
           "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+            "/img/care-styling/hair-wash.webp",
+            "/img/care-styling/hair-wash-1.webp",
+            "/img/care-styling/hair-wash-2.webp",
+            "/img/care-styling/hair-wash-3.webp"
           ],
-          "difficulty": "Medium",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Rectangle", "Square"],
-          "popular": true
+          "features": [
+            "Refreshing wash",
+            "Professional blow-dry",
+            "Premium products",
+            "Scalp massage"
+          ],
+          "benefits": [
+            "Clean hair",
+            "Light feeling",
+            "Relaxation",
+            "Healthy scalp"
+          ],
+          "styles": {}
         },
-        "voluminous-curls": {
-          "id": "voluminous-curls",
-          "name": "Voluminous Curls",
-          "description": "Big, bouncy curls for a glamorous and standout look.",
+        "wash-and-style": {
+          "id": "wash-and-style",
+          "title": "Wash & Style",
+          "subtitle": "Wash & Style",
+          "price": "Price advised upon booking",
+          "description": "Enjoy a luxurious wash followed by beautiful styling with a brush or curling/straightening iron.",
+          "longDescription": "Enjoy a luxurious wash followed by beautiful styling with a brush or curling/straightening iron, perfect for a finished look. Let our experts give you that 'just stepped out of the salon' look with ease, saving you time and effort styling at home.",
           "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+            "/img/care-styling/wash-and-style.webp"
           ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Round"],
-          "popular": true
+          "features": [
+            "Luxurious wash",
+            "Brush/iron styling",
+            "Premium products",
+            "Styling consultation"
+          ],
+          "benefits": [
+            "Finished look",
+            "Time-saving",
+            "Salon-beautiful hair",
+            "Maximum relaxation"
+          ],
+          "styles": {
+            "sleek-blowout": {
+              "id": "sleek-blowout",
+              "name": "Sleek Blowout",
+              "description": "Smooth, shiny blowout for an elegant and professional look.",
+              "images": [
+                "/img/care-styling/sleek-blowout.webp",
+                "/img/care-styling/sleek-blowout-1.webp",
+                "/img/care-styling/sleek-blowout-2.webp",
+                "/img/care-styling/sleek-blowout-3.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Rectangle", "Square"],
+              "popular": true
+            },
+            "voluminous-curls": {
+              "id": "voluminous-curls",
+              "name": "Voluminous Curls",
+              "description": "Big, bouncy curls for a glamorous and standout look.",
+              "images": [
+                "/img/care-styling/voluminous-curls.webp",
+                "/img/care-styling/voluminous-curls-1.webp",
+                "/img/care-styling/voluminous-curls-2.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Round"],
+              "popular": true
+            }
+          }
+        },
+        "hair-treatment": {
+          "id": "hair-treatment",
+          "title": "Nourishing Hair Therapy",
+          "subtitle": "Nourishing Shampoo Therapy",
+          "price": "$90 + tax",
+          "description": "Deeply nourish and restore vitality to your hair with our specialized nourishing shampoo therapy.",
+          "longDescription": "Deeply nourish and restore vitality to your hair with our specialized nourishing shampoo therapy, restoring health and shine. This intensive treatment repairs damage, adds incredible shine, and improves manageability, ultimately prolonging hair health and reducing the need for frequent deep conditioning at home.",
+          "images": [
+            "/img/care-styling/hair-treatment.webp"
+          ],
+          "features": [
+            "Deep nourishment",
+            "Damage repair",
+            "Boosts shine",
+            "Specialized products"
+          ],
+          "benefits": [
+            "Healthy hair",
+            "Radiant shine",
+            "Easy to manage",
+            "Less home care needed"
+          ],
+          "styles": {}
+        },
+        "scalp-massage": {
+          "id": "scalp-massage",
+          "title": "Scalp Massage",
+          "subtitle": "Scalp Massage",
+          "price": "$85 + tax",
+          "description": "Immerse yourself in a deeply relaxing and therapeutic scalp massage.",
+          "longDescription": "Immerse yourself in a deeply relaxing and therapeutic scalp massage. This is not just pampering; it actively promotes blood circulation to the scalp, encourages healthier hair growth, and provides wonderful stress relief. It's an investment in both your hair's vitality and your overall well-being.",
+          "images": [
+            "/img/care-styling/scalp-massage.webp"
+          ],
+          "features": [
+            "Relaxing massage",
+            "Boosts blood circulation",
+            "Scalp care products",
+            "Stress relief"
+          ],
+          "benefits": [
+            "Healthier hair growth",
+            "Deep relaxation",
+            "Improved scalp health",
+            "Enhanced overall wellness"
+          ],
+          "styles": {}
         }
-        }
-      },
-      "hair-treatment": {
-        "id": "hair-treatment",
-        "title": "Nourishing Hair Therapy",
-        "subtitle": "Nourishing Shampoo Therapy",
-        "price": "$90 + tax",
-        "description": "Deeply nourish and restore vitality to your hair with our specialized nourishing shampoo therapy.",
-        "longDescription": "Deeply nourish and restore vitality to your hair with our specialized nourishing shampoo therapy, restoring health and shine. This intensive treatment repairs damage, adds incredible shine, and improves manageability, ultimately prolonging hair health and reducing the need for frequent deep conditioning at home.",
-        "images": [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600"
-        ],
-        "features": [
-        "Deep nourishment",
-        "Damage repair",
-        "Boosts shine",
-        "Specialized products"
-        ],
-        "benefits": [
-        "Healthy hair",
-        "Radiant shine",
-        "Easy to manage",
-        "Less home care needed"
-        ],
-        "styles": {}
-      },
-      "scalp-massage": {
-        "id": "scalp-massage",
-        "title": "Scalp Massage",
-        "subtitle": "Scalp Massage",
-        "price": "$85 + tax",
-        "description": "Immerse yourself in a deeply relaxing and therapeutic scalp massage.",
-        "longDescription": "Immerse yourself in a deeply relaxing and therapeutic scalp massage. This is not just pampering; it actively promotes blood circulation to the scalp, encourages healthier hair growth, and provides wonderful stress relief. It's an investment in both your hair's vitality and your overall well-being.",
-        "images": [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600"
-        ],
-        "features": [
-        "Relaxing massage",
-        "Boosts blood circulation",
-        "Scalp care products",
-        "Stress relief"
-        ],
-        "benefits": [
-        "Healthier hair growth",
-        "Deep relaxation",
-        "Improved scalp health",
-        "Enhanced overall wellness"
-        ],
-        "styles": {}
-      }
       }
     },
+
     "esthetic-services": {
       "id": "beauty-services",
       "title": "Esthetic Services",
@@ -1044,214 +1157,210 @@
       "tagline": "Radiant, Relaxed & Real Results!",
       "color": "emerald",
       "services": {
-      "facial-treatment": {
-        "id": "facial-treatment",
-        "title": "Facial Treatment",
-        "subtitle": "Facial (1 Hour)",
-        "price": "From $90 + tax",
-        "description": "Rejuvenate your skin with our customized facial treatments.",
-        "longDescription": "Rejuvenate your skin with our customized facial treatments—designed to cleanse, nourish, and restore your complexion. Our experts analyze your skin to ensure you receive the exact treatment for your skin type, resulting in noticeable, long-lasting improvements that boost your skin health and help you avoid wasting money on unsuitable products.",
-        "images": [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600"
-        ],
-        "features": ["Customized therapy", "Deep cleansing", "Skin nourishment", "Skin restoration"],
-        "benefits": ["Rejuvenated skin", "Radiant complexion", "Improved skin texture", "Maximum relaxation"],
-        "styles": {
-        "hydrating-facial": {
-          "id": "hydrating-facial",
-          "name": "Hydrating Facial",
-          "description": "Deeply hydrating facial, ideal for dry or dehydrated skin.",
+        "facial-treatment": {
+          "id": "facial-treatment",
+          "title": "Facial Treatment",
+          "subtitle": "Facial (1 Hour)",
+          "price": "From $90 + tax",
+          "description": "Rejuvenate your skin with our customized facial treatments.",
+          "longDescription": "Rejuvenate your skin with our customized facial treatments—designed to cleanse, nourish, and restore your complexion. Our experts analyze your skin to ensure you receive the exact treatment for your skin type, resulting in noticeable, long-lasting improvements that boost your skin health and help you avoid wasting money on unsuitable products.",
           "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+            "/img/beauty-care/facial-treatment.webp",
+            "/img/beauty-care/facial-treatment-1.webp"
           ],
-          "difficulty": "Easy",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Round", "Square", "Rectangle"],
-          "popular": true
+          "features": [
+            "Customized therapy",
+            "Deep cleansing",
+            "Skin nourishment",
+            "Skin restoration"
+          ],
+          "benefits": [
+            "Rejuvenated skin",
+            "Radiant complexion",
+            "Improved skin texture",
+            "Maximum relaxation"
+          ],
+          "styles": {
+            "hydrating-facial": {
+              "id": "hydrating-facial",
+              "name": "Hydrating Facial",
+              "description": "Deeply hydrating facial, ideal for dry or dehydrated skin.",
+              "images": [
+                "/img/beauty-care/hydrating-facial.webp"
+              ],
+              "difficulty": "Easy",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Round", "Square", "Rectangle"],
+              "popular": true
+            },
+            "anti-aging-facial": {
+              "id": "anti-aging-facial",
+              "name": "Anti-Aging Facial",
+              "description": "Anti-aging facial therapy to reduce wrinkles and increase firmness.",
+              "images": [
+                "/img/beauty-care/anti-aging-facial.webp",
+                "/img/beauty-care/anti-aging-facial-1.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Rectangle", "Square"],
+              "popular": true
+            }
+          }
         },
-        "anti-aging-facial": {
-          "id": "anti-aging-facial",
-          "name": "Anti-Aging Facial",
-          "description": "Anti-aging facial therapy to reduce wrinkles and increase firmness.",
+        "body-waxing": {
+          "id": "body-waxing",
+          "title": "Body Waxing",
+          "subtitle": "Waxing",
+          "price": "From $16 + tax",
+          "description": "Achieve soft, smooth skin with professional waxing services.",
+          "longDescription": "Achieve soft, smooth skin with our professional waxing services for various areas. Our skilled estheticians ensure minimal discomfort and longer-lasting results compared to shaving, meaning fewer waxing sessions and more time for you to enjoy life.",
           "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+            "/img/beauty-care/body-waxing.webp"
           ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Rectangle", "Square"],
-          "popular": true
-        }
-        }
-      },
-      "body-waxing": {
-        "id": "body-waxing",
-        "title": "Body Waxing",
-        "subtitle": "Waxing",
-        "price": "From $16 + tax",
-        "description": "Achieve soft, smooth skin with professional waxing services.",
-        "longDescription": "Achieve soft, smooth skin with our professional waxing services for various areas. Our skilled estheticians ensure minimal discomfort and longer-lasting results compared to shaving, meaning fewer waxing sessions and more time for you to enjoy life.",
-        "images": [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600"
-        ],
-        "features": [
-        "Professional waxing",
-        "Minimized discomfort",
-        "Safe products",
-        "Long-lasting results"
-        ],
-        "benefits": [
-        "Smooth skin",
-        "Long-lasting results",
-        "Time-saving",
-        "Confidence in your skin"
-        ],
-        "styles": {
-        "bikini-wax": {
-          "id": "bikini-wax",
-          "name": "Bikini Wax",
-          "description": "Bikini area waxing for a neat and confident look.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+          "features": [
+            "Professional waxing",
+            "Minimized discomfort",
+            "Safe products",
+            "Long-lasting results"
           ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": [],
-          "popular": true
+          "benefits": [
+            "Smooth skin",
+            "Long-lasting results",
+            "Time-saving",
+            "Confidence in your skin"
+          ],
+          "styles": {
+            "bikini-wax": {
+              "id": "bikini-wax",
+              "name": "Bikini Wax",
+              "description": "Bikini area waxing for a neat and confident look.",
+              "images": [
+                "/img/beauty-care/bikini-wax.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": [],
+              "popular": true
+            },
+            "full-leg-wax": {
+              "id": "full-leg-wax",
+              "name": "Full Leg Wax",
+              "description": "Full leg waxing for smooth and clean skin.",
+              "images": [
+                "/img/beauty-care/full-leg-wax.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": [],
+              "popular": true
+            }
+          }
         },
-        "full-leg-wax": {
-          "id": "full-leg-wax",
-          "name": "Full Leg Wax",
-          "description": "Full leg waxing for smooth and clean skin.",
+        "eyelash-extension": {
+          "id": "eyelash-extension",
+          "title": "Eyelash Extension",
+          "subtitle": "Eyelash Extension",
+          "price": "From $85 + tax",
+          "description": "Enhance your natural beauty with longer, fuller lashes.",
+          "longDescription": "Enhance your natural beauty with longer, fuller lashes, professionally applied for a stunning look. Imagine waking up every morning with naturally beautiful lashes! Eyelash extensions eliminate the need for daily mascara, saving you precious time in your morning routine and giving you effortless allure.",
           "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+            "/img/beauty-care/eyelash-extension.webp",
+            "/img/beauty-care/eyelash-extension-1.webp",
+            "/img/beauty-care/eyelash-extension-2.webp"
           ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": [],
-          "popular": true
-        }
-        }
-      },
-      "eyelash-extension": {
-        "id": "eyelash-extension",
-        "title": "Eyelash Extension",
-        "subtitle": "Eyelash Extension",
-        "price": "From $85 + tax",
-        "description": "Enhance your natural beauty with longer, fuller lashes.",
-        "longDescription": "Enhance your natural beauty with longer, fuller lashes, professionally applied for a stunning look. Imagine waking up every morning with naturally beautiful lashes! Eyelash extensions eliminate the need for daily mascara, saving you precious time in your morning routine and giving you effortless allure.",
-        "images": [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600"
-        ],
-        "features": [
-        "Professional lash extensions",
-        "Long, full lashes",
-        "Safe products",
-        "Customizable"
-        ],
-        "benefits": [
-        "Glamorous look",
-        "Saves makeup time",
-        "Natural lashes",
-        "Confidence every day"
-        ],
-        "styles": {
-        "classic-lash": {
-          "id": "classic-lash",
-          "name": "Classic Lash",
-          "description": "Natural lash extensions, one extension per natural lash for an elegant look.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+          "features": [
+            "Professional lash extensions",
+            "Long, full lashes",
+            "Safe products",
+            "Customizable"
           ],
-          "difficulty": "Medium",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Round", "Rectangle"],
-          "popular": true
+          "benefits": [
+            "Glamorous look",
+            "Saves makeup time",
+            "Natural lashes",
+            "Confidence every day"
+          ],
+          "styles": {
+            "classic-lash": {
+              "id": "classic-lash",
+              "name": "Classic Lash",
+              "description": "Natural lash extensions, one extension per natural lash for an elegant look.",
+              "images": [
+                "/img/beauty-care/classic-lash.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Round", "Rectangle"],
+              "popular": true
+            },
+            "volume-lash": {
+              "id": "volume-lash",
+              "name": "Volume Lash",
+              "description": "Volume lash extensions, multiple extensions per natural lash for a dramatic effect.",
+              "images": [
+                "/img/beauty-care/",
+                "/img/beauty-care/",
+                "/img/beauty-care/"
+              ],
+              "difficulty": "Hard",
+              "maintenance": "High",
+              "faceShape": ["Oval", "Square"],
+              "popular": false
+            }
+          }
         },
-        "volume-lash": {
-          "id": "volume-lash",
-          "name": "Volume Lash",
-          "description": "Volume lash extensions, multiple extensions per natural lash for a dramatic effect.",
+        "microblading": {
+          "id": "microblading",
+          "title": "Microblading PMU",
+          "subtitle": "Microblading PMU",
+          "price": "$450 + tax (includes 1 touch-up)",
+          "description": "Achieve perfectly shaped, defined brows with semi-permanent microblading.",
+          "longDescription": "Achieve perfectly shaped, defined brows with our semi-permanent microblading service, including one free touch-up. Imagine waking up with flawless brows every day! This service saves you countless hours of daily brow makeup and provides a long-lasting, natural solution for perfect brows.",
           "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+            "/img/beauty-care/microblading.webp",
+            "/img/beauty-care/microblading-1.webp",
+            "/img/beauty-care/microblading-2.webp"
           ],
-          "difficulty": "Hard",
-          "maintenance": "High",
-          "faceShape": ["Oval", "Square"],
-          "popular": false
-        }
-        }
-      },
-      "microblading": {
-        "id": "microblading",
-        "title": "Microblading PMU",
-        "subtitle": "Microblading PMU",
-        "price": "$450 + tax (includes 1 touch-up)",
-        "description": "Achieve perfectly shaped, defined brows with semi-permanent microblading.",
-        "longDescription": "Achieve perfectly shaped, defined brows with our semi-permanent microblading service, including one free touch-up. Imagine waking up with flawless brows every day! This service saves you countless hours of daily brow makeup and provides a long-lasting, natural solution for perfect brows.",
-        "images": [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600"
-        ],
-        "features": [
-        "Semi-permanent microblading",
-        "Custom brow shaping",
-        "Includes 1 touch-up",
-        "Professional technique"
-        ],
-        "benefits": [
-        "Perfect brows",
-        "Saves makeup time",
-        "Natural look",
-        "Long-lasting solution"
-        ],
-        "styles": {
-        "natural-microblading": {
-          "id": "natural-microblading",
-          "name": "Natural Microblading",
-          "description": "Natural brows, softly shaped to suit any face.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+          "features": [
+            "Semi-permanent microblading",
+            "Custom brow shaping",
+            "Includes 1 touch-up",
+            "Professional technique"
           ],
-          "difficulty": "Medium",
-          "maintenance": "Low",
-          "faceShape": ["Oval", "Round", "Square", "Rectangle"],
-          "popular": true
-        },
-        "bold-microblading": {
-          "id": "bold-microblading",
-          "name": "Bold Microblading",
-          "description": "Bold, defined brows for a strong statement.",
-          "images": [
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400",
-          "/placeholder.svg?height=600&width=400"
+          "benefits": [
+            "Perfect brows",
+            "Saves makeup time",
+            "Natural look",
+            "Long-lasting solution"
           ],
-          "difficulty": "Hard",
-          "maintenance": "Medium",
-          "faceShape": ["Oval", "Square"],
-          "popular": false
+          "styles": {
+            "natural-microblading": {
+              "id": "natural-microblading",
+              "name": "Natural Microblading",
+              "description": "Natural brows, softly shaped to suit any face.",
+              "images": [
+                "/img/beauty-care/natural-microblading.webp"
+              ],
+              "difficulty": "Medium",
+              "maintenance": "Low",
+              "faceShape": ["Oval", "Round", "Square", "Rectangle"],
+              "popular": true
+            },
+            "bold-microblading": {
+              "id": "bold-microblading",
+              "name": "Bold Microblading",
+              "description": "Bold, defined brows for a strong statement.",
+              "images": [
+                "/img/beauty-care/bold-microblading.webp"
+              ],
+              "difficulty": "Hard",
+              "maintenance": "Medium",
+              "faceShape": ["Oval", "Square"],
+              "popular": false
+            }
+          }
         }
-        }
-      }
       }
     }
   }

@@ -10,13 +10,13 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
+          src="/img/banner.webp"
           alt="Winchair Beauty Spa Interior"
           fill
           className="object-cover opacity-20"
           priority
         />
-        <div className="absolute inset-0 bg-black/80"></div>
+        {/* <div className="absolute inset-0 bg-black/80"></div> */}
       </div>
 
       {/* Content */}

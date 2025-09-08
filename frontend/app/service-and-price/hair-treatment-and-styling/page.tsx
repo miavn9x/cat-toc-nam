@@ -140,7 +140,7 @@ const HairTreatmentServicesPage = () => {
                         <div className="flex items-center">
                           <span className="text-amber-500 text-sm font-medium">
                             {service.styleCount > 0
-                              ? `See ${service.styleCount} kiểu`
+                              ? `See ${service.styleCount} types`
                               : "See details"}
                           </span>
                           <svg

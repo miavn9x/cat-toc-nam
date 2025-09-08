@@ -158,7 +158,7 @@ const FeaturesPage = () => {
               <div className="relative order-1 lg:order-2">
                 <div className="aspect-square rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
                   <img
-                    src="/placeholder.svg?height=600&width=600"
+                    src="/img/classy-space.webp"
                     alt="Luxury spa interior with modern design"
                     className="w-full h-full object-cover"
                   />
@@ -206,7 +206,7 @@ const FeaturesPage = () => {
               <div className="lg:col-span-2">
                 <div className="aspect-video rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
                   <img
-                    src="/placeholder.svg?height=400&width=800"
+                    src="/img/satisfaction-guarantee.webp"
                     alt="Professional men's haircut service"
                     className="w-full h-full object-cover"
                   />
@@ -242,7 +242,7 @@ const FeaturesPage = () => {
                   title: "High-end Men's Haircut",
                   subtitle: "Premium Men's Haircut",
                   price: "From $35",
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/img/mens-hair-services.webp",
                   features: [
                     "Personal Style Advice",
                     "Relaxing Shampoo",
@@ -256,7 +256,7 @@ const FeaturesPage = () => {
                   title: "Professional Fade Cut",
                   subtitle: "Professional Skin Fade",
                   price: "From $40",
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/img/mens-haircut.webp",
                   features: [
                     "Precise Fade",
                     "Modern Technique",
@@ -270,7 +270,7 @@ const FeaturesPage = () => {
                   title: "Hot Towel Shave",
                   subtitle: "Traditional Hot Towel Shave",
                   price: "From $55",
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/img/mens-hot-shave-1.webp",
                   features: [
                     "Relaxing Hot Towel",
                     "Traditional Shave",
@@ -284,7 +284,7 @@ const FeaturesPage = () => {
                   title: "Artistic Beard Trimming",
                   subtitle: "Artistic Beard Trim",
                   price: "From $16",
-                  image: "/placeholder.svg?height=300&width=400",
+                  image: "/img/mens-beard-trim.webp",
                   features: [
                     "Professional styling",
                     "Style advice",
@@ -372,42 +372,42 @@ const FeaturesPage = () => {
                   title: "High-end Women's Haircut",
                   subtitle: "Premium Women's Haircut",
                   price: "From $55",
-                  image: "/placeholder.svg?height=400&width=300",
+                  image: "/img/womens-hair-services.webp",
                   specialty: "Personal style advice",
                 },
                 {
                   title: "Professional Hair Coloring",
                   subtitle: "Professional Hair Coloring",
                   price: "From $65",
-                  image: "/placeholder.svg?height=400&width=300",
+                  image: "/img/hair-coloring.webp",
                   specialty: "High quality products from Italy",
                 },
                 {
                   title: "Art Highlight",
                   subtitle: "Artistic Hair Highlights",
                   price: "From $180",
-                  image: "/placeholder.svg?height=400&width=300",
+                  image: "/img/hair-highlights.webp",
                   specialty: "Seamless blending technique",
                 },
                 {
                   title: "Modern Hair Perm",
                   subtitle: "Modern Hair Perm",
                   price: "From $85",
-                  image: "/placeholder.svg?height=400&width=300",
+                  image: "/img/hair-perm.webp",
                   specialty: "Lasts for months",
                 },
                 {
                   title: "High Quality Hair Straightening",
                   subtitle: "Premium Hair Relaxer",
                   price: "From $160",
-                  image: "/placeholder.svg?height=400&width=300",
+                  image: "/img/hair-straightening.webp",
                   specialty: "Advanced Keratin Technology",
                 },
                 {
                   title: "Prom Hairstyle",
                   subtitle: "Elegant Evening Updo",
                   price: "$120",
-                  image: "/placeholder.svg?height=400&width=300",
+                  image: "/img/prom-hairstyle.webp",
                   specialty: "Perfect for special events",
                 },
               ].map((service, index) => (
@@ -478,7 +478,7 @@ const FeaturesPage = () => {
                     {
                       title: "Boys Haircuts",
                       price: "From $25",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: "/img/boy-haircut.webp",
                       features: [
                         "Friendly space",
                         "Patient stylist",
@@ -488,7 +488,7 @@ const FeaturesPage = () => {
                     {
                       title: "Baby Girl Haircut",
                       price: "From $35",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: "/img/girl-haircut.webp",
                       features: [
                         "Cute hairstyle",
                         "Age appropriate",
@@ -562,28 +562,28 @@ const FeaturesPage = () => {
                       subtitle: "Premium Facial Treatment",
                       price: "From $90",
                       duration: "60 minutes",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: "/img/facial-care.webp",
                     },
                     {
                       title: "Hair Treatment",
                       subtitle: "Hair Nourishing Therapy",
                       price: "$90",
                       duration: "45 minutes",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: "/img/hair-treatment.webp",
                     },
                     {
                       title: "Relaxing Scalp Massage",
                       subtitle: "Relaxing Scalp Massage",
                       price: "$85",
                       duration: "30 minutes",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: "/img/scalp-massage.webp",
                     },
                     {
                       title: "Professional Hair Removal",
                       subtitle: "Professional Waxing",
                       price: "From $16",
                       duration: "15-30 minutes",
-                      image: "/placeholder.svg?height=200&width=300",
+                      image: "/img/waxing-service.webp",
                     },
                   ].map((service, index) => (
                     <div

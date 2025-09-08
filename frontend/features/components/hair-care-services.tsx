@@ -9,7 +9,7 @@ const HairCareServices = () => {
       description:
         "Refreshing shampoo followed by professional blow drying with an air dryer leaves your hair clean and soft.",
       benefits: "Instantly refresh your look and save time on your busy day",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/img/head-washing.webp",
       icon: "🧴",
     },
     {
@@ -18,7 +18,7 @@ const HairCareServices = () => {
       description:
         "Enjoy a luxurious shampoo followed by beautiful styling with a brush or curling/straightening iron, perfect for a finished look.",
       benefits: "'Just out of the salon' look, save effort in styling at home",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/img/shampoo-styling.webp",
       icon: "💇‍♀️",
     },
     {
@@ -28,7 +28,7 @@ const HairCareServices = () => {
         "Deeply nourish and revitalize hair with a specialized conditioning shampoo treatment that restores health and shine.",
       benefits:
         "Repairs damage, increases shine and improves long-term hair manageability",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/img/hair-treatment.webp",
       icon: "✨",
     },
     {
@@ -38,7 +38,7 @@ const HairCareServices = () => {
         "Indulge in a deeply relaxing and therapeutic scalp massage that promotes blood circulation to the scalp.",
       benefits:
         "Promotes healthy hair growth, reduces stress and improves overall health",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/img/beauty-services.webp",
       icon: "💆‍♀️",
     },
   ];
@@ -84,7 +84,7 @@ const HairCareServices = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
             <div key={index} className="group h-full">
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
