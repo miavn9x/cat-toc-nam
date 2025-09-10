@@ -178,19 +178,19 @@ const BeautyServices = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                name: "Minh Anh",
+                name: "Andrew",
                 service: "Facial Care",
                 quote:
                   "My skin has completely changed after the facial treatment at Winchair. The specialists are very dedicated and professional!",
               },
               {
-                name: "Thanh Hà",
+                name: "Aiden",
                 service: "Eyelash Extensions",
                 quote:
                   "I am very satisfied with the eyelash extension service here. The lashes are natural, beautiful and long lasting. Now I don't need to put on eye makeup every morning!",
               },
               {
-                name: "Thu Trang",
+                name: "Nicky",
                 service: "Microblading",
                 quote:
                   "My eyebrows are perfect after getting them done at Winchair. Saves a lot of time and always looks natural.",

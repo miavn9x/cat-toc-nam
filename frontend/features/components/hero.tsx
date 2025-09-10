@@ -33,7 +33,7 @@ const Hero = () => {
 
           <div className="mb-8 lg:mb-12">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-inter font-light text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Luxury Beauty Salon With Vietnamese Prices
+              Luxury Beauty Salon With  Prices
             </h2>
             <p className="text-base sm:text-lg font-inter text-gray-400 max-w-2xl mx-auto mt-4 leading-relaxed">
               3347 Bloor Street West, Etobicoke, Ontario
