@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#202020]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -23,10 +23,10 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <div className="py-12 lg:py-24">
           <div className="mb-8 lg:mb-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-medium text-slate-100 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-[8rem] font-playfair font-medium text-slate-100 leading-tight">
               WINCHAIR
               <br />
-              <span className="text-gray-400 font-light">BEAUTY SPA</span>
+              <span className="text-gray-300 font-light">BEAUTY SPA</span>
             </h1>
             <div className="w-32 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto my-6"></div>
           </div>
@@ -59,7 +59,6 @@ const Hero = () => {
             </Link>
           </div>
 
-          {/* Contact Info */}
           <div className="pt-12 text-center text-gray-500 font-inter font-light text-sm">
             <p>📍 3347 Bloor Street West, Etobicoke, Ontario</p>
             <p>📞 +1-123-456-7890</p>
