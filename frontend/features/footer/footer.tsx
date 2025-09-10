@@ -167,7 +167,7 @@ const Footer = () => {
               </h3>
               <div className="flex flex-col gap-2 items-stretch text-justify">
                 <p className="text-gray-300 text-sm lg:text-base leading-relaxed">
-                  Luxury beauty at Vietnamese prices! Located at{" "}
+                  Luxury beauty at  prices! Located at{" "}
                   <span
                     itemProp="address"
                     itemScope

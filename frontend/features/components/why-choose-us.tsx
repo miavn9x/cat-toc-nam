@@ -11,7 +11,7 @@ const WhyChooseUs = () => {
       icon: "💰",
       title: "Affordable Price",
       description:
-        "Luxurious beauty at Vietnamese prices, suitable for all budgets",
+        "Luxurious beauty at  prices, suitable for all budgets",
     },
     {
       icon: "🏆",

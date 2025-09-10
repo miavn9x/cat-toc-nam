@@ -74,7 +74,7 @@ const FeaturesPage = () => {
             <div className="w-16 sm:w-32 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto mb-8 sm:mb-12"></div>
 
             <p className="text-lg sm:text-2xl lg:text-3xl text-gray-300 font-light mb-4 sm:mb-6 max-w-4xl mx-auto leading-relaxed px-4">
-              Luxury Beauty Salon With Vietnamese Prices
+              Luxury Beauty Salon With  Prices
             </p>
 
             <p className="text-sm sm:text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-12 px-4">
